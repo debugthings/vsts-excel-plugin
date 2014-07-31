@@ -1,0 +1,86 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<customUI onLoad="Ribbon_Load" xmlns="http://schemas.microsoft.com/office/2006/01/customui">
+	<ribbon>
+		<tabs>
+			<tab id="publixVSTOAddIn" label="Publix Load Test">
+				<group id="group1" label="Reports">
+					<button id="button1" imageMso="CreateReportFromWizard" onAction="button1_Click" label="Create Load Test Report" size="large" />
+					<button id="button8" imageMso="ExportWord" onAction="exportToWord" label="Export to Word" size="large" />
+				</group>
+				<group id="group3" label="Toggle Visibility">
+					<toggleButton id="rawToggle" imageMso="TableInsert" onAction="pivotToggle_Click" screentip="Hide or show all raw data sheets in the work book." supertip="Hide or show all raw data sheets in the work book." description="Hide or show all raw data sheets in the work book." label="Raw Data" size="large" tag="raw"  enabled="true" getPressed="get_Pressed"/>
+					<toggleButton id="pivotToggle" imageMso="PivotTableSelectFlyout" onAction="pivotToggle_Click" screentip="Hide or show all pivot table sheets in the work book." supertip="Hide or show all pivot table sheets in the work book." description="Hide or show all pivot table sheets in the work book." label="Pivot Tables" size="large" tag="pivot" enabled="true" getPressed="get_Pressed"  />
+					<toggleButton id="chartToggle" imageMso="ChartChangeType" onAction="pivotToggle_Click" screentip="Hide or show all chart sheets in the work book." supertip="Hide or show all chart sheets in the work book." description="Hide or show all chart sheets in the work book." label="Charts" size="large" tag="chart" enabled="true" getPressed="get_Pressed" />
+					<toggleButton id="statsToggle" imageMso="Formula" onAction="pivotToggle_Click" screentip="Hide or show all statisctics sheets in the work book." supertip="Hide or show all statisctics sheets in the work book." description="Hide or show all statisctics sheets in the work book." label="Statistics" size="large" tag="stats"  enabled="true" getPressed="get_Pressed"/>
+				</group>
+				<group id="group4" label="Common Chart Fixes">
+					<button id="button6" imageMso="ChartTypeLineInsertGallery" onAction="button6_Click" label="Correct Colors" size="large" />
+					<button id="button7" imageMso="ChartResetToMatchStyle" onAction="button7_Click" label="Remove Markers" size="large" />
+					<button id="button9" imageMso="ChartLines" onAction="button9_Click" label="Thin Lines" size="large" />
+				</group>
+				<group id="group5" label="Common Statistics Fixes">
+					<comboBox id="cmbLower" label="Lower Value" showImage="false" getText="getItemLabel">
+						<item label="1" />
+						<item  label="2" />
+						<item  label="3" />
+						<item  label="4" />
+						<item  label="5" />
+						<item label="6" />
+						<item  label="7" />
+						<item  label="8" />
+						<item label="9" />
+						<item label="10" />
+					</comboBox>
+					<comboBox id="cmbMiddle" label="Middle Value" showImage="false"
+							  getText="getItemLabel">
+						<item  label="1" />
+						<item label="2" />
+						<item  label="3" />
+						<item label="4" />
+						<item label="5" />
+						<item label="6" />
+						<item label="7" />
+						<item label="8" />
+						<item label="9" />
+						<item label="10" />
+					</comboBox>
+					<comboBox id="cmbUpper" label="Upper Value" showImage="false"
+							  getText="getItemLabel">
+						<item label="1" />
+						<item label="2" />
+						<item label="3" />
+						<item label="4" />
+						<item label="5" />
+						<item  label="6" />
+						<item  label="7" />
+						<item  label="8" />
+						<item  label="9" />
+						<item  label="10" />
+					</comboBox>
+					<button id="button13" imageMso="ConditionalFormattingColorScalesGallery" onAction="conditionalFormatButton_Click" label="Conditional Formatting" size="large" />
+					<button id="btnMultiple" imageMso="ConditionalFormattingIconSetsGallery" onAction="conditionalFormatButtonMultiple_Click" label="Multiple Stats" size="large" />
+					<button id="btnActiveCells" imageMso="TableDeleteRowsAndColumnsMenuWord" onAction="btnActiveCells" label="Remove Test Names" size="large" />
+				</group>
+				<group id="group6" label="Load Test Maintenance">
+					<button id="button12" imageMso="Recurrence" onAction="findShortLoadTests" label="Short Load Tests" size="large" />
+					<button id="button10" imageMso="ChartTypePieInsertGallery" onAction="findLargeLoadTests" label="Large Load Tests" size="large" />
+					<button id="button11" imageMso="EquationMatrixGallery" onAction="findHighSampleLoadTests" label="High Samples Count" size="large" />
+					<button id="button14" imageMso="GroupJunkEmail" onAction="findMyLoadTests" label="My Load Tests" size="large" />
+				</group>
+				<group id="groupDb" label="Database Maintenance"
+					   getVisible="gtVisible">
+					<button id="btnGetTableSize" imageMso="GroupInsertTables" onAction="findShortLoadTests" label="Table Sizes" size="large" />
+					<button id="btnGetPhysicalStats" imageMso="FileBackUpSqlDatabase" onAction="findLargeLoadTests" label="Physical Stats" size="large" />
+					<button id="btnRebuildIndexes" imageMso="DataSourceCatalogDataBase" onAction="findHighSampleLoadTests" label="Rebuild Indexes" size="large" />
+				</group>
+				<group id="debugGroup" label="Debugging Commands"
+					   getVisible="gtVisible" >
+					<button id="button2" imageMso="TableInsert" onAction="button2_Click" label="Add Sheet" size="large" />
+					<button id="button3" imageMso="TableDrawTable" onAction="button3_Click" label="Add Data" size="large" />
+					<button id="button4" imageMso="PivotTableSelectFlyout" onAction="button4_Click" label="Add Pivot" size="large" />
+					<button id="button5" imageMso="TableDeleteRowsAndColumnsMenuWord" onAction="button5_Click" label="Hide Sheet" size="large" />
+				</group>
+			</tab>
+		</tabs>
+	</ribbon>
+</customUI>

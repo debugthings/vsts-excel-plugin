@@ -1,0 +1,825 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="LoadTest2010ModelStoreContainer" CdmEntityContainer="LoadTest2010Entities">
+    <EntitySetMapping Name="LoadTestBrowsers">
+      <EntityTypeMapping TypeName="LoadTest2010Model.LoadTestBrowser">
+        <MappingFragment StoreEntitySet="LoadTestBrowsers">
+          <ScalarProperty Name="LoadTestRunId" ColumnName="LoadTestRunId" />
+          <ScalarProperty Name="BrowserId" ColumnName="BrowserId" />
+          <ScalarProperty Name="BrowserName" ColumnName="BrowserName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LoadTestCases">
+      <EntityTypeMapping TypeName="LoadTest2010Model.LoadTestCase">
+        <MappingFragment StoreEntitySet="LoadTestCase">
+          <ScalarProperty Name="LoadTestRunId" ColumnName="LoadTestRunId" />
+          <ScalarProperty Name="ScenarioId" ColumnName="ScenarioId" />
+          <ScalarProperty Name="TestCaseId" ColumnName="TestCaseId" />
+          <ScalarProperty Name="TestCaseName" ColumnName="TestCaseName" />
+          <ScalarProperty Name="TestElement" ColumnName="TestElement" />
+          <ScalarProperty Name="TestType" ColumnName="TestType" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LoadTestDataCollectorLogs">
+      <EntityTypeMapping TypeName="LoadTest2010Model.LoadTestDataCollectorLog">
+        <MappingFragment StoreEntitySet="LoadTestDataCollectorLog">
+          <ScalarProperty Name="LoadTestRunId" ColumnName="LoadTestRunId" />
+          <ScalarProperty Name="DataCollectorLogId" ColumnName="DataCollectorLogId" />
+          <ScalarProperty Name="DataCollectorDisplayName" ColumnName="DataCollectorDisplayName" />
+          <ScalarProperty Name="MachineName" ColumnName="MachineName" />
+          <ScalarProperty Name="TimestampColumnName" ColumnName="TimestampColumnName" />
+          <ScalarProperty Name="DurationColumnName" ColumnName="DurationColumnName" />
+          <ScalarProperty Name="CreateTableFormatString" ColumnName="CreateTableFormatString" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LoadTestDetailMessages">
+      <EntityTypeMapping TypeName="LoadTest2010Model.LoadTestDetailMessage">
+        <MappingFragment StoreEntitySet="LoadTestDetailMessage">
+          <ScalarProperty Name="LoadTestRunId" ColumnName="LoadTestRunId" />
+          <ScalarProperty Name="LoadTestDetailMessageId" ColumnName="LoadTestDetailMessageId" />
+          <ScalarProperty Name="TestDetailId" ColumnName="TestDetailId" />
+          <ScalarProperty Name="PageDetailId" ColumnName="PageDetailId" />
+          <ScalarProperty Name="MessageTypeId" ColumnName="MessageTypeId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LoadTestFileAttachments">
+      <EntityTypeMapping TypeName="LoadTest2010Model.LoadTestFileAttachment">
+        <MappingFragment StoreEntitySet="LoadTestFileAttachment">
+          <ScalarProperty Name="LoadTestRunId" ColumnName="LoadTestRunId" />
+          <ScalarProperty Name="FileAttachmentId" ColumnName="FileAttachmentId" />
+          <ScalarProperty Name="MachineName" ColumnName="MachineName" />
+          <ScalarProperty Name="Filename" ColumnName="Filename" />
+          <ScalarProperty Name="FileSize" ColumnName="FileSize" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LoadTestFileAttachmentChunks">
+      <EntityTypeMapping TypeName="LoadTest2010Model.LoadTestFileAttachmentChunk">
+        <MappingFragment StoreEntitySet="LoadTestFileAttachmentChunk">
+          <ScalarProperty Name="LoadTestRunId" ColumnName="LoadTestRunId" />
+          <ScalarProperty Name="FileAttachmentId" ColumnName="FileAttachmentId" />
+          <ScalarProperty Name="StartOffset" ColumnName="StartOffset" />
+          <ScalarProperty Name="EndOffset" ColumnName="EndOffset" />
+          <ScalarProperty Name="ChunkLength" ColumnName="ChunkLength" />
+          <ScalarProperty Name="ChunkBytes" ColumnName="ChunkBytes" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LoadTestMessages">
+      <EntityTypeMapping TypeName="LoadTest2010Model.LoadTestMessage">
+        <MappingFragment StoreEntitySet="LoadTestMessage">
+          <ScalarProperty Name="LoadTestRunId" ColumnName="LoadTestRunId" />
+          <ScalarProperty Name="AgentId" ColumnName="AgentId" />
+          <ScalarProperty Name="MessageId" ColumnName="MessageId" />
+          <ScalarProperty Name="MessageType" ColumnName="MessageType" />
+          <ScalarProperty Name="MessageText" ColumnName="MessageText" />
+          <ScalarProperty Name="SubType" ColumnName="SubType" />
+          <ScalarProperty Name="StackTrace" ColumnName="StackTrace" />
+          <ScalarProperty Name="MessageTimeStamp" ColumnName="MessageTimeStamp" />
+          <ScalarProperty Name="TestCaseId" ColumnName="TestCaseId" />
+          <ScalarProperty Name="RequestId" ColumnName="RequestId" />
+          <ScalarProperty Name="TestLogId" ColumnName="TestLogId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LoadTestMessageTypes">
+      <EntityTypeMapping TypeName="LoadTest2010Model.LoadTestMessageType">
+        <MappingFragment StoreEntitySet="LoadTestMessageType">
+          <ScalarProperty Name="LoadTestRunId" ColumnName="LoadTestRunId" />
+          <ScalarProperty Name="MessageTypeId" ColumnName="MessageTypeId" />
+          <ScalarProperty Name="MessageType" ColumnName="MessageType" />
+          <ScalarProperty Name="SubType" ColumnName="SubType" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LoadTestNetworks">
+      <EntityTypeMapping TypeName="LoadTest2010Model.LoadTestNetwork">
+        <MappingFragment StoreEntitySet="LoadTestNetworks">
+          <ScalarProperty Name="LoadTestRunId" ColumnName="LoadTestRunId" />
+          <ScalarProperty Name="NetworkId" ColumnName="NetworkId" />
+          <ScalarProperty Name="NetworkName" ColumnName="NetworkName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LoadTestPageDetails">
+      <EntityTypeMapping TypeName="LoadTest2010Model.LoadTestPageDetail">
+        <MappingFragment StoreEntitySet="LoadTestPageDetail">
+          <ScalarProperty Name="LoadTestRunId" ColumnName="LoadTestRunId" />
+          <ScalarProperty Name="PageDetailId" ColumnName="PageDetailId" />
+          <ScalarProperty Name="TestDetailId" ColumnName="TestDetailId" />
+          <ScalarProperty Name="TimeStamp" ColumnName="TimeStamp" />
+          <ScalarProperty Name="PageId" ColumnName="PageId" />
+          <ScalarProperty Name="ResponseTime" ColumnName="ResponseTime" />
+          <ScalarProperty Name="ResponseTimeGoal" ColumnName="ResponseTimeGoal" />
+          <ScalarProperty Name="GoalExceeded" ColumnName="GoalExceeded" />
+          <ScalarProperty Name="EndTime" ColumnName="EndTime" />
+          <ScalarProperty Name="Outcome" ColumnName="Outcome" />
+          <ScalarProperty Name="InMeasurementInterval" ColumnName="InMeasurementInterval" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LoadTestPageSummaryByNetworks">
+      <EntityTypeMapping TypeName="LoadTest2010Model.LoadTestPageSummaryByNetwork">
+        <MappingFragment StoreEntitySet="LoadTestPageSummaryByNetwork">
+          <ScalarProperty Name="LoadTestRunId" ColumnName="LoadTestRunId" />
+          <ScalarProperty Name="PageId" ColumnName="PageId" />
+          <ScalarProperty Name="NetworkId" ColumnName="NetworkId" />
+          <ScalarProperty Name="PageCount" ColumnName="PageCount" />
+          <ScalarProperty Name="Average" ColumnName="Average" />
+          <ScalarProperty Name="Minimum" ColumnName="Minimum" />
+          <ScalarProperty Name="Maximum" ColumnName="Maximum" />
+          <ScalarProperty Name="Percentile90" ColumnName="Percentile90" />
+          <ScalarProperty Name="Percentile95" ColumnName="Percentile95" />
+          <ScalarProperty Name="Percentile99" ColumnName="Percentile99" />
+          <ScalarProperty Name="Goal" ColumnName="Goal" />
+          <ScalarProperty Name="PagesMeetingGoal" ColumnName="PagesMeetingGoal" />
+          <ScalarProperty Name="Median" ColumnName="Median" />
+          <ScalarProperty Name="StandardDeviation" ColumnName="StandardDeviation" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LoadTestPageSummaryDatas">
+      <EntityTypeMapping TypeName="LoadTest2010Model.LoadTestPageSummaryData">
+        <MappingFragment StoreEntitySet="LoadTestPageSummaryData">
+          <ScalarProperty Name="LoadTestRunId" ColumnName="LoadTestRunId" />
+          <ScalarProperty Name="PageId" ColumnName="PageId" />
+          <ScalarProperty Name="PageCount" ColumnName="PageCount" />
+          <ScalarProperty Name="Average" ColumnName="Average" />
+          <ScalarProperty Name="Minimum" ColumnName="Minimum" />
+          <ScalarProperty Name="Maximum" ColumnName="Maximum" />
+          <ScalarProperty Name="Percentile90" ColumnName="Percentile90" />
+          <ScalarProperty Name="Percentile95" ColumnName="Percentile95" />
+          <ScalarProperty Name="Percentile99" ColumnName="Percentile99" />
+          <ScalarProperty Name="Median" ColumnName="Median" />
+          <ScalarProperty Name="StandardDeviation" ColumnName="StandardDeviation" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LoadTestPerformanceCounters">
+      <EntityTypeMapping TypeName="LoadTest2010Model.LoadTestPerformanceCounter">
+        <MappingFragment StoreEntitySet="LoadTestPerformanceCounter">
+          <ScalarProperty Name="LoadTestRunId" ColumnName="LoadTestRunId" />
+          <ScalarProperty Name="CounterCategoryId" ColumnName="CounterCategoryId" />
+          <ScalarProperty Name="CounterId" ColumnName="CounterId" />
+          <ScalarProperty Name="CounterName" ColumnName="CounterName" />
+          <ScalarProperty Name="HigherIsBetter" ColumnName="HigherIsBetter" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LoadTestPerformanceCounterCategories">
+      <EntityTypeMapping TypeName="LoadTest2010Model.LoadTestPerformanceCounterCategory">
+        <MappingFragment StoreEntitySet="LoadTestPerformanceCounterCategory">
+          <ScalarProperty Name="LoadTestRunId" ColumnName="LoadTestRunId" />
+          <ScalarProperty Name="CounterCategoryId" ColumnName="CounterCategoryId" />
+          <ScalarProperty Name="CategoryName" ColumnName="CategoryName" />
+          <ScalarProperty Name="MachineName" ColumnName="MachineName" />
+          <ScalarProperty Name="StartTimeStamp100nSec" ColumnName="StartTimeStamp100nSec" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LoadTestPerformanceCounterInstances">
+      <EntityTypeMapping TypeName="LoadTest2010Model.LoadTestPerformanceCounterInstance">
+        <MappingFragment StoreEntitySet="LoadTestPerformanceCounterInstance">
+          <ScalarProperty Name="LoadTestRunId" ColumnName="LoadTestRunId" />
+          <ScalarProperty Name="CounterId" ColumnName="CounterId" />
+          <ScalarProperty Name="InstanceId" ColumnName="InstanceId" />
+          <ScalarProperty Name="LoadTestItemId" ColumnName="LoadTestItemId" />
+          <ScalarProperty Name="InstanceName" ColumnName="InstanceName" />
+          <ScalarProperty Name="CumulativeValue" ColumnName="CumulativeValue" />
+          <ScalarProperty Name="OverallThresholdRuleResult" ColumnName="OverallThresholdRuleResult" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LoadTestPerformanceCounterSamples">
+      <EntityTypeMapping TypeName="LoadTest2010Model.LoadTestPerformanceCounterSample">
+        <MappingFragment StoreEntitySet="LoadTestPerformanceCounterSample">
+          <ScalarProperty Name="LoadTestRunId" ColumnName="LoadTestRunId" />
+          <ScalarProperty Name="TestRunIntervalId" ColumnName="TestRunIntervalId" />
+          <ScalarProperty Name="InstanceId" ColumnName="InstanceId" />
+          <ScalarProperty Name="ComputedValue" ColumnName="ComputedValue" />
+          <ScalarProperty Name="RawValue" ColumnName="RawValue" />
+          <ScalarProperty Name="BaseValue" ColumnName="BaseValue" />
+          <ScalarProperty Name="CounterFrequency" ColumnName="CounterFrequency" />
+          <ScalarProperty Name="SystemFrequency" ColumnName="SystemFrequency" />
+          <ScalarProperty Name="SampleTimeStamp" ColumnName="SampleTimeStamp" />
+          <ScalarProperty Name="SampleTimeStamp100nSec" ColumnName="SampleTimeStamp100nSec" />
+          <ScalarProperty Name="CounterType" ColumnName="CounterType" />
+          <ScalarProperty Name="ThresholdRuleResult" ColumnName="ThresholdRuleResult" />
+          <ScalarProperty Name="ThresholdRuleMessageId" ColumnName="ThresholdRuleMessageId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LoadTestReports">
+      <EntityTypeMapping TypeName="LoadTest2010Model.LoadTestReport">
+        <MappingFragment StoreEntitySet="LoadTestReport">
+          <ScalarProperty Name="ReportId" ColumnName="ReportId" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="LoadTestName" ColumnName="LoadTestName" />
+          <ScalarProperty Name="LastRunId" ColumnName="LastRunId" />
+          <ScalarProperty Name="SelectNewRuns" ColumnName="SelectNewRuns" />
+          <ScalarProperty Name="LastModified" ColumnName="LastModified" />
+          <ScalarProperty Name="LastModifiedBy" ColumnName="LastModifiedBy" />
+          <ScalarProperty Name="ReportType" ColumnName="ReportType" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LoadTestReportPages">
+      <EntityTypeMapping TypeName="LoadTest2010Model.LoadTestReportPage">
+        <MappingFragment StoreEntitySet="LoadTestReportPage">
+          <ScalarProperty Name="PageId" ColumnName="PageId" />
+          <ScalarProperty Name="ReportId" ColumnName="ReportId" />
+          <ScalarProperty Name="CategoryName" ColumnName="CategoryName" />
+          <ScalarProperty Name="CounterName" ColumnName="CounterName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LoadTestReportRuns">
+      <EntityTypeMapping TypeName="LoadTest2010Model.LoadTestReportRun">
+        <MappingFragment StoreEntitySet="LoadTestReportRuns">
+          <ScalarProperty Name="ReportId" ColumnName="ReportId" />
+          <ScalarProperty Name="LoadTestRunId" ColumnName="LoadTestRunId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LoadTestRuns">
+      <EntityTypeMapping TypeName="LoadTest2010Model.LoadTestRun">
+        <MappingFragment StoreEntitySet="LoadTestRun">
+          <ScalarProperty Name="LoadTestRunId" ColumnName="LoadTestRunId" />
+          <ScalarProperty Name="LoadTestName" ColumnName="LoadTestName" />
+          <ScalarProperty Name="RunId" ColumnName="RunId" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="StartTime" ColumnName="StartTime" />
+          <ScalarProperty Name="EndTime" ColumnName="EndTime" />
+          <ScalarProperty Name="RunDuration" ColumnName="RunDuration" />
+          <ScalarProperty Name="WarmupTime" ColumnName="WarmupTime" />
+          <ScalarProperty Name="RunSettingUsed" ColumnName="RunSettingUsed" />
+          <ScalarProperty Name="IsLocalRun" ColumnName="IsLocalRun" />
+          <ScalarProperty Name="ControllerName" ColumnName="ControllerName" />
+          <ScalarProperty Name="Outcome" ColumnName="Outcome" />
+          <ScalarProperty Name="LoadTest" ColumnName="LoadTest" />
+          <ScalarProperty Name="Comment" ColumnName="Comment" />
+          <ScalarProperty Name="LoadTestSchemaRev" ColumnName="LoadTestSchemaRev" />
+          <ScalarProperty Name="CooldownTime" ColumnName="CooldownTime" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LoadTestRunAgents">
+      <EntityTypeMapping TypeName="LoadTest2010Model.LoadTestRunAgent">
+        <MappingFragment StoreEntitySet="LoadTestRunAgent">
+          <ScalarProperty Name="LoadTestRunId" ColumnName="LoadTestRunId" />
+          <ScalarProperty Name="AgentId" ColumnName="AgentId" />
+          <ScalarProperty Name="AgentName" ColumnName="AgentName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LoadTestRunIntervals">
+      <EntityTypeMapping TypeName="LoadTest2010Model.LoadTestRunInterval">
+        <MappingFragment StoreEntitySet="LoadTestRunInterval">
+          <ScalarProperty Name="LoadTestRunId" ColumnName="LoadTestRunId" />
+          <ScalarProperty Name="TestRunIntervalId" ColumnName="TestRunIntervalId" />
+          <ScalarProperty Name="IntervalStartTime" ColumnName="IntervalStartTime" />
+          <ScalarProperty Name="IntervalEndTime" ColumnName="IntervalEndTime" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LoadTestScenarios">
+      <EntityTypeMapping TypeName="LoadTest2010Model.LoadTestScenario">
+        <MappingFragment StoreEntitySet="LoadTestScenario">
+          <ScalarProperty Name="LoadTestRunId" ColumnName="LoadTestRunId" />
+          <ScalarProperty Name="ScenarioId" ColumnName="ScenarioId" />
+          <ScalarProperty Name="ScenarioName" ColumnName="ScenarioName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LoadTestSchemaRevisions">
+      <EntityTypeMapping TypeName="LoadTest2010Model.LoadTestSchemaRevision">
+        <MappingFragment StoreEntitySet="LoadTestSchemaRevision">
+          <ScalarProperty Name="LoadTestSchemaRev" ColumnName="LoadTestSchemaRev" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LoadTestSqlTraces">
+      <EntityTypeMapping TypeName="LoadTest2010Model.LoadTestSqlTrace">
+        <MappingFragment StoreEntitySet="LoadTestSqlTrace">
+          <ScalarProperty Name="LoadTestRunId" ColumnName="LoadTestRunId" />
+          <ScalarProperty Name="TextData" ColumnName="TextData" />
+          <ScalarProperty Name="Duration" ColumnName="Duration" />
+          <ScalarProperty Name="StartTime" ColumnName="StartTime" />
+          <ScalarProperty Name="EndTime" ColumnName="EndTime" />
+          <ScalarProperty Name="Reads" ColumnName="Reads" />
+          <ScalarProperty Name="Writes" ColumnName="Writes" />
+          <ScalarProperty Name="CPU" ColumnName="CPU" />
+          <ScalarProperty Name="EventClass" ColumnName="EventClass" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LoadTestSystemUnderTests">
+      <EntityTypeMapping TypeName="LoadTest2010Model.LoadTestSystemUnderTest">
+        <MappingFragment StoreEntitySet="LoadTestSystemUnderTest">
+          <ScalarProperty Name="LoadTestRunId" ColumnName="LoadTestRunId" />
+          <ScalarProperty Name="SystemUnderTestId" ColumnName="SystemUnderTestId" />
+          <ScalarProperty Name="MachineName" ColumnName="MachineName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LoadTestSystemUnderTestTags">
+      <EntityTypeMapping TypeName="LoadTest2010Model.LoadTestSystemUnderTestTag">
+        <MappingFragment StoreEntitySet="LoadTestSystemUnderTestTag">
+          <ScalarProperty Name="LoadTestRunId" ColumnName="LoadTestRunId" />
+          <ScalarProperty Name="SystemUnderTestId" ColumnName="SystemUnderTestId" />
+          <ScalarProperty Name="MachineTag" ColumnName="MachineTag" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LoadTestTestDetails">
+      <EntityTypeMapping TypeName="LoadTest2010Model.LoadTestTestDetail">
+        <MappingFragment StoreEntitySet="LoadTestTestDetail">
+          <ScalarProperty Name="LoadTestRunId" ColumnName="LoadTestRunId" />
+          <ScalarProperty Name="TestDetailId" ColumnName="TestDetailId" />
+          <ScalarProperty Name="TimeStamp" ColumnName="TimeStamp" />
+          <ScalarProperty Name="TestCaseId" ColumnName="TestCaseId" />
+          <ScalarProperty Name="ElapsedTime" ColumnName="ElapsedTime" />
+          <ScalarProperty Name="AgentId" ColumnName="AgentId" />
+          <ScalarProperty Name="BrowserId" ColumnName="BrowserId" />
+          <ScalarProperty Name="NetworkId" ColumnName="NetworkId" />
+          <ScalarProperty Name="Outcome" ColumnName="Outcome" />
+          <ScalarProperty Name="TestLogId" ColumnName="TestLogId" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="EndTime" ColumnName="EndTime" />
+          <ScalarProperty Name="InMeasurementInterval" ColumnName="InMeasurementInterval" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LoadTestTestLogs">
+      <EntityTypeMapping TypeName="LoadTest2010Model.LoadTestTestLog">
+        <MappingFragment StoreEntitySet="LoadTestTestLog">
+          <ScalarProperty Name="LoadTestRunId" ColumnName="LoadTestRunId" />
+          <ScalarProperty Name="AgentId" ColumnName="AgentId" />
+          <ScalarProperty Name="TestCaseId" ColumnName="TestCaseId" />
+          <ScalarProperty Name="TestLogId" ColumnName="TestLogId" />
+          <ScalarProperty Name="TestLog" ColumnName="TestLog" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LoadTestTestSummaryDatas">
+      <EntityTypeMapping TypeName="LoadTest2010Model.LoadTestTestSummaryData">
+        <MappingFragment StoreEntitySet="LoadTestTestSummaryData">
+          <ScalarProperty Name="LoadTestRunId" ColumnName="LoadTestRunId" />
+          <ScalarProperty Name="TestCaseId" ColumnName="TestCaseId" />
+          <ScalarProperty Name="TestsRun" ColumnName="TestsRun" />
+          <ScalarProperty Name="Average" ColumnName="Average" />
+          <ScalarProperty Name="Minimum" ColumnName="Minimum" />
+          <ScalarProperty Name="Maximum" ColumnName="Maximum" />
+          <ScalarProperty Name="Percentile90" ColumnName="Percentile90" />
+          <ScalarProperty Name="Percentile95" ColumnName="Percentile95" />
+          <ScalarProperty Name="Percentile99" ColumnName="Percentile99" />
+          <ScalarProperty Name="Median" ColumnName="Median" />
+          <ScalarProperty Name="StandardDeviation" ColumnName="StandardDeviation" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LoadTestThresholdMessages">
+      <EntityTypeMapping TypeName="LoadTest2010Model.LoadTestThresholdMessage">
+        <MappingFragment StoreEntitySet="LoadTestThresholdMessage">
+          <ScalarProperty Name="LoadTestRunId" ColumnName="LoadTestRunId" />
+          <ScalarProperty Name="TestRunIntervalId" ColumnName="TestRunIntervalId" />
+          <ScalarProperty Name="CounterInstanceId" ColumnName="CounterInstanceId" />
+          <ScalarProperty Name="MessageId" ColumnName="MessageId" />
+          <ScalarProperty Name="MessageText" ColumnName="MessageText" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LoadTestTransactionDetails">
+      <EntityTypeMapping TypeName="LoadTest2010Model.LoadTestTransactionDetail">
+        <MappingFragment StoreEntitySet="LoadTestTransactionDetail">
+          <ScalarProperty Name="LoadTestRunId" ColumnName="LoadTestRunId" />
+          <ScalarProperty Name="TransactionDetailId" ColumnName="TransactionDetailId" />
+          <ScalarProperty Name="TestDetailId" ColumnName="TestDetailId" />
+          <ScalarProperty Name="TimeStamp" ColumnName="TimeStamp" />
+          <ScalarProperty Name="TransactionId" ColumnName="TransactionId" />
+          <ScalarProperty Name="ElapsedTime" ColumnName="ElapsedTime" />
+          <ScalarProperty Name="EndTime" ColumnName="EndTime" />
+          <ScalarProperty Name="InMeasurementInterval" ColumnName="InMeasurementInterval" />
+          <ScalarProperty Name="ResponseTime" ColumnName="ResponseTime" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LoadTestTransactionSummaryDatas">
+      <EntityTypeMapping TypeName="LoadTest2010Model.LoadTestTransactionSummaryData">
+        <MappingFragment StoreEntitySet="LoadTestTransactionSummaryData">
+          <ScalarProperty Name="LoadTestRunId" ColumnName="LoadTestRunId" />
+          <ScalarProperty Name="TransactionId" ColumnName="TransactionId" />
+          <ScalarProperty Name="TransactionCount" ColumnName="TransactionCount" />
+          <ScalarProperty Name="Average" ColumnName="Average" />
+          <ScalarProperty Name="Minimum" ColumnName="Minimum" />
+          <ScalarProperty Name="Maximum" ColumnName="Maximum" />
+          <ScalarProperty Name="Percentile90" ColumnName="Percentile90" />
+          <ScalarProperty Name="Percentile95" ColumnName="Percentile95" />
+          <ScalarProperty Name="Percentile99" ColumnName="Percentile99" />
+          <ScalarProperty Name="Median" ColumnName="Median" />
+          <ScalarProperty Name="StandardDeviation" ColumnName="StandardDeviation" />
+          <ScalarProperty Name="AvgTransactionTime" ColumnName="AvgTransactionTime" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PassportUserIDStatus">
+      <EntityTypeMapping TypeName="LoadTest2010Model.PassportUserIDStatu">
+        <MappingFragment StoreEntitySet="PassportUserIDStatus">
+          <ScalarProperty Name="UserID" ColumnName="UserID" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="sysdiagrams">
+      <EntityTypeMapping TypeName="LoadTest2010Model.sysdiagram">
+        <MappingFragment StoreEntitySet="sysdiagrams">
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+          <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+          <ScalarProperty Name="version" ColumnName="version" />
+          <ScalarProperty Name="definition" ColumnName="definition" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="WebLoadTestErrorDetails">
+      <EntityTypeMapping TypeName="LoadTest2010Model.WebLoadTestErrorDetail">
+        <MappingFragment StoreEntitySet="WebLoadTestErrorDetail">
+          <ScalarProperty Name="LoadTestRunId" ColumnName="LoadTestRunId" />
+          <ScalarProperty Name="AgentId" ColumnName="AgentId" />
+          <ScalarProperty Name="MessageId" ColumnName="MessageId" />
+          <ScalarProperty Name="WebTestRequestResult" ColumnName="WebTestRequestResult" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="WebLoadTestRequestMaps">
+      <EntityTypeMapping TypeName="LoadTest2010Model.WebLoadTestRequestMap">
+        <MappingFragment StoreEntitySet="WebLoadTestRequestMap">
+          <ScalarProperty Name="LoadTestRunId" ColumnName="LoadTestRunId" />
+          <ScalarProperty Name="RequestId" ColumnName="RequestId" />
+          <ScalarProperty Name="TestCaseId" ColumnName="TestCaseId" />
+          <ScalarProperty Name="RequestUri" ColumnName="RequestUri" />
+          <ScalarProperty Name="ResponseTimeGoal" ColumnName="ResponseTimeGoal" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="WebLoadTestTransactions">
+      <EntityTypeMapping TypeName="LoadTest2010Model.WebLoadTestTransaction">
+        <MappingFragment StoreEntitySet="WebLoadTestTransaction">
+          <ScalarProperty Name="LoadTestRunId" ColumnName="LoadTestRunId" />
+          <ScalarProperty Name="TransactionId" ColumnName="TransactionId" />
+          <ScalarProperty Name="TestCaseId" ColumnName="TestCaseId" />
+          <ScalarProperty Name="TransactionName" ColumnName="TransactionName" />
+          <ScalarProperty Name="Goal" ColumnName="Goal" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LoadTestComputedCounterSamples">
+      <EntityTypeMapping TypeName="LoadTest2010Model.LoadTestComputedCounterSample">
+        <MappingFragment StoreEntitySet="LoadTestComputedCounterSample">
+          <ScalarProperty Name="LoadTestRunId" ColumnName="LoadTestRunId" />
+          <ScalarProperty Name="MachineName" ColumnName="MachineName" />
+          <ScalarProperty Name="CategoryName" ColumnName="CategoryName" />
+          <ScalarProperty Name="CounterName" ColumnName="CounterName" />
+          <ScalarProperty Name="InstanceName" ColumnName="InstanceName" />
+          <ScalarProperty Name="IntervalStartTime" ColumnName="IntervalStartTime" />
+          <ScalarProperty Name="IntervalEndTime" ColumnName="IntervalEndTime" />
+          <ScalarProperty Name="CounterType" ColumnName="CounterType" />
+          <ScalarProperty Name="ComputedValue" ColumnName="ComputedValue" />
+          <ScalarProperty Name="RawValue" ColumnName="RawValue" />
+          <ScalarProperty Name="ThresholdRuleResult" ColumnName="ThresholdRuleResult" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LoadTestComputedCounterSummaries">
+      <EntityTypeMapping TypeName="LoadTest2010Model.LoadTestComputedCounterSummary">
+        <MappingFragment StoreEntitySet="LoadTestComputedCounterSummary">
+          <ScalarProperty Name="LoadTestName" ColumnName="LoadTestName" />
+          <ScalarProperty Name="LoadTestRunId" ColumnName="LoadTestRunId" />
+          <ScalarProperty Name="MachineName" ColumnName="MachineName" />
+          <ScalarProperty Name="CategoryName" ColumnName="CategoryName" />
+          <ScalarProperty Name="CounterName" ColumnName="CounterName" />
+          <ScalarProperty Name="HigherIsBetter" ColumnName="HigherIsBetter" />
+          <ScalarProperty Name="InstanceName" ColumnName="InstanceName" />
+          <ScalarProperty Name="CumulativeValue" ColumnName="CumulativeValue" />
+          <ScalarProperty Name="OverallThresholdRuleResult" ColumnName="OverallThresholdRuleResult" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LoadTestMessageSummaries">
+      <EntityTypeMapping TypeName="LoadTest2010Model.LoadTestMessageSummary">
+        <MappingFragment StoreEntitySet="LoadTestMessageSummary">
+          <ScalarProperty Name="LoadTestRunId" ColumnName="LoadTestRunId" />
+          <ScalarProperty Name="AgentName" ColumnName="AgentName" />
+          <ScalarProperty Name="ScenarioName" ColumnName="ScenarioName" />
+          <ScalarProperty Name="TestCaseName" ColumnName="TestCaseName" />
+          <ScalarProperty Name="RequestUri" ColumnName="RequestUri" />
+          <ScalarProperty Name="MessageId" ColumnName="MessageId" />
+          <ScalarProperty Name="MessageTimeStamp" ColumnName="MessageTimeStamp" />
+          <ScalarProperty Name="MessageType" ColumnName="MessageType" />
+          <ScalarProperty Name="SubType" ColumnName="SubType" />
+          <ScalarProperty Name="MessageText" ColumnName="MessageText" />
+          <ScalarProperty Name="StackTrace" ColumnName="StackTrace" />
+          <ScalarProperty Name="RequestId" ColumnName="RequestId" />
+          <ScalarProperty Name="HasWebTestErrorDetail" ColumnName="HasWebTestErrorDetail" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LoadTestMessageViews">
+      <EntityTypeMapping TypeName="LoadTest2010Model.LoadTestMessageView">
+        <MappingFragment StoreEntitySet="LoadTestMessageView">
+          <ScalarProperty Name="LoadTestRunId" ColumnName="LoadTestRunId" />
+          <ScalarProperty Name="AgentName" ColumnName="AgentName" />
+          <ScalarProperty Name="ScenarioName" ColumnName="ScenarioName" />
+          <ScalarProperty Name="TestCaseName" ColumnName="TestCaseName" />
+          <ScalarProperty Name="RequestUri" ColumnName="RequestUri" />
+          <ScalarProperty Name="MessageId" ColumnName="MessageId" />
+          <ScalarProperty Name="MessageTimeStamp" ColumnName="MessageTimeStamp" />
+          <ScalarProperty Name="MessageType" ColumnName="MessageType" />
+          <ScalarProperty Name="SubType" ColumnName="SubType" />
+          <ScalarProperty Name="MessageText" ColumnName="MessageText" />
+          <ScalarProperty Name="StackTrace" ColumnName="StackTrace" />
+          <ScalarProperty Name="RequestId" ColumnName="RequestId" />
+          <ScalarProperty Name="HasWebTestErrorDetail" ColumnName="HasWebTestErrorDetail" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LoadTestMessageView2">
+      <EntityTypeMapping TypeName="LoadTest2010Model.LoadTestMessageView2">
+        <MappingFragment StoreEntitySet="LoadTestMessageView2">
+          <ScalarProperty Name="LoadTestRunId" ColumnName="LoadTestRunId" />
+          <ScalarProperty Name="AgentName" ColumnName="AgentName" />
+          <ScalarProperty Name="ScenarioName" ColumnName="ScenarioName" />
+          <ScalarProperty Name="TestCaseName" ColumnName="TestCaseName" />
+          <ScalarProperty Name="RequestUri" ColumnName="RequestUri" />
+          <ScalarProperty Name="MessageId" ColumnName="MessageId" />
+          <ScalarProperty Name="MessageTimeStamp" ColumnName="MessageTimeStamp" />
+          <ScalarProperty Name="MessageType" ColumnName="MessageType" />
+          <ScalarProperty Name="SubType" ColumnName="SubType" />
+          <ScalarProperty Name="MessageText" ColumnName="MessageText" />
+          <ScalarProperty Name="StackTrace" ColumnName="StackTrace" />
+          <ScalarProperty Name="RequestId" ColumnName="RequestId" />
+          <ScalarProperty Name="HasWebTestErrorDetail" ColumnName="HasWebTestErrorDetail" />
+          <ScalarProperty Name="TestLogId" ColumnName="TestLogId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LoadTestPageResults">
+      <EntityTypeMapping TypeName="LoadTest2010Model.LoadTestPageResult">
+        <MappingFragment StoreEntitySet="LoadTestPageResults">
+          <ScalarProperty Name="LoadTestRunId" ColumnName="LoadTestRunId" />
+          <ScalarProperty Name="ScenarioName" ColumnName="ScenarioName" />
+          <ScalarProperty Name="TestCaseName" ColumnName="TestCaseName" />
+          <ScalarProperty Name="RequestUri" ColumnName="RequestUri" />
+          <ScalarProperty Name="PageCount" ColumnName="PageCount" />
+          <ScalarProperty Name="Minimum" ColumnName="Minimum" />
+          <ScalarProperty Name="Average" ColumnName="Average" />
+          <ScalarProperty Name="Percentile90" ColumnName="Percentile90" />
+          <ScalarProperty Name="Percentile95" ColumnName="Percentile95" />
+          <ScalarProperty Name="Maximum" ColumnName="Maximum" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LoadTestPageResultsByNetworks">
+      <EntityTypeMapping TypeName="LoadTest2010Model.LoadTestPageResultsByNetwork">
+        <MappingFragment StoreEntitySet="LoadTestPageResultsByNetwork">
+          <ScalarProperty Name="LoadTestRunId" ColumnName="LoadTestRunId" />
+          <ScalarProperty Name="ScenarioName" ColumnName="ScenarioName" />
+          <ScalarProperty Name="TestCaseName" ColumnName="TestCaseName" />
+          <ScalarProperty Name="RequestUri" ColumnName="RequestUri" />
+          <ScalarProperty Name="NetworkName" ColumnName="NetworkName" />
+          <ScalarProperty Name="PageCount" ColumnName="PageCount" />
+          <ScalarProperty Name="Minimum" ColumnName="Minimum" />
+          <ScalarProperty Name="Average" ColumnName="Average" />
+          <ScalarProperty Name="Percentile90" ColumnName="Percentile90" />
+          <ScalarProperty Name="Percentile95" ColumnName="Percentile95" />
+          <ScalarProperty Name="Maximum" ColumnName="Maximum" />
+          <ScalarProperty Name="Goal" ColumnName="Goal" />
+          <ScalarProperty Name="PagesMeetingGoal" ColumnName="PagesMeetingGoal" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LoadTestPageResultsByNetwork2">
+      <EntityTypeMapping TypeName="LoadTest2010Model.LoadTestPageResultsByNetwork2">
+        <MappingFragment StoreEntitySet="LoadTestPageResultsByNetwork2">
+          <ScalarProperty Name="LoadTestRunId" ColumnName="LoadTestRunId" />
+          <ScalarProperty Name="ScenarioName" ColumnName="ScenarioName" />
+          <ScalarProperty Name="TestCaseName" ColumnName="TestCaseName" />
+          <ScalarProperty Name="RequestUri" ColumnName="RequestUri" />
+          <ScalarProperty Name="NetworkName" ColumnName="NetworkName" />
+          <ScalarProperty Name="PageCount" ColumnName="PageCount" />
+          <ScalarProperty Name="Minimum" ColumnName="Minimum" />
+          <ScalarProperty Name="Average" ColumnName="Average" />
+          <ScalarProperty Name="Median" ColumnName="Median" />
+          <ScalarProperty Name="Percentile90" ColumnName="Percentile90" />
+          <ScalarProperty Name="Percentile95" ColumnName="Percentile95" />
+          <ScalarProperty Name="Percentile99" ColumnName="Percentile99" />
+          <ScalarProperty Name="Maximum" ColumnName="Maximum" />
+          <ScalarProperty Name="StandardDeviation" ColumnName="StandardDeviation" />
+          <ScalarProperty Name="Goal" ColumnName="Goal" />
+          <ScalarProperty Name="PagesMeetingGoal" ColumnName="PagesMeetingGoal" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LoadTestPageSamples">
+      <EntityTypeMapping TypeName="LoadTest2010Model.LoadTestPageSample">
+        <MappingFragment StoreEntitySet="LoadTestPageSample">
+          <ScalarProperty Name="LoadTestRunId" ColumnName="LoadTestRunId" />
+          <ScalarProperty Name="CounterName" ColumnName="CounterName" />
+          <ScalarProperty Name="ScenarioName" ColumnName="ScenarioName" />
+          <ScalarProperty Name="TestCaseName" ColumnName="TestCaseName" />
+          <ScalarProperty Name="RequestUri" ColumnName="RequestUri" />
+          <ScalarProperty Name="IntervalStartTime" ColumnName="IntervalStartTime" />
+          <ScalarProperty Name="IntervalEndTime" ColumnName="IntervalEndTime" />
+          <ScalarProperty Name="ComputedValue" ColumnName="ComputedValue" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LoadTestPageSummaries">
+      <EntityTypeMapping TypeName="LoadTest2010Model.LoadTestPageSummary">
+        <MappingFragment StoreEntitySet="LoadTestPageSummary">
+          <ScalarProperty Name="LoadTestName" ColumnName="LoadTestName" />
+          <ScalarProperty Name="LoadTestRunId" ColumnName="LoadTestRunId" />
+          <ScalarProperty Name="CounterName" ColumnName="CounterName" />
+          <ScalarProperty Name="ScenarioName" ColumnName="ScenarioName" />
+          <ScalarProperty Name="TestCaseName" ColumnName="TestCaseName" />
+          <ScalarProperty Name="RequestUri" ColumnName="RequestUri" />
+          <ScalarProperty Name="CumulativeValue" ColumnName="CumulativeValue" />
+          <ScalarProperty Name="ResponseTimeGoal" ColumnName="ResponseTimeGoal" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LoadTestRequestSummaries">
+      <EntityTypeMapping TypeName="LoadTest2010Model.LoadTestRequestSummary">
+        <MappingFragment StoreEntitySet="LoadTestRequestSummary">
+          <ScalarProperty Name="LoadTestName" ColumnName="LoadTestName" />
+          <ScalarProperty Name="LoadTestRunId" ColumnName="LoadTestRunId" />
+          <ScalarProperty Name="CounterName" ColumnName="CounterName" />
+          <ScalarProperty Name="ScenarioName" ColumnName="ScenarioName" />
+          <ScalarProperty Name="TestCaseName" ColumnName="TestCaseName" />
+          <ScalarProperty Name="RequestUri" ColumnName="RequestUri" />
+          <ScalarProperty Name="CumulativeValue" ColumnName="CumulativeValue" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LoadTestScenarioSummaries">
+      <EntityTypeMapping TypeName="LoadTest2010Model.LoadTestScenarioSummary">
+        <MappingFragment StoreEntitySet="LoadTestScenarioSummary">
+          <ScalarProperty Name="LoadTestName" ColumnName="LoadTestName" />
+          <ScalarProperty Name="LoadTestRunId" ColumnName="LoadTestRunId" />
+          <ScalarProperty Name="CounterName" ColumnName="CounterName" />
+          <ScalarProperty Name="ScenarioName" ColumnName="ScenarioName" />
+          <ScalarProperty Name="CumulativeValue" ColumnName="CumulativeValue" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LoadTestTestCaseSamples">
+      <EntityTypeMapping TypeName="LoadTest2010Model.LoadTestTestCaseSample">
+        <MappingFragment StoreEntitySet="LoadTestTestCaseSample">
+          <ScalarProperty Name="LoadTestRunId" ColumnName="LoadTestRunId" />
+          <ScalarProperty Name="CounterName" ColumnName="CounterName" />
+          <ScalarProperty Name="ScenarioName" ColumnName="ScenarioName" />
+          <ScalarProperty Name="TestCaseName" ColumnName="TestCaseName" />
+          <ScalarProperty Name="IntervalStartTime" ColumnName="IntervalStartTime" />
+          <ScalarProperty Name="IntervalEndTime" ColumnName="IntervalEndTime" />
+          <ScalarProperty Name="ComputedValue" ColumnName="ComputedValue" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LoadTestTestCaseSummaries">
+      <EntityTypeMapping TypeName="LoadTest2010Model.LoadTestTestCaseSummary">
+        <MappingFragment StoreEntitySet="LoadTestTestCaseSummary">
+          <ScalarProperty Name="LoadTestName" ColumnName="LoadTestName" />
+          <ScalarProperty Name="LoadTestRunId" ColumnName="LoadTestRunId" />
+          <ScalarProperty Name="CounterName" ColumnName="CounterName" />
+          <ScalarProperty Name="ScenarioName" ColumnName="ScenarioName" />
+          <ScalarProperty Name="TestCaseName" ColumnName="TestCaseName" />
+          <ScalarProperty Name="CumulativeValue" ColumnName="CumulativeValue" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LoadTestTestResults">
+      <EntityTypeMapping TypeName="LoadTest2010Model.LoadTestTestResult">
+        <MappingFragment StoreEntitySet="LoadTestTestResults">
+          <ScalarProperty Name="LoadTestRunId" ColumnName="LoadTestRunId" />
+          <ScalarProperty Name="ScenarioName" ColumnName="ScenarioName" />
+          <ScalarProperty Name="TestCaseName" ColumnName="TestCaseName" />
+          <ScalarProperty Name="TestsRun" ColumnName="TestsRun" />
+          <ScalarProperty Name="Minimum" ColumnName="Minimum" />
+          <ScalarProperty Name="Average" ColumnName="Average" />
+          <ScalarProperty Name="Percentile90" ColumnName="Percentile90" />
+          <ScalarProperty Name="Percentile95" ColumnName="Percentile95" />
+          <ScalarProperty Name="Maximum" ColumnName="Maximum" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LoadTestTransactionResults">
+      <EntityTypeMapping TypeName="LoadTest2010Model.LoadTestTransactionResult">
+        <MappingFragment StoreEntitySet="LoadTestTransactionResults">
+          <ScalarProperty Name="LoadTestRunId" ColumnName="LoadTestRunId" />
+          <ScalarProperty Name="ScenarioName" ColumnName="ScenarioName" />
+          <ScalarProperty Name="TestCaseName" ColumnName="TestCaseName" />
+          <ScalarProperty Name="TransactionName" ColumnName="TransactionName" />
+          <ScalarProperty Name="TransactionCount" ColumnName="TransactionCount" />
+          <ScalarProperty Name="Minimum" ColumnName="Minimum" />
+          <ScalarProperty Name="Average" ColumnName="Average" />
+          <ScalarProperty Name="Percentile90" ColumnName="Percentile90" />
+          <ScalarProperty Name="Percentile95" ColumnName="Percentile95" />
+          <ScalarProperty Name="Maximum" ColumnName="Maximum" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LoadTestTransactionResults2">
+      <EntityTypeMapping TypeName="LoadTest2010Model.LoadTestTransactionResults2">
+        <MappingFragment StoreEntitySet="LoadTestTransactionResults2">
+          <ScalarProperty Name="LoadTestRunId" ColumnName="LoadTestRunId" />
+          <ScalarProperty Name="ScenarioName" ColumnName="ScenarioName" />
+          <ScalarProperty Name="TestCaseName" ColumnName="TestCaseName" />
+          <ScalarProperty Name="TransactionName" ColumnName="TransactionName" />
+          <ScalarProperty Name="TransactionCount" ColumnName="TransactionCount" />
+          <ScalarProperty Name="Minimum" ColumnName="Minimum" />
+          <ScalarProperty Name="Average" ColumnName="Average" />
+          <ScalarProperty Name="Percentile90" ColumnName="Percentile90" />
+          <ScalarProperty Name="Percentile95" ColumnName="Percentile95" />
+          <ScalarProperty Name="Maximum" ColumnName="Maximum" />
+          <ScalarProperty Name="Median" ColumnName="Median" />
+          <ScalarProperty Name="Percentile99" ColumnName="Percentile99" />
+          <ScalarProperty Name="StandardDeviation" ColumnName="StandardDeviation" />
+          <ScalarProperty Name="AvgTransactionTime" ColumnName="AvgTransactionTime" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LoadTestTransactionSamples">
+      <EntityTypeMapping TypeName="LoadTest2010Model.LoadTestTransactionSample">
+        <MappingFragment StoreEntitySet="LoadTestTransactionSample">
+          <ScalarProperty Name="LoadTestRunId" ColumnName="LoadTestRunId" />
+          <ScalarProperty Name="CounterName" ColumnName="CounterName" />
+          <ScalarProperty Name="ScenarioName" ColumnName="ScenarioName" />
+          <ScalarProperty Name="TestCaseName" ColumnName="TestCaseName" />
+          <ScalarProperty Name="TransactionName" ColumnName="TransactionName" />
+          <ScalarProperty Name="IntervalStartTime" ColumnName="IntervalStartTime" />
+          <ScalarProperty Name="IntervalEndTime" ColumnName="IntervalEndTime" />
+          <ScalarProperty Name="ComputedValue" ColumnName="ComputedValue" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LoadTestTransactionSummaries">
+      <EntityTypeMapping TypeName="LoadTest2010Model.LoadTestTransactionSummary">
+        <MappingFragment StoreEntitySet="LoadTestTransactionSummary">
+          <ScalarProperty Name="LoadTestName" ColumnName="LoadTestName" />
+          <ScalarProperty Name="LoadTestRunId" ColumnName="LoadTestRunId" />
+          <ScalarProperty Name="CounterName" ColumnName="CounterName" />
+          <ScalarProperty Name="ScenarioName" ColumnName="ScenarioName" />
+          <ScalarProperty Name="TestCaseName" ColumnName="TestCaseName" />
+          <ScalarProperty Name="TransactionName" ColumnName="TransactionName" />
+          <ScalarProperty Name="CumulativeValue" ColumnName="CumulativeValue" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LoadTestWebPageAndUserLoadCounterSamples">
+      <EntityTypeMapping TypeName="LoadTest2010Model.LoadTestWebPageAndUserLoadCounterSample">
+        <MappingFragment StoreEntitySet="LoadTestWebPageAndUserLoadCounterSample">
+          <ScalarProperty Name="loadtestrunid" ColumnName="loadtestrunid" />
+          <ScalarProperty Name="instanceName" ColumnName="instanceName" />
+          <ScalarProperty Name="RequestUri" ColumnName="RequestUri" />
+          <ScalarProperty Name="IntervalStartTime" ColumnName="IntervalStartTime" />
+          <ScalarProperty Name="UserLoad" ColumnName="UserLoad" />
+          <ScalarProperty Name="ResponseTime" ColumnName="ResponseTime" />
+          <ScalarProperty Name="RPS" ColumnName="RPS" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LoadTestWebRequestCounterSamples">
+      <EntityTypeMapping TypeName="LoadTest2010Model.LoadTestWebRequestCounterSample">
+        <MappingFragment StoreEntitySet="LoadTestWebRequestCounterSample">
+          <ScalarProperty Name="LoadTestRunId" ColumnName="LoadTestRunId" />
+          <ScalarProperty Name="CounterName" ColumnName="CounterName" />
+          <ScalarProperty Name="ScenarioName" ColumnName="ScenarioName" />
+          <ScalarProperty Name="TestCaseName" ColumnName="TestCaseName" />
+          <ScalarProperty Name="RequestUri" ColumnName="RequestUri" />
+          <ScalarProperty Name="IntervalStartTime" ColumnName="IntervalStartTime" />
+          <ScalarProperty Name="IntervalEndTime" ColumnName="IntervalEndTime" />
+          <ScalarProperty Name="CounterType" ColumnName="CounterType" />
+          <ScalarProperty Name="ComputedValue" ColumnName="ComputedValue" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LoadTestWebRequestCounterSummaries">
+      <EntityTypeMapping TypeName="LoadTest2010Model.LoadTestWebRequestCounterSummary">
+        <MappingFragment StoreEntitySet="LoadTestWebRequestCounterSummary">
+          <ScalarProperty Name="LoadTestRunId" ColumnName="LoadTestRunId" />
+          <ScalarProperty Name="CounterName" ColumnName="CounterName" />
+          <ScalarProperty Name="ScenarioName" ColumnName="ScenarioName" />
+          <ScalarProperty Name="TestCaseName" ColumnName="TestCaseName" />
+          <ScalarProperty Name="RequestUri" ColumnName="RequestUri" />
+          <ScalarProperty Name="CumulativeValue" ColumnName="CumulativeValue" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

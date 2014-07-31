@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<reportdefinition>
+	<header>
+		<!--
+		Static
+		Pivot
+		Raw
+		None
+		-->
+		<tablemode></tablemode>
+		<!--
+		Static
+		Pivot
+		PivotInReport
+		PivotOwnSheet
+		None
+		-->
+		<graphmode></graphmode>
+		<title></title>
+		<description></description>
+		<!--
+		TableOnly
+		GraphOnly
+		TableAndGraph
+		-->
+		<reportstyle></reportstyle>
+		
+		
+	</header>
+	<graphs>
+		<graph>
+			<graphsql></graphsql>
+			<!--
+			Line
+			LineStacked
+			Bar
+			BarStacked
+			Column
+			ColumnStacked
+			Pie
+			Scatter
+			-->
+			<style></style>
+			<vertaxis1></vertaxis1>
+			<vertaxis2></vertaxis2>
+			<horzaxis1></horzaxis1>
+			<horsaxis2></horsaxis2>
+		</graph>
+	</graphs>
+	<tables>
+		<table>
+			<tablesql></tablesql>
+			<style></style>
+		</table>
+	</tables>
+</reportdefinition>
