@@ -22,14 +22,14 @@ You cannot instantiate a new class and expect it to work. Like most VBA/VSTO you
 ###How to write functions
 
 The quickest way to start writing functions for this plugin is to start recording macros in Excel. Here	is an example Macro:
-```
+```C#
 Sheets("Sheet3").Select
 ActiveCell.FormulaR1C1 = ""
 Sheets("Sheet3").Name = "RenameSheet3"
 ```
 
 This Macro is simple enough. It first selects the sheet named "Sheet 3", sets the value of the ActiveCell 	to "" (blank) and then renames the sheet to "RenameSheet3".  Here is what the commands would look like in C#:
-```	
+```C#
 Globals.ThisAddIn.Application.Sheets[SheetName].Select();
 Globals.ThisAddIn.Application.ActiveCell.Value = "";
 Globals.ThisAddIn.Application.Sheets[SheetName].Name = "RenameSheet3";
@@ -51,7 +51,7 @@ The data you pull back will be of varying size. (Ranges, Cells, Address). This i
 Instead you should use the Range[Cell[],Cell[]] model to locate your data.  Once you create your selections you can use the Range[Cell[],Cell[]].Address property to translate your coordinates to something you can use with a formula.
 
 Example:
-```
+```C#
 // We are on a sheet of raw data and will use this command to get the address of the range
 string formulaAddress = 
 	App.ActiveSheet.Range[App.Cells[2, startingColumn], App.Cells[2 + countNumber, startingColumn]].Address;
@@ -69,7 +69,7 @@ When inserting multiple rows into a spreadsheet you will want to do it with an a
 For simple row insertions an array of objects will do fine. Note that the array has to be the same length as the range. You can insert anything you'd like in the array, string, int, float, single, etc.
 
 Example:
-```
+```C#
 App.ActiveSheet.Range["A1:F1"] = new object[] { "A", "B", "C", "D", "E", "F" };
 ```
 
@@ -78,7 +78,7 @@ needs to be sized for the range. In the example below we are looping 100 times t
 that will be inserted in one shot.
 
 Example:
-```
+```C#
 int countNumber = 100;
 App.Sheets["RawTable"].Select();
 Single[,] _multiDimensional = new Single[countNumber, 1];
@@ -96,7 +96,7 @@ When you loop through the Application.Sheets collection you can end up with Shee
 One way you can help limit the amount of errors down the road is by checking the type of the item returned.
 
 Example:
-```
+```C#
 foreach (var worksheetTest in App.Sheets)
 {
 	if (worksheetTest is Excel.Worksheet)
@@ -112,7 +112,7 @@ Well, yeah, it can. But there is a way to fix it. You need to update the stats o
 
 Case in point, when I was developing this I had a couple of queries that ran for 40 seconds.  After updating the stats they ran in 1 second.
 
-##Extensibility <<SOMEWHAT INCOMPLETE>>
+##Extensibility
 
 This application is being written to be extensible.  What I am tryin to acheive is a plugin system that you can control and load anything you'd like without having to touch the main code base.
 
