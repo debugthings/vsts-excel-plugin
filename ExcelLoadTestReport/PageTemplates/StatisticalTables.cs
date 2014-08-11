@@ -111,12 +111,12 @@ namespace ExcelLoadTestReport.PageTemplates
 
                 Globals.ThisAddIn.Application.ActiveWorkbook.Sheets.Add(After: Globals.ThisAddIn.Application.ActiveWorkbook.Sheets[Globals.ThisAddIn.Application.ActiveWorkbook.Sheets.Count]);
                 Globals.ThisAddIn.Application.ActiveSheet.Name = rawSheetName;
-                Globals.ThisAddIn.Application.ActiveSheet.CustomProperties.Add("PublixLTSheetType", "raw");
+                Globals.ThisAddIn.Application.ActiveSheet.CustomProperties.Add("VSTSLTSheetType", "raw");
 
                 // Create statistics sheet here as well.
                 Globals.ThisAddIn.Application.ActiveWorkbook.Sheets.Add(After: Globals.ThisAddIn.Application.ActiveWorkbook.Sheets[Globals.ThisAddIn.Application.ActiveWorkbook.Sheets.Count]);
                 Globals.ThisAddIn.Application.ActiveSheet.Name = statSheetName;
-                Globals.ThisAddIn.Application.ActiveSheet.CustomProperties.Add("PublixLTSheetType", "stats");
+                Globals.ThisAddIn.Application.ActiveSheet.CustomProperties.Add("VSTSLTSheetType", "stats");
 
                 App.ActiveSheet.Range["A1"] = "";
                 App.ActiveSheet.Range["B1"] = "Min";
@@ -178,9 +178,9 @@ namespace ExcelLoadTestReport.PageTemplates
             // Create statistics sheet here as well.
             Globals.ThisAddIn.Application.ActiveWorkbook.Sheets.Add(After: Globals.ThisAddIn.Application.ActiveWorkbook.Sheets[Globals.ThisAddIn.Application.ActiveWorkbook.Sheets.Count]);
             Globals.ThisAddIn.Application.ActiveSheet.Name = statSheetName;
-            Globals.ThisAddIn.Application.ActiveSheet.CustomProperties.Add("PublixLTSheetType", "stats");
-            Globals.ThisAddIn.Application.ActiveSheet.CustomProperties.Add("PublixLTSheetName", statSheetName);
-            Globals.ThisAddIn.Application.ActiveSheet.CustomProperties.Add("PublixLTSheetDescription", "Statistics for Transaction Response times.");
+            Globals.ThisAddIn.Application.ActiveSheet.CustomProperties.Add("VSTSLTSheetType", "stats");
+            Globals.ThisAddIn.Application.ActiveSheet.CustomProperties.Add("VSTSLTSheetName", statSheetName);
+            Globals.ThisAddIn.Application.ActiveSheet.CustomProperties.Add("VSTSLTSheetDescription", "Statistics for Transaction Response times.");
 
             App.ActiveSheet.Range["A1"] = "Transaction Name";
             App.ActiveSheet.Range["B1"] = "Count";
@@ -219,10 +219,10 @@ namespace ExcelLoadTestReport.PageTemplates
             // Create statistics sheet here as well.
             Globals.ThisAddIn.Application.ActiveWorkbook.Sheets.Add(After: Globals.ThisAddIn.Application.ActiveWorkbook.Sheets[Globals.ThisAddIn.Application.ActiveWorkbook.Sheets.Count]);
             Globals.ThisAddIn.Application.ActiveSheet.Name = statSheetName;
-            Globals.ThisAddIn.Application.ActiveSheet.CustomProperties.Add("PublixLTSheetType", "stats");
-            Globals.ThisAddIn.Application.ActiveSheet.CustomProperties.Add("PublixLTTestCount", TestNumber.Count);
-            Globals.ThisAddIn.Application.ActiveSheet.CustomProperties.Add("PublixLTSheetName", statSheetName);
-            Globals.ThisAddIn.Application.ActiveSheet.CustomProperties.Add("PublixLTSheetDescription", "Statistics for Transaction Response times.");
+            Globals.ThisAddIn.Application.ActiveSheet.CustomProperties.Add("VSTSLTSheetType", "stats");
+            Globals.ThisAddIn.Application.ActiveSheet.CustomProperties.Add("VSTSLTTestCount", TestNumber.Count);
+            Globals.ThisAddIn.Application.ActiveSheet.CustomProperties.Add("VSTSLTSheetName", statSheetName);
+            Globals.ThisAddIn.Application.ActiveSheet.CustomProperties.Add("VSTSLTSheetDescription", "Statistics for Transaction Response times.");
 
             var list = new List<string>();
             list.Add("Count");
@@ -302,9 +302,9 @@ namespace ExcelLoadTestReport.PageTemplates
             // Create statistics sheet here as well.
             Globals.ThisAddIn.Application.ActiveWorkbook.Sheets.Add(After: Globals.ThisAddIn.Application.ActiveWorkbook.Sheets[Globals.ThisAddIn.Application.ActiveWorkbook.Sheets.Count]);
             Globals.ThisAddIn.Application.ActiveSheet.Name = statSheetName;
-            Globals.ThisAddIn.Application.ActiveSheet.CustomProperties.Add("PublixLTSheetType", "stats");
-            Globals.ThisAddIn.Application.ActiveSheet.CustomProperties.Add("PublixLTSheetName", statSheetName);
-            Globals.ThisAddIn.Application.ActiveSheet.CustomProperties.Add("PublixLTSheetDescription", "Statistics for Page Response times.");
+            Globals.ThisAddIn.Application.ActiveSheet.CustomProperties.Add("VSTSLTSheetType", "stats");
+            Globals.ThisAddIn.Application.ActiveSheet.CustomProperties.Add("VSTSLTSheetName", statSheetName);
+            Globals.ThisAddIn.Application.ActiveSheet.CustomProperties.Add("VSTSLTSheetDescription", "Statistics for Page Response times.");
 
             App.ActiveSheet.Range["A1"] = "Page";
             App.ActiveSheet.Range["B1"] = "Count";
@@ -339,10 +339,10 @@ namespace ExcelLoadTestReport.PageTemplates
             // Create statistics sheet here as well.
             Globals.ThisAddIn.Application.ActiveWorkbook.Sheets.Add(After: Globals.ThisAddIn.Application.ActiveWorkbook.Sheets[Globals.ThisAddIn.Application.ActiveWorkbook.Sheets.Count]);
             Globals.ThisAddIn.Application.ActiveSheet.Name = statSheetName;
-            Globals.ThisAddIn.Application.ActiveSheet.CustomProperties.Add("PublixLTSheetType", "stats");
-            Globals.ThisAddIn.Application.ActiveSheet.CustomProperties.Add("PublixLTTestCount", TestNumber.Count);
-            Globals.ThisAddIn.Application.ActiveSheet.CustomProperties.Add("PublixLTSheetName", statSheetName);
-            Globals.ThisAddIn.Application.ActiveSheet.CustomProperties.Add("PublixLTSheetDescription", "Statistics for Page Response times.");
+            Globals.ThisAddIn.Application.ActiveSheet.CustomProperties.Add("VSTSLTSheetType", "stats");
+            Globals.ThisAddIn.Application.ActiveSheet.CustomProperties.Add("VSTSLTTestCount", TestNumber.Count);
+            Globals.ThisAddIn.Application.ActiveSheet.CustomProperties.Add("VSTSLTSheetName", statSheetName);
+            Globals.ThisAddIn.Application.ActiveSheet.CustomProperties.Add("VSTSLTSheetDescription", "Statistics for Page Response times.");
 
             var list = new List<string>();
             list.Add("Count");
@@ -657,7 +657,7 @@ namespace ExcelLoadTestReport.PageTemplates
             {
                 Globals.ThisAddIn.Application.ActiveWorkbook.Sheets.Add(Before: Globals.ThisAddIn.Application.ActiveWorkbook.Sheets[1]);
                 Globals.ThisAddIn.Application.ActiveSheet.Name = "TOC";
-                Globals.ThisAddIn.Application.ActiveSheet.CustomProperties.Add("PublixLTSheetType", "TOC");
+                Globals.ThisAddIn.Application.ActiveSheet.CustomProperties.Add("VSTSLTSheetType", "TOC");
             }
             foreach (var worksheetTest in App.Sheets)
             {
@@ -687,7 +687,7 @@ namespace ExcelLoadTestReport.PageTemplates
                 {
                     foreach (Excel.CustomProperty custProp in item.CustomProperties)
                     {
-                        if (custProp.Name == "PublixLTSheetName")
+                        if (custProp.Name == "VSTSLTSheetName")
                         {
                             try
                             {

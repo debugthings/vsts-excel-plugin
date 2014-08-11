@@ -15,8 +15,8 @@ namespace ExcelLoadTestReport.Classes.AnalysisEngine
 
     interface IAnalysisReport
     {
-        public string Outcome { get; set; }
-        public string ReportName { get; set; }
-        public string ReportDescription { get; set; }
+        string Outcome { get; set; }
+        string ReportName { get; set; }
+        string ReportDescription { get; set; }
     }
 }

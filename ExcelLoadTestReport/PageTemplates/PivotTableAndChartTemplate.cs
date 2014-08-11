@@ -89,7 +89,7 @@ namespace ExcelLoadTestReport.PageTemplates
         {
             Globals.ThisAddIn.Application.ActiveWorkbook.Sheets.Add(After: Globals.ThisAddIn.Application.ActiveWorkbook.Sheets[Globals.ThisAddIn.Application.ActiveWorkbook.Sheets.Count]);
             Globals.ThisAddIn.Application.ActiveSheet.Name = SheetName;
-            Globals.ThisAddIn.Application.ActiveSheet.CustomProperties.Add("PublixLTSheetType", "raw");
+            Globals.ThisAddIn.Application.ActiveSheet.CustomProperties.Add("VSTSLTSheetType", "raw");
 
             App.Sheets[SheetName].Select();
             App.ActiveSheet.Range["A1"] = "Interval";
@@ -201,7 +201,7 @@ namespace ExcelLoadTestReport.PageTemplates
             string sheetRange = string.Format("'{0}'!{1}", SourceSheet, Range);
             App.ActiveWorkbook.Sheets.Add(After: App.ActiveWorkbook.Sheets[App.ActiveWorkbook.Sheets.Count]);
             App.ActiveSheet.Name = Sheetname;
-            Globals.ThisAddIn.Application.ActiveSheet.CustomProperties.Add("PublixLTSheetType", "pivot");
+            Globals.ThisAddIn.Application.ActiveSheet.CustomProperties.Add("VSTSLTSheetType", "pivot");
 
 
             var pvtCache = App.ActiveWorkbook.PivotCaches().Create(
@@ -251,7 +251,7 @@ namespace ExcelLoadTestReport.PageTemplates
                             int testNum = TestNumber[i];
                             System.Diagnostics.Stopwatch sw = new System.Diagnostics.Stopwatch();
                             sw.Start();
-                            var conCatresult = (from items in context.PublixGetSamplesForTest(testNum, counterList.Value.CounterCategory, counterList.Value.CounterName, counterList.Value.CounterInstance, counterList.Value.FilterOutLoadTestRig) select items).ToList();
+                            var conCatresult = (from items in context.VSTSGetSamplesForTest(testNum, counterList.Value.CounterCategory, counterList.Value.CounterName, counterList.Value.CounterInstance, counterList.Value.FilterOutLoadTestRig) select items).ToList();
                             sw.Stop();
                             var ts = sw.Elapsed;
                             if (result == null)
@@ -273,7 +273,7 @@ namespace ExcelLoadTestReport.PageTemplates
                 }
                 string sheetRange = string.Format("A1:G{0}", sheetRows);
                 CreatePivotTableInternal(sheetRange, rawSheetName, PvtSheetName, PivotTableName);
-                //Globals.ThisAddIn.Application.ActiveSheet.CustomProperties.Add("PublixLTCounterstObject", Counters);
+                //Globals.ThisAddIn.Application.ActiveSheet.CustomProperties.Add("VSTSLTCounterstObject", Counters);
             
 
             var pvtTable = CreatePivotTableData("", PivotTableName, MachineCount, CounterCount, InstanceCount, TestNumber.Count);
@@ -448,7 +448,7 @@ namespace ExcelLoadTestReport.PageTemplates
             {
                 Globals.ThisAddIn.Application.ActiveWorkbook.Sheets.Add(Before: Globals.ThisAddIn.Application.ActiveWorkbook.Sheets[1]);
                 Globals.ThisAddIn.Application.ActiveSheet.Name = "TOC";
-                Globals.ThisAddIn.Application.ActiveSheet.CustomProperties.Add("PublixLTSheetType", "TOC");
+                Globals.ThisAddIn.Application.ActiveSheet.CustomProperties.Add("VSTSLTSheetType", "TOC");
             }
             foreach (var worksheetTest in App.Sheets)
             {

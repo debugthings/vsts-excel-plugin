@@ -6,12 +6,12 @@ using System.Security;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("Publix Load Test Excel Plug-In")]
+[assembly: AssemblyTitle("VSTS Load Test Excel Plug-In")]
 [assembly: AssemblyDescription("This is a plugin for excel that connects to the Load Test database in order to automate the creation of reports.")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("Publix Super Markets, Inc.")]
-[assembly: AssemblyProduct("Publix Load Test Excel Plug-In")]
-[assembly: AssemblyCopyright("Copyright © Publix Super Markets, Inc. 2011")]
+[assembly: AssemblyCompany("James Davis")]
+[assembly: AssemblyProduct("VSTS Load Test Excel Plug-In")]
+[assembly: AssemblyCopyright("James Davis, 2011")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 

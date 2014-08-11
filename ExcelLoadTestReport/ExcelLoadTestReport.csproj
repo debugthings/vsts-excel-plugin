@@ -376,6 +376,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Rules\" />
+    <Folder Include="SQL\" />
   </ItemGroup>
   <!-- Include the build rules for a C# project. -->
   <PropertyGroup>

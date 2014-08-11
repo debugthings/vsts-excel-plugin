@@ -56,7 +56,7 @@ namespace ExcelLoadTestReport.Models
         /// <summary>
         /// Initializes a new LoadTest2010Entities object using the connection string found in the 'LoadTest2010Entities' section of the application configuration file.
         /// </summary>
-        public LoadTest2010Entities() : base("name=Remote Data Base", "LoadTest2010Entities")
+        public LoadTest2010Entities() : base("name=LoadTest2010Entities", "LoadTest2010Entities")
         {
             this.ContextOptions.LazyLoadingEnabled = true;
             OnContextCreated();
@@ -1565,7 +1565,7 @@ namespace ExcelLoadTestReport.Models
         /// <param name="counterName">No Metadata Documentation available.</param>
         /// <param name="instanceName">No Metadata Documentation available.</param>
         /// <param name="filterAgents">No Metadata Documentation available.</param>
-        public ObjectResult<Pbx_GetSamplesForTest_Result> PublixGetSamplesForTest(Nullable<global::System.Int32> loadTestId, global::System.String counterCategory, global::System.String counterName, global::System.String instanceName, Nullable<global::System.Boolean> filterAgents)
+        public ObjectResult<Pbx_GetSamplesForTest_Result> VSTSGetSamplesForTest(Nullable<global::System.Int32> loadTestId, global::System.String counterCategory, global::System.String counterName, global::System.String instanceName, Nullable<global::System.Boolean> filterAgents)
         {
             ObjectParameter loadTestIdParameter;
             if (loadTestId.HasValue)
@@ -1617,7 +1617,7 @@ namespace ExcelLoadTestReport.Models
                 filterAgentsParameter = new ObjectParameter("FilterAgents", typeof(global::System.Boolean));
             }
     
-            return base.ExecuteFunction<Pbx_GetSamplesForTest_Result>("PublixGetSamplesForTest", loadTestIdParameter, counterCategoryParameter, counterNameParameter, instanceNameParameter, filterAgentsParameter);
+            return base.ExecuteFunction<Pbx_GetSamplesForTest_Result>("VSTSGetSamplesForTest", loadTestIdParameter, counterCategoryParameter, counterNameParameter, instanceNameParameter, filterAgentsParameter);
         }
     
         /// <summary>

@@ -2,7 +2,7 @@
 <customUI onLoad="Ribbon_Load" xmlns="http://schemas.microsoft.com/office/2006/01/customui">
 	<ribbon>
 		<tabs>
-			<tab id="publixVSTOAddIn" label="Publix Load Test">
+			<tab id="VSTSVSTOAddIn" label="VSTS Load Test">
 				<group id="group1" label="Reports">
 					<button id="button1" imageMso="CreateReportFromWizard" onAction="button1_Click" label="Create Load Test Report" size="large" />
 					<button id="button8" imageMso="ExportWord" onAction="exportToWord" label="Export to Word" size="large" />

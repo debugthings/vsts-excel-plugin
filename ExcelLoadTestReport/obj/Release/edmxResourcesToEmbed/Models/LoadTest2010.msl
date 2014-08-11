@@ -829,7 +829,7 @@
         </ComplexTypeMapping>
       </ResultMapping>
     </FunctionImportMapping>
-    <FunctionImportMapping FunctionImportName="PublixGetSamplesForTest" FunctionName="LoadTest2010Model.Store.Pbx_GetSamplesForTest">
+    <FunctionImportMapping FunctionImportName="VSTSGetSamplesForTest" FunctionName="LoadTest2010Model.Store.Pbx_GetSamplesForTest">
       <ResultMapping>
         <ComplexTypeMapping TypeName="LoadTest2010Model.Pbx_GetSamplesForTest_Result">
           <ScalarProperty Name="LoadTestRunId" ColumnName="LoadTestRunId" />

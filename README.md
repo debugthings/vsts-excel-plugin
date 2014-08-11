@@ -22,7 +22,7 @@ You cannot instantiate a new class and expect it to work. Like most VBA/VSTO you
 ###How to write functions
 
 The quickest way to start writing functions for this plugin is to start recording macros in Excel. Here	is an example Macro:
-```C#
+```Visual Basic
 Sheets("Sheet3").Select
 ActiveCell.FormulaR1C1 = ""
 Sheets("Sheet3").Name = "RenameSheet3"

@@ -42,7 +42,7 @@ namespace ExcelLoadTestReport.RibbonCommands
 
             foreach (Excel.CustomProperty property in App.ActiveSheet.CustomProperties)
             {
-                if (property.Name.Equals("PublixLTTestCount", StringComparison.CurrentCultureIgnoreCase))
+                if (property.Name.Equals("VSTSLTTestCount", StringComparison.CurrentCultureIgnoreCase))
                 {
                     int testCount = int.Parse(property.Value);
                     if (rng.Columns.Count % testCount == 0)
@@ -209,7 +209,7 @@ namespace ExcelLoadTestReport.RibbonCommands
                     var worksheet = worksheetTest as Excel.Worksheet;
                     foreach (Excel.CustomProperty property in worksheet.CustomProperties)
                     {
-                        if (property.Name.Equals("PublixLTSheetType", StringComparison.CurrentCultureIgnoreCase) && property.Value.Equals(sheettype, StringComparison.CurrentCultureIgnoreCase))
+                        if (property.Name.Equals("VSTSLTSheetType", StringComparison.CurrentCultureIgnoreCase) && property.Value.Equals(sheettype, StringComparison.CurrentCultureIgnoreCase))
                         {
                             if (hide)
                             {

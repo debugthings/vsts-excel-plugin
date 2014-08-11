@@ -32,3 +32,23 @@ C:\Users\pjld\Documents\Visual Studio 2010\Projects\ExcelLoadTestReport\ExcelLoa
 C:\Users\pjld\Documents\Visual Studio 2010\Projects\ExcelLoadTestReport\ExcelLoadTestReport\obj\Release\ExcelLoadTestReport.Forms.selectWordDocPages.resources
 C:\Users\pjld\Documents\Visual Studio 2010\Projects\ExcelLoadTestReport\ExcelLoadTestReport\obj\Release\ExcelLoadTestReport.csprojResolveAssemblyReference.cache
 C:\Users\pjld\Documents\Visual Studio 2010\Projects\ExcelLoadTestReport\ExcelLoadTestReport\obj\Release\ExcelLoadTestReport.csproj.GenerateResource.Cache
+C:\Users\pjld\Source\Repos\vsts-excel-plugin\ExcelLoadTestReport\obj\Release\ExcelLoadTestReport.csprojResolveAssemblyReference.cache
+C:\Users\pjld\Source\Repos\vsts-excel-plugin\ExcelLoadTestReport\obj\Release\ExcelLoadTestReport.deleteWait.resources
+C:\Users\pjld\Source\Repos\vsts-excel-plugin\ExcelLoadTestReport\obj\Release\ExcelLoadTestReport.loadTestView.resources
+C:\Users\pjld\Source\Repos\vsts-excel-plugin\ExcelLoadTestReport\obj\Release\ExcelLoadTestReport.Forms.reportDesign.resources
+C:\Users\pjld\Source\Repos\vsts-excel-plugin\ExcelLoadTestReport\obj\Release\ExcelLoadTestReport.Forms.selectWordDocPages.resources
+C:\Users\pjld\Source\Repos\vsts-excel-plugin\ExcelLoadTestReport\obj\Release\ExcelLoadTestReport.Properties.Resources.resources
+C:\Users\pjld\Source\Repos\vsts-excel-plugin\ExcelLoadTestReport\obj\Release\ExcelLoadTestReport.selectLoadTest.resources
+C:\Users\pjld\Source\Repos\vsts-excel-plugin\ExcelLoadTestReport\obj\Release\ExcelLoadTestReport.Windows.ModalWait.resources
+C:\Users\pjld\Source\Repos\vsts-excel-plugin\ExcelLoadTestReport\obj\Release\ExcelLoadTestReport.csproj.GenerateResource.Cache
+C:\Users\pjld\Source\Repos\vsts-excel-plugin\ExcelLoadTestReport\obj\Release\ExcelLoadTestReport.dll
+C:\Users\pjld\Source\Repos\vsts-excel-plugin\ExcelLoadTestReport\obj\Release\ExcelLoadTestReport.pdb
+C:\Users\pjld\Source\Repos\vsts-excel-plugin\ExcelLoadTestReport\bin\Release\ExcelLoadTestReport.dll.config
+C:\Users\pjld\Source\Repos\vsts-excel-plugin\ExcelLoadTestReport\bin\Release\ExcelLoadTestReport.dll
+C:\Users\pjld\Source\Repos\vsts-excel-plugin\ExcelLoadTestReport\bin\Release\ExcelLoadTestReport.pdb
+C:\Users\pjld\Source\Repos\vsts-excel-plugin\ExcelLoadTestReport\bin\Release\ExcelLoadTestReport.dll.manifest
+C:\Users\pjld\Source\Repos\vsts-excel-plugin\ExcelLoadTestReport\bin\Release\ExcelLoadTestReport.vsto
+C:\Users\pjld\Source\Repos\vsts-excel-plugin\ExcelLoadTestReport\bin\Release\EntityFramework.dll
+C:\Users\pjld\Source\Repos\vsts-excel-plugin\ExcelLoadTestReport\bin\Release\Microsoft.Office.Tools.Common.v4.0.Utilities.dll
+C:\Users\pjld\Source\Repos\vsts-excel-plugin\ExcelLoadTestReport\bin\Release\EntityFramework.xml
+C:\Users\pjld\Source\Repos\vsts-excel-plugin\ExcelLoadTestReport\bin\Release\Microsoft.Office.Tools.Common.v4.0.Utilities.xml

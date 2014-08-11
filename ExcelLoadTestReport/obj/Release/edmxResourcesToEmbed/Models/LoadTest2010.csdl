@@ -144,7 +144,7 @@
     <FunctionImport Name="GetAgents" ReturnType="Collection(LoadTest2010Model.GetAgents_Result)">
       <Parameter Name="LoadTestRunId" Mode="In" Type="Int32" />
     </FunctionImport>
-    <FunctionImport Name="PublixGetSamplesForTest" ReturnType="Collection(LoadTest2010Model.Pbx_GetSamplesForTest_Result)">
+    <FunctionImport Name="VSTSGetSamplesForTest" ReturnType="Collection(LoadTest2010Model.Pbx_GetSamplesForTest_Result)">
       <Parameter Name="LoadTestId" Mode="In" Type="Int32" />
       <Parameter Name="CounterCategory" Mode="In" Type="String" />
       <Parameter Name="CounterName" Mode="In" Type="String" />
