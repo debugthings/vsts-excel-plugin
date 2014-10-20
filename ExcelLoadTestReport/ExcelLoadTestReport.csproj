@@ -372,11 +372,19 @@
   <ItemGroup>
     <EmbeddedResource Include="Ribbon.xml" />
     <EmbeddedResource Include="DebugRibbon.xml" />
+    <Content Include="SQL\Pbx_DeleteLoadTestsLessThan15MinutesDuration.sql" />
+    <Content Include="SQL\Pbx_FindLoadTestsLessThan15MinutesDuration.sql" />
+    <Content Include="SQL\Pbx_GetAgents.sql" />
+    <Content Include="SQL\Pbx_GetLoadTestRunsWithHighCounterSampleRecords.sql" />
+    <Content Include="SQL\Pbx_GetLoadTestsHoggingAllTheSpace.sql" />
+    <Content Include="SQL\Pbx_GetSamplesForTest.sql" />
+    <Content Include="SQL\Pbx_RebuildIndexes.sql" />
+    <Content Include="SQL\Pbx_ReorganizeAllIndexes.sql" />
+    <Content Include="SQL\Pbx_ShrinkDatabase.sql" />
     <Content Include="_README\README.txt" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Rules\" />
-    <Folder Include="SQL\" />
   </ItemGroup>
   <!-- Include the build rules for a C# project. -->
   <PropertyGroup>
