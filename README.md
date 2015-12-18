@@ -22,13 +22,15 @@ You cannot instantiate a new class and expect it to work. Like most VBA/VSTO you
 ###How to write functions
 
 The quickest way to start writing functions for this plugin is to start recording macros in Excel. Here	is an example Macro:
-```Visual Basic
+
+```VB
 Sheets("Sheet3").Select
 ActiveCell.FormulaR1C1 = ""
 Sheets("Sheet3").Name = "RenameSheet3"
 ```
 
 This Macro is simple enough. It first selects the sheet named "Sheet 3", sets the value of the ActiveCell 	to "" (blank) and then renames the sheet to "RenameSheet3".  Here is what the commands would look like in C#:
+
 ```C#
 Globals.ThisAddIn.Application.Sheets[SheetName].Select();
 Globals.ThisAddIn.Application.ActiveCell.Value = "";
