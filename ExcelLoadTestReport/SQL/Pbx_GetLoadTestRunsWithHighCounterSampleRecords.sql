@@ -1,3 +1,5 @@
+USE LoadTest2010;
+GO
 CREATE procedure [dbo].[Pbx_GetLoadTestRunsWithHighCounterSampleRecords]  
 as  
 begin  

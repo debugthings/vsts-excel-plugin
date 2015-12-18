@@ -21,7 +21,9 @@ namespace ExcelLoadTestReport.PageTemplates
         /// </summary>
         /// <param name="DataSet"></param>
         /// <returns></returns>
-        bool Fill(System.Collections.Generic.List<int> TestNumber, System.Collections.Generic.Dictionary<int, DAO.Counters> Counters, bool CreateChart = true, bool CreateRawSheets = true, string ChartName = "");
+        bool Fill(System.Collections.Generic.List<int> TestNumber, 
+                System.Collections.Generic.Dictionary<int, DAO.Counters> Counters, 
+                bool CreateChart = true, bool CreateRawSheets = true, string ChartName = "");
 
         void CreateTOC(List<int> TestNumber, List<DAO.LoadTestReports> reportList);
 

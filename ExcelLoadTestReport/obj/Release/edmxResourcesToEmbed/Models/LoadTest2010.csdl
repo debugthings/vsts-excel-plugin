@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Schema Namespace="LoadTest2010Model" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
-  <EntityContainer Name="LoadTest2010Entities" annotation:LazyLoadingEnabled="true">
+<Schema Namespace="LoadTest2010Model" Alias="Self" xmlns="http://schemas.microsoft.com/ado/2009/11/edm" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation">
+  <EntityContainer Name="LoadTest2010Entities" annotation:LazyLoadingEnabled="true" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation">
     <EntitySet Name="LoadTestBrowsers" EntityType="LoadTest2010Model.LoadTestBrowser" />
     <EntitySet Name="LoadTestCases" EntityType="LoadTest2010Model.LoadTestCase" />
     <EntitySet Name="LoadTestDataCollectorLogs" EntityType="LoadTest2010Model.LoadTestDataCollectorLog" />
@@ -156,6 +156,23 @@
     </FunctionImport>
     <FunctionImport Name="GetLargeLoadTests" ReturnType="Collection(LoadTest2010Model.Pbx_GetLoadTestsHoggingAllTheSpace_Result)" />
     <FunctionImport Name="GetLargeCounterSampleLoadTests" ReturnType="Collection(LoadTest2010Model.Pbx_GetLoadTestRunsWithHighCounterSampleRecords_Result)" />
+    <FunctionImport Name="Pbx_ReorganizeAllIndexes" />
+    <FunctionImport Name="Prc_UpdatePageSummary3">
+      <Parameter Name="LoadTestRunId" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="Prc_UpdatePageSummaryByNetwork3">
+      <Parameter Name="LoadTestRunId" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="Prc_UpdateSummaryData3">
+      <Parameter Name="LoadTestRunId" Mode="In" Type="Int32" />
+      <Parameter Name="DeleteDetailTables" Mode="In" Type="Boolean" />
+    </FunctionImport>
+    <FunctionImport Name="Prc_UpdateTestSummary3">
+      <Parameter Name="LoadTestRunId" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="Prc_UpdateTransactionSummary3">
+      <Parameter Name="LoadTestRunId" Mode="In" Type="Int32" />
+    </FunctionImport>
   </EntityContainer>
   <EntityType Name="LoadTestBrowser">
     <Key>
@@ -243,7 +260,7 @@
     <Property Name="MessageText" Type="String" MaxLength="2048" Unicode="true" FixedLength="false" />
     <Property Name="SubType" Type="String" MaxLength="64" Unicode="true" FixedLength="false" />
     <Property Name="StackTrace" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
-    <Property Name="MessageTimeStamp" Type="DateTime" Nullable="false" />
+    <Property Name="MessageTimeStamp" Type="DateTime" Nullable="false" Precision="3" />
     <Property Name="TestCaseId" Type="Int32" />
     <Property Name="RequestId" Type="Int32" />
     <Property Name="TestLogId" Type="Int32" />
@@ -276,12 +293,12 @@
     <Property Name="LoadTestRunId" Type="Int32" Nullable="false" />
     <Property Name="PageDetailId" Type="Int32" Nullable="false" />
     <Property Name="TestDetailId" Type="Int32" Nullable="false" />
-    <Property Name="TimeStamp" Type="DateTime" Nullable="false" />
+    <Property Name="TimeStamp" Type="DateTime" Nullable="false" Precision="3" />
     <Property Name="PageId" Type="Int32" Nullable="false" />
     <Property Name="ResponseTime" Type="Double" Nullable="false" />
     <Property Name="ResponseTimeGoal" Type="Double" Nullable="false" />
     <Property Name="GoalExceeded" Type="Boolean" Nullable="false" />
-    <Property Name="EndTime" Type="DateTime" />
+    <Property Name="EndTime" Type="DateTime" Precision="3" />
     <Property Name="Outcome" Type="Byte" />
     <Property Name="InMeasurementInterval" Type="Boolean" />
   </EntityType>
@@ -386,13 +403,13 @@
     <Key>
       <PropertyRef Name="ReportId" />
     </Key>
-    <Property Name="ReportId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ReportId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
     <Property Name="Name" Type="String" Nullable="false" MaxLength="255" Unicode="true" FixedLength="false" />
     <Property Name="Description" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
     <Property Name="LoadTestName" Type="String" Nullable="false" MaxLength="255" Unicode="true" FixedLength="false" />
     <Property Name="LastRunId" Type="Int32" Nullable="false" />
     <Property Name="SelectNewRuns" Type="Boolean" Nullable="false" />
-    <Property Name="LastModified" Type="DateTime" Nullable="false" />
+    <Property Name="LastModified" Type="DateTime" Nullable="false" Precision="3" />
     <Property Name="LastModifiedBy" Type="String" Nullable="false" MaxLength="255" Unicode="true" FixedLength="false" />
     <Property Name="ReportType" Type="Byte" Nullable="false" />
   </EntityType>
@@ -400,7 +417,7 @@
     <Key>
       <PropertyRef Name="PageId" />
     </Key>
-    <Property Name="PageId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="PageId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
     <Property Name="ReportId" Type="Int32" Nullable="false" />
     <Property Name="CategoryName" Type="String" Nullable="false" MaxLength="255" Unicode="true" FixedLength="false" />
     <Property Name="CounterName" Type="String" Nullable="false" MaxLength="255" Unicode="true" FixedLength="false" />
@@ -417,12 +434,12 @@
     <Key>
       <PropertyRef Name="LoadTestRunId" />
     </Key>
-    <Property Name="LoadTestRunId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="LoadTestRunId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
     <Property Name="LoadTestName" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
     <Property Name="RunId" Type="String" Nullable="false" MaxLength="36" Unicode="false" FixedLength="true" />
     <Property Name="Description" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
-    <Property Name="StartTime" Type="DateTime" />
-    <Property Name="EndTime" Type="DateTime" />
+    <Property Name="StartTime" Type="DateTime" Precision="3" />
+    <Property Name="EndTime" Type="DateTime" Precision="3" />
     <Property Name="RunDuration" Type="Int32" Nullable="false" />
     <Property Name="WarmupTime" Type="Int32" Nullable="false" />
     <Property Name="RunSettingUsed" Type="String" Nullable="false" MaxLength="32" Unicode="true" FixedLength="false" />
@@ -471,8 +488,8 @@
     </Key>
     <Property Name="LoadTestRunId" Type="Int32" Nullable="false" />
     <Property Name="TestRunIntervalId" Type="Int32" Nullable="false" />
-    <Property Name="IntervalStartTime" Type="DateTime" Nullable="false" />
-    <Property Name="IntervalEndTime" Type="DateTime" Nullable="false" />
+    <Property Name="IntervalStartTime" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="IntervalEndTime" Type="DateTime" Nullable="false" Precision="3" />
     <NavigationProperty Name="LoadTestRun" Relationship="LoadTest2010Model.FK__LoadTestR__LoadT__7A672E12" FromRole="LoadTestRunInterval" ToRole="LoadTestRun" />
   </EntityType>
   <EntityType Name="LoadTestScenario">
@@ -499,8 +516,8 @@
     <Property Name="LoadTestRunId" Type="Int32" Nullable="false" />
     <Property Name="TextData" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
     <Property Name="Duration" Type="Int64" />
-    <Property Name="StartTime" Type="DateTime" />
-    <Property Name="EndTime" Type="DateTime" />
+    <Property Name="StartTime" Type="DateTime" Precision="3" />
+    <Property Name="EndTime" Type="DateTime" Precision="3" />
     <Property Name="Reads" Type="Int64" />
     <Property Name="Writes" Type="Int64" />
     <Property Name="CPU" Type="Int32" />
@@ -535,7 +552,7 @@
     </Key>
     <Property Name="LoadTestRunId" Type="Int32" Nullable="false" />
     <Property Name="TestDetailId" Type="Int32" Nullable="false" />
-    <Property Name="TimeStamp" Type="DateTime" Nullable="false" />
+    <Property Name="TimeStamp" Type="DateTime" Nullable="false" Precision="3" />
     <Property Name="TestCaseId" Type="Int32" Nullable="false" />
     <Property Name="ElapsedTime" Type="Double" Nullable="false" />
     <Property Name="AgentId" Type="Int32" Nullable="false" />
@@ -544,7 +561,7 @@
     <Property Name="Outcome" Type="Byte" />
     <Property Name="TestLogId" Type="Int32" />
     <Property Name="UserId" Type="Int32" />
-    <Property Name="EndTime" Type="DateTime" />
+    <Property Name="EndTime" Type="DateTime" Precision="3" />
     <Property Name="InMeasurementInterval" Type="Boolean" />
   </EntityType>
   <EntityType Name="LoadTestTestLog">
@@ -597,10 +614,10 @@
     <Property Name="LoadTestRunId" Type="Int32" Nullable="false" />
     <Property Name="TransactionDetailId" Type="Int32" Nullable="false" />
     <Property Name="TestDetailId" Type="Int32" Nullable="false" />
-    <Property Name="TimeStamp" Type="DateTime" Nullable="false" />
+    <Property Name="TimeStamp" Type="DateTime" Nullable="false" Precision="3" />
     <Property Name="TransactionId" Type="Int32" Nullable="false" />
     <Property Name="ElapsedTime" Type="Double" Nullable="false" />
-    <Property Name="EndTime" Type="DateTime" />
+    <Property Name="EndTime" Type="DateTime" Precision="3" />
     <Property Name="InMeasurementInterval" Type="Boolean" />
     <Property Name="ResponseTime" Type="Double" />
   </EntityType>
@@ -638,7 +655,7 @@
     </Key>
     <Property Name="name" Type="String" Nullable="false" MaxLength="128" Unicode="true" FixedLength="false" />
     <Property Name="principal_id" Type="Int32" Nullable="false" />
-    <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
     <Property Name="version" Type="Int32" />
     <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
   </EntityType>
@@ -696,8 +713,8 @@
     <Property Name="CategoryName" Type="String" Nullable="false" MaxLength="255" Unicode="true" FixedLength="false" />
     <Property Name="CounterName" Type="String" Nullable="false" MaxLength="255" Unicode="true" FixedLength="false" />
     <Property Name="InstanceName" Type="String" Nullable="false" MaxLength="255" Unicode="true" FixedLength="false" />
-    <Property Name="IntervalStartTime" Type="DateTime" Nullable="false" />
-    <Property Name="IntervalEndTime" Type="DateTime" Nullable="false" />
+    <Property Name="IntervalStartTime" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="IntervalEndTime" Type="DateTime" Nullable="false" Precision="3" />
     <Property Name="CounterType" Type="Int32" Nullable="false" />
     <Property Name="ComputedValue" Type="Single" />
     <Property Name="RawValue" Type="Int64" Nullable="false" />
@@ -735,7 +752,7 @@
     <Property Name="TestCaseName" Type="String" MaxLength="64" Unicode="true" FixedLength="false" />
     <Property Name="RequestUri" Type="String" MaxLength="2048" Unicode="true" FixedLength="false" />
     <Property Name="MessageId" Type="Int32" Nullable="false" />
-    <Property Name="MessageTimeStamp" Type="DateTime" Nullable="false" />
+    <Property Name="MessageTimeStamp" Type="DateTime" Nullable="false" Precision="3" />
     <Property Name="MessageType" Type="String" Nullable="false" MaxLength="19" Unicode="false" FixedLength="false" />
     <Property Name="SubType" Type="String" MaxLength="64" Unicode="true" FixedLength="false" />
     <Property Name="MessageText" Type="String" MaxLength="2048" Unicode="true" FixedLength="false" />
@@ -757,7 +774,7 @@
     <Property Name="TestCaseName" Type="String" MaxLength="64" Unicode="true" FixedLength="false" />
     <Property Name="RequestUri" Type="String" MaxLength="2048" Unicode="true" FixedLength="false" />
     <Property Name="MessageId" Type="Int32" Nullable="false" />
-    <Property Name="MessageTimeStamp" Type="DateTime" Nullable="false" />
+    <Property Name="MessageTimeStamp" Type="DateTime" Nullable="false" Precision="3" />
     <Property Name="MessageType" Type="Byte" Nullable="false" />
     <Property Name="SubType" Type="String" MaxLength="64" Unicode="true" FixedLength="false" />
     <Property Name="MessageText" Type="String" MaxLength="2048" Unicode="true" FixedLength="false" />
@@ -779,7 +796,7 @@
     <Property Name="TestCaseName" Type="String" MaxLength="64" Unicode="true" FixedLength="false" />
     <Property Name="RequestUri" Type="String" MaxLength="2048" Unicode="true" FixedLength="false" />
     <Property Name="MessageId" Type="Int32" Nullable="false" />
-    <Property Name="MessageTimeStamp" Type="DateTime" Nullable="false" />
+    <Property Name="MessageTimeStamp" Type="DateTime" Nullable="false" Precision="3" />
     <Property Name="MessageType" Type="Byte" Nullable="false" />
     <Property Name="SubType" Type="String" MaxLength="64" Unicode="true" FixedLength="false" />
     <Property Name="MessageText" Type="String" MaxLength="2048" Unicode="true" FixedLength="false" />
@@ -880,8 +897,8 @@
     <Property Name="ScenarioName" Type="String" Nullable="false" MaxLength="64" Unicode="true" FixedLength="false" />
     <Property Name="TestCaseName" Type="String" Nullable="false" MaxLength="64" Unicode="true" FixedLength="false" />
     <Property Name="RequestUri" Type="String" Nullable="false" MaxLength="2048" Unicode="true" FixedLength="false" />
-    <Property Name="IntervalStartTime" Type="DateTime" Nullable="false" />
-    <Property Name="IntervalEndTime" Type="DateTime" Nullable="false" />
+    <Property Name="IntervalStartTime" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="IntervalEndTime" Type="DateTime" Nullable="false" Precision="3" />
     <Property Name="ComputedValue" Type="Single" />
   </EntityType>
   <EntityType Name="LoadTestPageSummary">
@@ -943,8 +960,8 @@
     <Property Name="CounterName" Type="String" Nullable="false" MaxLength="255" Unicode="true" FixedLength="false" />
     <Property Name="ScenarioName" Type="String" Nullable="false" MaxLength="64" Unicode="true" FixedLength="false" />
     <Property Name="TestCaseName" Type="String" Nullable="false" MaxLength="64" Unicode="true" FixedLength="false" />
-    <Property Name="IntervalStartTime" Type="DateTime" Nullable="false" />
-    <Property Name="IntervalEndTime" Type="DateTime" Nullable="false" />
+    <Property Name="IntervalStartTime" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="IntervalEndTime" Type="DateTime" Nullable="false" Precision="3" />
     <Property Name="ComputedValue" Type="Single" />
   </EntityType>
   <EntityType Name="LoadTestTestCaseSummary">
@@ -1044,8 +1061,8 @@
     <Property Name="ScenarioName" Type="String" Nullable="false" MaxLength="64" Unicode="true" FixedLength="false" />
     <Property Name="TestCaseName" Type="String" Nullable="false" MaxLength="64" Unicode="true" FixedLength="false" />
     <Property Name="TransactionName" Type="String" Nullable="false" MaxLength="64" Unicode="true" FixedLength="false" />
-    <Property Name="IntervalStartTime" Type="DateTime" Nullable="false" />
-    <Property Name="IntervalEndTime" Type="DateTime" Nullable="false" />
+    <Property Name="IntervalStartTime" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="IntervalEndTime" Type="DateTime" Nullable="false" Precision="3" />
     <Property Name="ComputedValue" Type="Single" />
   </EntityType>
   <EntityType Name="LoadTestTransactionSummary">
@@ -1074,7 +1091,7 @@
     <Property Name="loadtestrunid" Type="Int32" Nullable="false" />
     <Property Name="instanceName" Type="String" Nullable="false" MaxLength="255" Unicode="true" FixedLength="false" />
     <Property Name="RequestUri" Type="String" Nullable="false" MaxLength="2048" Unicode="true" FixedLength="false" />
-    <Property Name="IntervalStartTime" Type="DateTime" Nullable="false" />
+    <Property Name="IntervalStartTime" Type="DateTime" Nullable="false" Precision="3" />
     <Property Name="UserLoad" Type="Single" />
     <Property Name="ResponseTime" Type="Single" />
     <Property Name="RPS" Type="Single" />
@@ -1095,8 +1112,8 @@
     <Property Name="ScenarioName" Type="String" Nullable="false" MaxLength="64" Unicode="true" FixedLength="false" />
     <Property Name="TestCaseName" Type="String" Nullable="false" MaxLength="64" Unicode="true" FixedLength="false" />
     <Property Name="RequestUri" Type="String" Nullable="false" MaxLength="2048" Unicode="true" FixedLength="false" />
-    <Property Name="IntervalStartTime" Type="DateTime" Nullable="false" />
-    <Property Name="IntervalEndTime" Type="DateTime" Nullable="false" />
+    <Property Name="IntervalStartTime" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="IntervalEndTime" Type="DateTime" Nullable="false" Precision="3" />
     <Property Name="CounterType" Type="Int32" Nullable="false" />
     <Property Name="ComputedValue" Type="Single" />
   </EntityType>

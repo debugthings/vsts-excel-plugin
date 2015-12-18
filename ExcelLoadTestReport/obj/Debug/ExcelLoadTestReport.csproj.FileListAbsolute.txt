@@ -31,3 +31,34 @@ C:\Users\pjld\Documents\Visual Studio 2010\Projects\ExcelLoadTestReport\ExcelLoa
 C:\Users\pjld\Documents\Visual Studio 2010\Projects\ExcelLoadTestReport\ExcelLoadTestReport\obj\Debug\ExcelLoadTestReport.pdb
 C:\Users\pjld\Documents\Visual Studio 2010\Projects\ExcelLoadTestReport\ExcelLoadTestReport\obj\Debug\ExcelLoadTestReport.loadTestView.resources
 C:\Users\pjld\Documents\Visual Studio 2010\Projects\ExcelLoadTestReport\ExcelLoadTestReport\obj\Debug\ExcelLoadTestReport.deleteWait.resources
+C:\Users\pjld\Source\Repos\vsts-excel-plugin\ExcelLoadTestReport\obj\Debug\ExcelLoadTestReport.deleteWait.resources
+C:\Users\pjld\Source\Repos\vsts-excel-plugin\ExcelLoadTestReport\obj\Debug\ExcelLoadTestReport.loadTestView.resources
+C:\Users\pjld\Source\Repos\vsts-excel-plugin\ExcelLoadTestReport\obj\Debug\ExcelLoadTestReport.Forms.reportDesign.resources
+C:\Users\pjld\Source\Repos\vsts-excel-plugin\ExcelLoadTestReport\obj\Debug\ExcelLoadTestReport.Forms.selectWordDocPages.resources
+C:\Users\pjld\Source\Repos\vsts-excel-plugin\ExcelLoadTestReport\obj\Debug\ExcelLoadTestReport.Properties.Resources.resources
+C:\Users\pjld\Source\Repos\vsts-excel-plugin\ExcelLoadTestReport\obj\Debug\ExcelLoadTestReport.selectLoadTest.resources
+C:\Users\pjld\Source\Repos\vsts-excel-plugin\ExcelLoadTestReport\obj\Debug\ExcelLoadTestReport.Windows.ModalWait.resources
+C:\Users\pjld\Source\Repos\vsts-excel-plugin\ExcelLoadTestReport\obj\Debug\ExcelLoadTestReport.csproj.GenerateResource.Cache
+C:\Users\pjld\Source\Repos\vsts-excel-plugin\ExcelLoadTestReport\obj\Debug\ExcelLoadTestReport.csprojResolveAssemblyReference.cache
+C:\Users\pjld\Source\Repos\vsts-excel-plugin\ExcelLoadTestReport\bin\Debug\ExcelLoadTestReport.dll.config
+C:\Users\pjld\Source\Repos\vsts-excel-plugin\ExcelLoadTestReport\bin\Debug\ExcelLoadTestReport.dll
+C:\Users\pjld\Source\Repos\vsts-excel-plugin\ExcelLoadTestReport\bin\Debug\ExcelLoadTestReport.pdb
+C:\Users\pjld\Source\Repos\vsts-excel-plugin\ExcelLoadTestReport\bin\Debug\ExcelLoadTestReport.dll.manifest
+C:\Users\pjld\Source\Repos\vsts-excel-plugin\ExcelLoadTestReport\bin\Debug\ExcelLoadTestReport.vsto
+C:\Users\pjld\Source\Repos\vsts-excel-plugin\ExcelLoadTestReport\bin\Debug\EntityFramework.dll
+C:\Users\pjld\Source\Repos\vsts-excel-plugin\ExcelLoadTestReport\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\pjld\Source\Repos\vsts-excel-plugin\ExcelLoadTestReport\bin\Debug\Microsoft.Office.Tools.Common.dll
+C:\Users\pjld\Source\Repos\vsts-excel-plugin\ExcelLoadTestReport\bin\Debug\Microsoft.Office.Tools.Common.v4.0.Utilities.dll
+C:\Users\pjld\Source\Repos\vsts-excel-plugin\ExcelLoadTestReport\bin\Debug\Microsoft.Office.Tools.dll
+C:\Users\pjld\Source\Repos\vsts-excel-plugin\ExcelLoadTestReport\bin\Debug\Microsoft.Office.Tools.Excel.dll
+C:\Users\pjld\Source\Repos\vsts-excel-plugin\ExcelLoadTestReport\bin\Debug\Microsoft.Office.Tools.v4.0.Framework.dll
+C:\Users\pjld\Source\Repos\vsts-excel-plugin\ExcelLoadTestReport\bin\Debug\Microsoft.VisualStudio.Tools.Applications.Runtime.dll
+C:\Users\pjld\Source\Repos\vsts-excel-plugin\ExcelLoadTestReport\bin\Debug\EntityFramework.xml
+C:\Users\pjld\Source\Repos\vsts-excel-plugin\ExcelLoadTestReport\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\pjld\Source\Repos\vsts-excel-plugin\ExcelLoadTestReport\bin\Debug\Microsoft.Office.Tools.Common.xml
+C:\Users\pjld\Source\Repos\vsts-excel-plugin\ExcelLoadTestReport\bin\Debug\Microsoft.VisualStudio.Tools.Applications.Runtime.xml
+C:\Users\pjld\Source\Repos\vsts-excel-plugin\ExcelLoadTestReport\bin\Debug\Microsoft.Office.Tools.v4.0.Framework.xml
+C:\Users\pjld\Source\Repos\vsts-excel-plugin\ExcelLoadTestReport\bin\Debug\Microsoft.Office.Tools.Excel.xml
+C:\Users\pjld\Source\Repos\vsts-excel-plugin\ExcelLoadTestReport\bin\Debug\Microsoft.Office.Tools.Common.v4.0.Utilities.xml
+C:\Users\pjld\Source\Repos\vsts-excel-plugin\ExcelLoadTestReport\obj\Debug\ExcelLoadTestReport.dll
+C:\Users\pjld\Source\Repos\vsts-excel-plugin\ExcelLoadTestReport\obj\Debug\ExcelLoadTestReport.pdb

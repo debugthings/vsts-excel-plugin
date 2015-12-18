@@ -1,3 +1,5 @@
+USE LoadTest2010;
+GO
 -- =============================================  
 -- Author:  James Davis  
 -- Create date:   

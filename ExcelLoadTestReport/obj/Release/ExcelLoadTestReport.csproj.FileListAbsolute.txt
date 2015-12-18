@@ -52,3 +52,11 @@ C:\Users\pjld\Source\Repos\vsts-excel-plugin\ExcelLoadTestReport\bin\Release\Ent
 C:\Users\pjld\Source\Repos\vsts-excel-plugin\ExcelLoadTestReport\bin\Release\Microsoft.Office.Tools.Common.v4.0.Utilities.dll
 C:\Users\pjld\Source\Repos\vsts-excel-plugin\ExcelLoadTestReport\bin\Release\EntityFramework.xml
 C:\Users\pjld\Source\Repos\vsts-excel-plugin\ExcelLoadTestReport\bin\Release\Microsoft.Office.Tools.Common.v4.0.Utilities.xml
+C:\Users\pjld\Source\Repos\vsts-excel-plugin\ExcelLoadTestReport\bin\Release\EntityFramework.SqlServer.dll
+C:\Users\pjld\Source\Repos\vsts-excel-plugin\ExcelLoadTestReport\bin\Release\Microsoft.Office.Tools.Excel.dll
+C:\Users\pjld\Source\Repos\vsts-excel-plugin\ExcelLoadTestReport\bin\Release\Microsoft.Office.Tools.v4.0.Framework.dll
+C:\Users\pjld\Source\Repos\vsts-excel-plugin\ExcelLoadTestReport\bin\Release\Microsoft.VisualStudio.Tools.Applications.Runtime.dll
+C:\Users\pjld\Source\Repos\vsts-excel-plugin\ExcelLoadTestReport\bin\Release\EntityFramework.SqlServer.xml
+C:\Users\pjld\Source\Repos\vsts-excel-plugin\ExcelLoadTestReport\bin\Release\Microsoft.VisualStudio.Tools.Applications.Runtime.xml
+C:\Users\pjld\Source\Repos\vsts-excel-plugin\ExcelLoadTestReport\bin\Release\Microsoft.Office.Tools.v4.0.Framework.xml
+C:\Users\pjld\Source\Repos\vsts-excel-plugin\ExcelLoadTestReport\bin\Release\Microsoft.Office.Tools.Excel.xml

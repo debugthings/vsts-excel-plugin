@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <!--
     This section defines project-level properties.
 
@@ -27,8 +27,9 @@
     <NoStandardLibraries>false</NoStandardLibraries>
     <RootNamespace>ExcelLoadTestReport</RootNamespace>
     <AssemblyName>ExcelLoadTestReport</AssemblyName>
-    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
-    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+    <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
     <DefineConstants>VSTO40</DefineConstants>
     <IsWebBootstrapper>False</IsWebBootstrapper>
     <FileUpgradeFlags>
@@ -88,6 +89,11 @@
       <ProductName>Windows Installer 3.1</ProductName>
       <Install>true</Install>
     </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.4.5">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 4.5</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
   </ItemGroup>
   <PropertyGroup>
     <!--
@@ -121,6 +127,7 @@
     <DefineConstants>$(DefineConstants);DEBUG;TRACE</DefineConstants>
     <WarningLevel>4</WarningLevel>
     <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <!--
     This section defines properties that are set when the "Release" configuration is selected.
@@ -146,6 +153,7 @@
     <DefineConstants>$(DefineConstants);TRACE</DefineConstants>
     <WarningLevel>4</WarningLevel>
     <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <!--
     This section enables pre- and post-build steps. However, in VSTO use
@@ -178,8 +186,13 @@
   -->
   <ItemGroup>
     <Reference Include="Accessibility" />
-    <Reference Include="EntityFramework">
-      <HintPath>..\packages\EntityFramework.5.0.0\lib\net40\EntityFramework.dll</HintPath>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.1\lib\net45\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.1\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <Private>True</Private>
     </Reference>
     <Reference Include="Microsoft.Office.Interop.Excel, Version=14.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c">
       <EmbedInteropTypes>True</EmbedInteropTypes>
@@ -188,10 +201,10 @@
       <EmbedInteropTypes>True</EmbedInteropTypes>
     </Reference>
     <Reference Include="Microsoft.Office.Tools, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
-      <EmbedInteropTypes>True</EmbedInteropTypes>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
     </Reference>
     <Reference Include="Microsoft.Office.Tools.Common, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
-      <EmbedInteropTypes>True</EmbedInteropTypes>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
     </Reference>
     <Reference Include="Microsoft.VisualStudio.Tools.Applications.Runtime, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
     <Reference Include="Office, Version=14.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c">
@@ -204,7 +217,6 @@
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.configuration" />
     <Reference Include="System.Data" />
-    <Reference Include="System.Data.Entity" />
     <Reference Include="System.DirectoryServices" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Runtime.Serialization" />
@@ -236,15 +248,15 @@
     can be found.
   -->
   <ItemGroup>
-    <Compile Include="Classes\Analysis Engine\AnalysisEngine.cs" />
-    <Compile Include="Classes\Analysis Engine\IAnalysis.cs" />
-    <Compile Include="Classes\Config Sections\PageTemplateConfigSection.cs" />
-    <Compile Include="Classes\Config Sections\RulesConfigSection.cs" />
-    <Compile Include="Classes\Ribbon Commands\WordDocumentClass.cs" />
-    <Compile Include="Classes\Rules Engine\ChartRule.cs" />
-    <Compile Include="Classes\Rules Engine\IRule.cs" />
-    <Compile Include="Classes\Rules Engine\ReportRule.cs" />
-    <Compile Include="Classes\Rules Engine\RulesEngine.cs" />
+    <Compile Include="Classes\AnalysisEngine\AnalysisEngine.cs" />
+    <Compile Include="Classes\AnalysisEngine\HighValueAnalysis.cs" />
+    <Compile Include="Classes\AnalysisEngine\Interfaces\IAnalysis.cs" />
+    <Compile Include="Classes\AnalysisEngine\LowValueAnalysis.cs" />
+    <Compile Include="Classes\AnalysisEngine\RatioAnalysis.cs" />
+    <Compile Include="Classes\AnalysisEngine\TrendAnalysis.cs" />
+    <Compile Include="Classes\ConfigSections\PageTemplateConfigSection.cs" />
+    <Compile Include="Classes\ConfigSections\RulesConfigSection.cs" />
+    <Compile Include="Classes\RibbonCommands\WordDocumentClass.cs" />
     <Compile Include="Forms\deleteWait.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -270,13 +282,218 @@
       <DependentUpon>selectWordDocPages.cs</DependentUpon>
     </Compile>
     <Compile Include="Models\DAOModels.cs" />
+    <Compile Include="Models\GetAgents_Result.cs">
+      <DependentUpon>LoadTest2010.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\GetSamplesForTest_Result.cs">
+      <DependentUpon>LoadTest2010.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\LoadTest2010.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>LoadTest2010.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\LoadTest2010.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>LoadTest2010.tt</DependentUpon>
+    </Compile>
     <Compile Include="Models\LoadTest2010.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>LoadTest2010.edmx</DependentUpon>
     </Compile>
-    <Compile Include="Classes\Ribbon Commands\RibbonCommands.cs" />
-    <Compile Include="Classes\Ribbon Commands\DebuggingCommands.cs" />
+    <Compile Include="Classes\RibbonCommands\RibbonCommands.cs" />
+    <Compile Include="Classes\RibbonCommands\DebuggingCommands.cs" />
+    <Compile Include="Models\LoadTestBrowser.cs">
+      <DependentUpon>LoadTest2010.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\LoadTestCase.cs">
+      <DependentUpon>LoadTest2010.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\LoadTestComputedCounterSample.cs">
+      <DependentUpon>LoadTest2010.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\LoadTestComputedCounterSummary.cs">
+      <DependentUpon>LoadTest2010.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\LoadTestDataCollectorLog.cs">
+      <DependentUpon>LoadTest2010.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\LoadTestDetailMessage.cs">
+      <DependentUpon>LoadTest2010.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\LoadTestFileAttachment.cs">
+      <DependentUpon>LoadTest2010.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\LoadTestFileAttachmentChunk.cs">
+      <DependentUpon>LoadTest2010.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\LoadTestMessage.cs">
+      <DependentUpon>LoadTest2010.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\LoadTestMessageSummary.cs">
+      <DependentUpon>LoadTest2010.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\LoadTestMessageType.cs">
+      <DependentUpon>LoadTest2010.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\LoadTestMessageView.cs">
+      <DependentUpon>LoadTest2010.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\LoadTestMessageView2.cs">
+      <DependentUpon>LoadTest2010.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\LoadTestNetwork.cs">
+      <DependentUpon>LoadTest2010.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\LoadTestPageDetail.cs">
+      <DependentUpon>LoadTest2010.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\LoadTestPageResult.cs">
+      <DependentUpon>LoadTest2010.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\LoadTestPageResultsByNetwork.cs">
+      <DependentUpon>LoadTest2010.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\LoadTestPageResultsByNetwork2.cs">
+      <DependentUpon>LoadTest2010.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\LoadTestPageSample.cs">
+      <DependentUpon>LoadTest2010.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\LoadTestPageSummary.cs">
+      <DependentUpon>LoadTest2010.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\LoadTestPageSummaryByNetwork.cs">
+      <DependentUpon>LoadTest2010.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\LoadTestPageSummaryData.cs">
+      <DependentUpon>LoadTest2010.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\LoadTestPerformanceCounter.cs">
+      <DependentUpon>LoadTest2010.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\LoadTestPerformanceCounterCategory.cs">
+      <DependentUpon>LoadTest2010.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\LoadTestPerformanceCounterInstance.cs">
+      <DependentUpon>LoadTest2010.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\LoadTestPerformanceCounterSample.cs">
+      <DependentUpon>LoadTest2010.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\LoadTestReport.cs">
+      <DependentUpon>LoadTest2010.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\LoadTestReportPage.cs">
+      <DependentUpon>LoadTest2010.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\LoadTestReportRun.cs">
+      <DependentUpon>LoadTest2010.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\LoadTestRequestSummary.cs">
+      <DependentUpon>LoadTest2010.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\LoadTestRun.cs">
+      <DependentUpon>LoadTest2010.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\LoadTestRunAgent.cs">
+      <DependentUpon>LoadTest2010.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\LoadTestRunInterval.cs">
+      <DependentUpon>LoadTest2010.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\LoadTestScenario.cs">
+      <DependentUpon>LoadTest2010.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\LoadTestScenarioSummary.cs">
+      <DependentUpon>LoadTest2010.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\LoadTestSchemaRevision.cs">
+      <DependentUpon>LoadTest2010.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\LoadTestSqlTrace.cs">
+      <DependentUpon>LoadTest2010.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\LoadTestSystemUnderTest.cs">
+      <DependentUpon>LoadTest2010.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\LoadTestSystemUnderTestTag.cs">
+      <DependentUpon>LoadTest2010.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\LoadTestTestCaseSample.cs">
+      <DependentUpon>LoadTest2010.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\LoadTestTestCaseSummary.cs">
+      <DependentUpon>LoadTest2010.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\LoadTestTestDetail.cs">
+      <DependentUpon>LoadTest2010.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\LoadTestTestLog.cs">
+      <DependentUpon>LoadTest2010.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\LoadTestTestResult.cs">
+      <DependentUpon>LoadTest2010.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\LoadTestTestSummaryData.cs">
+      <DependentUpon>LoadTest2010.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\LoadTestThresholdMessage.cs">
+      <DependentUpon>LoadTest2010.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\LoadTestTransactionDetail.cs">
+      <DependentUpon>LoadTest2010.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\LoadTestTransactionResult.cs">
+      <DependentUpon>LoadTest2010.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\LoadTestTransactionResults2.cs">
+      <DependentUpon>LoadTest2010.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\LoadTestTransactionSample.cs">
+      <DependentUpon>LoadTest2010.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\LoadTestTransactionSummary.cs">
+      <DependentUpon>LoadTest2010.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\LoadTestTransactionSummaryData.cs">
+      <DependentUpon>LoadTest2010.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\LoadTestWebPageAndUserLoadCounterSample.cs">
+      <DependentUpon>LoadTest2010.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\LoadTestWebRequestCounterSample.cs">
+      <DependentUpon>LoadTest2010.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\LoadTestWebRequestCounterSummary.cs">
+      <DependentUpon>LoadTest2010.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\PassportUserIDStatu.cs">
+      <DependentUpon>LoadTest2010.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Pbx_GetLoadTestRunsWithHighCounterSampleRecords_Result.cs">
+      <DependentUpon>LoadTest2010.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Pbx_GetLoadTestsHoggingAllTheSpace_Result.cs">
+      <DependentUpon>LoadTest2010.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Pbx_GetSamplesForTest_Result.cs">
+      <DependentUpon>LoadTest2010.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\sysdiagram.cs">
+      <DependentUpon>LoadTest2010.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\WebLoadTestErrorDetail.cs">
+      <DependentUpon>LoadTest2010.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\WebLoadTestRequestMap.cs">
+      <DependentUpon>LoadTest2010.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\WebLoadTestTransaction.cs">
+      <DependentUpon>LoadTest2010.tt</DependentUpon>
+    </Compile>
     <Compile Include="PageTemplates\AnalysisReportPage.cs" />
     <Compile Include="PageTemplates\StatisticalTables.cs" />
     <Compile Include="PageTemplates\PivotTableAndChartTemplate.cs" />
@@ -307,7 +524,7 @@
       <DependentUpon>selectWordDocPages.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
-      <Generator>ResXFileCodeGenerator</Generator>
+      <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </EmbeddedResource>
@@ -372,6 +589,15 @@
   <ItemGroup>
     <EmbeddedResource Include="Ribbon.xml" />
     <EmbeddedResource Include="DebugRibbon.xml" />
+    <Content Include="Models\LoadTest2010.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>LoadTest2010.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Models\LoadTest2010.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>LoadTest2010.cs</LastGenOutput>
+      <DependentUpon>LoadTest2010.edmx</DependentUpon>
+    </Content>
     <Content Include="SQL\Pbx_DeleteLoadTestsLessThan15MinutesDuration.sql" />
     <Content Include="SQL\Pbx_FindLoadTestsLessThan15MinutesDuration.sql" />
     <Content Include="SQL\Pbx_GetAgents.sql" />
@@ -397,7 +623,7 @@
   <ProjectExtensions>
     <VisualStudio>
       <FlavorProperties GUID="{BAA0C2D2-18E2-41B9-852F-F413020CAA33}">
-        <ProjectProperties HostName="Excel" HostPackage="{20A848B8-E01F-4801-962E-25DB0FF57389}" OfficeVersion="14.0" VstxVersion="4.0" ApplicationType="Excel" Language="cs" TemplatesPath="VSTOTemplates" DebugInfoExeName="#Software\Microsoft\Office\14.0\Excel\InstallRoot\Path#excel.exe" AddItemTemplatesGuid="{147FB6A7-F239-4523-AE65-B6A4E49B361F}" />
+        <ProjectProperties HostName="Excel" HostPackage="{20A848B8-E01F-4801-962E-25DB0FF57389}" OfficeVersion="14.0" VstxVersion="4.0" ApplicationType="Excel" Language="cs" TemplatesPath="VSTOTemplates" DebugInfoExeName="#Software\Microsoft\Office\14.0\Excel\InstallRoot\Path#excel.exe" AddItemTemplatesGuid="{51063C3A-E220-4D12-8922-BDA915ACD783}" />
         <Host Name="Excel" GeneratedCodeNamespace="ExcelLoadTestReport" PublishedHash="69C324AB27932AA2FBF2B7EA72250886FF164DE6" IconIndex="0">
           <HostItem Name="ThisAddIn" Code="ThisAddIn.cs" CanonicalName="AddIn" PublishedHash="FE8CB507F7A8A193C69380458C50C3FDE1280379" CanActivate="false" IconIndex="1" Blueprint="ThisAddIn.Designer.xml" GeneratedCode="ThisAddIn.Designer.cs" />
         </Host>

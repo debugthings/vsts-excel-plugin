@@ -1,451 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Schema Namespace="LoadTest2010Model.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
-  <EntityContainer Name="LoadTest2010ModelStoreContainer">
-    <EntitySet Name="LoadTestBrowsers" EntityType="LoadTest2010Model.Store.LoadTestBrowsers" store:Type="Tables" Schema="dbo" />
-    <EntitySet Name="LoadTestCase" EntityType="LoadTest2010Model.Store.LoadTestCase" store:Type="Tables" Schema="dbo" />
-    <EntitySet Name="LoadTestDataCollectorLog" EntityType="LoadTest2010Model.Store.LoadTestDataCollectorLog" store:Type="Tables" Schema="dbo" />
-    <EntitySet Name="LoadTestDetailMessage" EntityType="LoadTest2010Model.Store.LoadTestDetailMessage" store:Type="Tables" Schema="dbo" />
-    <EntitySet Name="LoadTestFileAttachment" EntityType="LoadTest2010Model.Store.LoadTestFileAttachment" store:Type="Tables" Schema="dbo" />
-    <EntitySet Name="LoadTestFileAttachmentChunk" EntityType="LoadTest2010Model.Store.LoadTestFileAttachmentChunk" store:Type="Tables" Schema="dbo" />
-    <EntitySet Name="LoadTestMessage" EntityType="LoadTest2010Model.Store.LoadTestMessage" store:Type="Tables" Schema="dbo" />
-    <EntitySet Name="LoadTestMessageType" EntityType="LoadTest2010Model.Store.LoadTestMessageType" store:Type="Tables" Schema="dbo" />
-    <EntitySet Name="LoadTestNetworks" EntityType="LoadTest2010Model.Store.LoadTestNetworks" store:Type="Tables" Schema="dbo" />
-    <EntitySet Name="LoadTestPageDetail" EntityType="LoadTest2010Model.Store.LoadTestPageDetail" store:Type="Tables" Schema="dbo" />
-    <EntitySet Name="LoadTestPageSummaryByNetwork" EntityType="LoadTest2010Model.Store.LoadTestPageSummaryByNetwork" store:Type="Tables" Schema="dbo" />
-    <EntitySet Name="LoadTestPageSummaryData" EntityType="LoadTest2010Model.Store.LoadTestPageSummaryData" store:Type="Tables" Schema="dbo" />
-    <EntitySet Name="LoadTestPerformanceCounter" EntityType="LoadTest2010Model.Store.LoadTestPerformanceCounter" store:Type="Tables" Schema="dbo" />
-    <EntitySet Name="LoadTestPerformanceCounterCategory" EntityType="LoadTest2010Model.Store.LoadTestPerformanceCounterCategory" store:Type="Tables" Schema="dbo" />
-    <EntitySet Name="LoadTestPerformanceCounterInstance" EntityType="LoadTest2010Model.Store.LoadTestPerformanceCounterInstance" store:Type="Tables" Schema="dbo" />
-    <EntitySet Name="LoadTestPerformanceCounterSample" EntityType="LoadTest2010Model.Store.LoadTestPerformanceCounterSample" store:Type="Tables" Schema="dbo" />
-    <EntitySet Name="LoadTestReport" EntityType="LoadTest2010Model.Store.LoadTestReport" store:Type="Tables" Schema="dbo" />
-    <EntitySet Name="LoadTestReportPage" EntityType="LoadTest2010Model.Store.LoadTestReportPage" store:Type="Tables" Schema="dbo" />
-    <EntitySet Name="LoadTestReportRuns" EntityType="LoadTest2010Model.Store.LoadTestReportRuns" store:Type="Tables" Schema="dbo" />
-    <EntitySet Name="LoadTestRun" EntityType="LoadTest2010Model.Store.LoadTestRun" store:Type="Tables" Schema="dbo" />
-    <EntitySet Name="LoadTestRunAgent" EntityType="LoadTest2010Model.Store.LoadTestRunAgent" store:Type="Tables" Schema="dbo" />
-    <EntitySet Name="LoadTestRunInterval" EntityType="LoadTest2010Model.Store.LoadTestRunInterval" store:Type="Tables" Schema="dbo" />
-    <EntitySet Name="LoadTestScenario" EntityType="LoadTest2010Model.Store.LoadTestScenario" store:Type="Tables" Schema="dbo" />
-    <EntitySet Name="LoadTestSchemaRevision" EntityType="LoadTest2010Model.Store.LoadTestSchemaRevision" store:Type="Tables" store:Schema="dbo" store:Name="LoadTestSchemaRevision">
-      <DefiningQuery>SELECT 
-      [LoadTestSchemaRevision].[LoadTestSchemaRev] AS [LoadTestSchemaRev]
-      FROM [dbo].[LoadTestSchemaRevision] AS [LoadTestSchemaRevision]</DefiningQuery>
-    </EntitySet>
-    <EntitySet Name="LoadTestSqlTrace" EntityType="LoadTest2010Model.Store.LoadTestSqlTrace" store:Type="Tables" store:Schema="dbo" store:Name="LoadTestSqlTrace">
-      <DefiningQuery>SELECT 
-      [LoadTestSqlTrace].[LoadTestRunId] AS [LoadTestRunId], 
-      [LoadTestSqlTrace].[TextData] AS [TextData], 
-      [LoadTestSqlTrace].[Duration] AS [Duration], 
-      [LoadTestSqlTrace].[StartTime] AS [StartTime], 
-      [LoadTestSqlTrace].[EndTime] AS [EndTime], 
-      [LoadTestSqlTrace].[Reads] AS [Reads], 
-      [LoadTestSqlTrace].[Writes] AS [Writes], 
-      [LoadTestSqlTrace].[CPU] AS [CPU], 
-      [LoadTestSqlTrace].[EventClass] AS [EventClass]
-      FROM [dbo].[LoadTestSqlTrace] AS [LoadTestSqlTrace]</DefiningQuery>
-    </EntitySet>
-    <EntitySet Name="LoadTestSystemUnderTest" EntityType="LoadTest2010Model.Store.LoadTestSystemUnderTest" store:Type="Tables" Schema="dbo" />
-    <EntitySet Name="LoadTestSystemUnderTestTag" EntityType="LoadTest2010Model.Store.LoadTestSystemUnderTestTag" store:Type="Tables" store:Schema="dbo" store:Name="LoadTestSystemUnderTestTag">
-      <DefiningQuery>SELECT 
-      [LoadTestSystemUnderTestTag].[LoadTestRunId] AS [LoadTestRunId], 
-      [LoadTestSystemUnderTestTag].[SystemUnderTestId] AS [SystemUnderTestId], 
-      [LoadTestSystemUnderTestTag].[MachineTag] AS [MachineTag]
-      FROM [dbo].[LoadTestSystemUnderTestTag] AS [LoadTestSystemUnderTestTag]</DefiningQuery>
-    </EntitySet>
-    <EntitySet Name="LoadTestTestDetail" EntityType="LoadTest2010Model.Store.LoadTestTestDetail" store:Type="Tables" Schema="dbo" />
-    <EntitySet Name="LoadTestTestLog" EntityType="LoadTest2010Model.Store.LoadTestTestLog" store:Type="Tables" Schema="dbo" />
-    <EntitySet Name="LoadTestTestSummaryData" EntityType="LoadTest2010Model.Store.LoadTestTestSummaryData" store:Type="Tables" Schema="dbo" />
-    <EntitySet Name="LoadTestThresholdMessage" EntityType="LoadTest2010Model.Store.LoadTestThresholdMessage" store:Type="Tables" Schema="dbo" />
-    <EntitySet Name="LoadTestTransactionDetail" EntityType="LoadTest2010Model.Store.LoadTestTransactionDetail" store:Type="Tables" Schema="dbo" />
-    <EntitySet Name="LoadTestTransactionSummaryData" EntityType="LoadTest2010Model.Store.LoadTestTransactionSummaryData" store:Type="Tables" Schema="dbo" />
-    <EntitySet Name="PassportUserIDStatus" EntityType="LoadTest2010Model.Store.PassportUserIDStatus" store:Type="Tables" store:Schema="dbo" store:Name="PassportUserIDStatus">
-      <DefiningQuery>SELECT 
-      [PassportUserIDStatus].[UserID] AS [UserID], 
-      [PassportUserIDStatus].[Password] AS [Password], 
-      [PassportUserIDStatus].[Status] AS [Status]
-      FROM [dbo].[PassportUserIDStatus] AS [PassportUserIDStatus]</DefiningQuery>
-    </EntitySet>
-    <EntitySet Name="sysdiagrams" EntityType="LoadTest2010Model.Store.sysdiagrams" store:Type="Tables" Schema="dbo" />
-    <EntitySet Name="WebLoadTestErrorDetail" EntityType="LoadTest2010Model.Store.WebLoadTestErrorDetail" store:Type="Tables" Schema="dbo" />
-    <EntitySet Name="WebLoadTestRequestMap" EntityType="LoadTest2010Model.Store.WebLoadTestRequestMap" store:Type="Tables" Schema="dbo" />
-    <EntitySet Name="WebLoadTestTransaction" EntityType="LoadTest2010Model.Store.WebLoadTestTransaction" store:Type="Tables" Schema="dbo" />
-    <EntitySet Name="LoadTestComputedCounterSample" EntityType="LoadTest2010Model.Store.LoadTestComputedCounterSample" store:Type="Views" store:Schema="dbo" store:Name="LoadTestComputedCounterSample">
-      <DefiningQuery>SELECT 
-      [LoadTestComputedCounterSample].[LoadTestRunId] AS [LoadTestRunId], 
-      [LoadTestComputedCounterSample].[MachineName] AS [MachineName], 
-      [LoadTestComputedCounterSample].[CategoryName] AS [CategoryName], 
-      [LoadTestComputedCounterSample].[CounterName] AS [CounterName], 
-      [LoadTestComputedCounterSample].[InstanceName] AS [InstanceName], 
-      [LoadTestComputedCounterSample].[IntervalStartTime] AS [IntervalStartTime], 
-      [LoadTestComputedCounterSample].[IntervalEndTime] AS [IntervalEndTime], 
-      [LoadTestComputedCounterSample].[CounterType] AS [CounterType], 
-      [LoadTestComputedCounterSample].[ComputedValue] AS [ComputedValue], 
-      [LoadTestComputedCounterSample].[RawValue] AS [RawValue], 
-      [LoadTestComputedCounterSample].[ThresholdRuleResult] AS [ThresholdRuleResult]
-      FROM [dbo].[LoadTestComputedCounterSample] AS [LoadTestComputedCounterSample]</DefiningQuery>
-    </EntitySet>
-    <EntitySet Name="LoadTestComputedCounterSummary" EntityType="LoadTest2010Model.Store.LoadTestComputedCounterSummary" store:Type="Views" store:Schema="dbo" store:Name="LoadTestComputedCounterSummary">
-      <DefiningQuery>SELECT 
-      [LoadTestComputedCounterSummary].[LoadTestName] AS [LoadTestName], 
-      [LoadTestComputedCounterSummary].[LoadTestRunId] AS [LoadTestRunId], 
-      [LoadTestComputedCounterSummary].[MachineName] AS [MachineName], 
-      [LoadTestComputedCounterSummary].[CategoryName] AS [CategoryName], 
-      [LoadTestComputedCounterSummary].[CounterName] AS [CounterName], 
-      [LoadTestComputedCounterSummary].[HigherIsBetter] AS [HigherIsBetter], 
-      [LoadTestComputedCounterSummary].[InstanceName] AS [InstanceName], 
-      [LoadTestComputedCounterSummary].[CumulativeValue] AS [CumulativeValue], 
-      [LoadTestComputedCounterSummary].[OverallThresholdRuleResult] AS [OverallThresholdRuleResult]
-      FROM [dbo].[LoadTestComputedCounterSummary] AS [LoadTestComputedCounterSummary]</DefiningQuery>
-    </EntitySet>
-    <EntitySet Name="LoadTestMessageSummary" EntityType="LoadTest2010Model.Store.LoadTestMessageSummary" store:Type="Views" store:Schema="dbo" store:Name="LoadTestMessageSummary">
-      <DefiningQuery>SELECT 
-      [LoadTestMessageSummary].[LoadTestRunId] AS [LoadTestRunId], 
-      [LoadTestMessageSummary].[AgentName] AS [AgentName], 
-      [LoadTestMessageSummary].[ScenarioName] AS [ScenarioName], 
-      [LoadTestMessageSummary].[TestCaseName] AS [TestCaseName], 
-      [LoadTestMessageSummary].[RequestUri] AS [RequestUri], 
-      [LoadTestMessageSummary].[MessageId] AS [MessageId], 
-      [LoadTestMessageSummary].[MessageTimeStamp] AS [MessageTimeStamp], 
-      [LoadTestMessageSummary].[MessageType] AS [MessageType], 
-      [LoadTestMessageSummary].[SubType] AS [SubType], 
-      [LoadTestMessageSummary].[MessageText] AS [MessageText], 
-      [LoadTestMessageSummary].[StackTrace] AS [StackTrace], 
-      [LoadTestMessageSummary].[RequestId] AS [RequestId], 
-      [LoadTestMessageSummary].[HasWebTestErrorDetail] AS [HasWebTestErrorDetail]
-      FROM [dbo].[LoadTestMessageSummary] AS [LoadTestMessageSummary]</DefiningQuery>
-    </EntitySet>
-    <EntitySet Name="LoadTestMessageView" EntityType="LoadTest2010Model.Store.LoadTestMessageView" store:Type="Views" store:Schema="dbo" store:Name="LoadTestMessageView">
-      <DefiningQuery>SELECT 
-      [LoadTestMessageView].[LoadTestRunId] AS [LoadTestRunId], 
-      [LoadTestMessageView].[AgentName] AS [AgentName], 
-      [LoadTestMessageView].[ScenarioName] AS [ScenarioName], 
-      [LoadTestMessageView].[TestCaseName] AS [TestCaseName], 
-      [LoadTestMessageView].[RequestUri] AS [RequestUri], 
-      [LoadTestMessageView].[MessageId] AS [MessageId], 
-      [LoadTestMessageView].[MessageTimeStamp] AS [MessageTimeStamp], 
-      [LoadTestMessageView].[MessageType] AS [MessageType], 
-      [LoadTestMessageView].[SubType] AS [SubType], 
-      [LoadTestMessageView].[MessageText] AS [MessageText], 
-      [LoadTestMessageView].[StackTrace] AS [StackTrace], 
-      [LoadTestMessageView].[RequestId] AS [RequestId], 
-      [LoadTestMessageView].[HasWebTestErrorDetail] AS [HasWebTestErrorDetail]
-      FROM [dbo].[LoadTestMessageView] AS [LoadTestMessageView]</DefiningQuery>
-    </EntitySet>
-    <EntitySet Name="LoadTestMessageView2" EntityType="LoadTest2010Model.Store.LoadTestMessageView2" store:Type="Views" store:Schema="dbo" store:Name="LoadTestMessageView2">
-      <DefiningQuery>SELECT 
-      [LoadTestMessageView2].[LoadTestRunId] AS [LoadTestRunId], 
-      [LoadTestMessageView2].[AgentName] AS [AgentName], 
-      [LoadTestMessageView2].[ScenarioName] AS [ScenarioName], 
-      [LoadTestMessageView2].[TestCaseName] AS [TestCaseName], 
-      [LoadTestMessageView2].[RequestUri] AS [RequestUri], 
-      [LoadTestMessageView2].[MessageId] AS [MessageId], 
-      [LoadTestMessageView2].[MessageTimeStamp] AS [MessageTimeStamp], 
-      [LoadTestMessageView2].[MessageType] AS [MessageType], 
-      [LoadTestMessageView2].[SubType] AS [SubType], 
-      [LoadTestMessageView2].[MessageText] AS [MessageText], 
-      [LoadTestMessageView2].[StackTrace] AS [StackTrace], 
-      [LoadTestMessageView2].[RequestId] AS [RequestId], 
-      [LoadTestMessageView2].[HasWebTestErrorDetail] AS [HasWebTestErrorDetail], 
-      [LoadTestMessageView2].[TestLogId] AS [TestLogId]
-      FROM [dbo].[LoadTestMessageView2] AS [LoadTestMessageView2]</DefiningQuery>
-    </EntitySet>
-    <EntitySet Name="LoadTestPageResults" EntityType="LoadTest2010Model.Store.LoadTestPageResults" store:Type="Views" store:Schema="dbo" store:Name="LoadTestPageResults">
-      <DefiningQuery>SELECT 
-      [LoadTestPageResults].[LoadTestRunId] AS [LoadTestRunId], 
-      [LoadTestPageResults].[ScenarioName] AS [ScenarioName], 
-      [LoadTestPageResults].[TestCaseName] AS [TestCaseName], 
-      [LoadTestPageResults].[RequestUri] AS [RequestUri], 
-      [LoadTestPageResults].[PageCount] AS [PageCount], 
-      [LoadTestPageResults].[Minimum] AS [Minimum], 
-      [LoadTestPageResults].[Average] AS [Average], 
-      [LoadTestPageResults].[Percentile90] AS [Percentile90], 
-      [LoadTestPageResults].[Percentile95] AS [Percentile95], 
-      [LoadTestPageResults].[Maximum] AS [Maximum]
-      FROM [dbo].[LoadTestPageResults] AS [LoadTestPageResults]</DefiningQuery>
-    </EntitySet>
-    <EntitySet Name="LoadTestPageResultsByNetwork" EntityType="LoadTest2010Model.Store.LoadTestPageResultsByNetwork" store:Type="Views" store:Schema="dbo" store:Name="LoadTestPageResultsByNetwork">
-      <DefiningQuery>SELECT 
-      [LoadTestPageResultsByNetwork].[LoadTestRunId] AS [LoadTestRunId], 
-      [LoadTestPageResultsByNetwork].[ScenarioName] AS [ScenarioName], 
-      [LoadTestPageResultsByNetwork].[TestCaseName] AS [TestCaseName], 
-      [LoadTestPageResultsByNetwork].[RequestUri] AS [RequestUri], 
-      [LoadTestPageResultsByNetwork].[NetworkName] AS [NetworkName], 
-      [LoadTestPageResultsByNetwork].[PageCount] AS [PageCount], 
-      [LoadTestPageResultsByNetwork].[Minimum] AS [Minimum], 
-      [LoadTestPageResultsByNetwork].[Average] AS [Average], 
-      [LoadTestPageResultsByNetwork].[Percentile90] AS [Percentile90], 
-      [LoadTestPageResultsByNetwork].[Percentile95] AS [Percentile95], 
-      [LoadTestPageResultsByNetwork].[Maximum] AS [Maximum], 
-      [LoadTestPageResultsByNetwork].[Goal] AS [Goal], 
-      [LoadTestPageResultsByNetwork].[PagesMeetingGoal] AS [PagesMeetingGoal]
-      FROM [dbo].[LoadTestPageResultsByNetwork] AS [LoadTestPageResultsByNetwork]</DefiningQuery>
-    </EntitySet>
-    <EntitySet Name="LoadTestPageResultsByNetwork2" EntityType="LoadTest2010Model.Store.LoadTestPageResultsByNetwork2" store:Type="Views" store:Schema="dbo" store:Name="LoadTestPageResultsByNetwork2">
-      <DefiningQuery>SELECT 
-      [LoadTestPageResultsByNetwork2].[LoadTestRunId] AS [LoadTestRunId], 
-      [LoadTestPageResultsByNetwork2].[ScenarioName] AS [ScenarioName], 
-      [LoadTestPageResultsByNetwork2].[TestCaseName] AS [TestCaseName], 
-      [LoadTestPageResultsByNetwork2].[RequestUri] AS [RequestUri], 
-      [LoadTestPageResultsByNetwork2].[NetworkName] AS [NetworkName], 
-      [LoadTestPageResultsByNetwork2].[PageCount] AS [PageCount], 
-      [LoadTestPageResultsByNetwork2].[Minimum] AS [Minimum], 
-      [LoadTestPageResultsByNetwork2].[Average] AS [Average], 
-      [LoadTestPageResultsByNetwork2].[Median] AS [Median], 
-      [LoadTestPageResultsByNetwork2].[Percentile90] AS [Percentile90], 
-      [LoadTestPageResultsByNetwork2].[Percentile95] AS [Percentile95], 
-      [LoadTestPageResultsByNetwork2].[Percentile99] AS [Percentile99], 
-      [LoadTestPageResultsByNetwork2].[Maximum] AS [Maximum], 
-      [LoadTestPageResultsByNetwork2].[StandardDeviation] AS [StandardDeviation], 
-      [LoadTestPageResultsByNetwork2].[Goal] AS [Goal], 
-      [LoadTestPageResultsByNetwork2].[PagesMeetingGoal] AS [PagesMeetingGoal]
-      FROM [dbo].[LoadTestPageResultsByNetwork2] AS [LoadTestPageResultsByNetwork2]</DefiningQuery>
-    </EntitySet>
-    <EntitySet Name="LoadTestPageSample" EntityType="LoadTest2010Model.Store.LoadTestPageSample" store:Type="Views" store:Schema="dbo" store:Name="LoadTestPageSample">
-      <DefiningQuery>SELECT 
-      [LoadTestPageSample].[LoadTestRunId] AS [LoadTestRunId], 
-      [LoadTestPageSample].[CounterName] AS [CounterName], 
-      [LoadTestPageSample].[ScenarioName] AS [ScenarioName], 
-      [LoadTestPageSample].[TestCaseName] AS [TestCaseName], 
-      [LoadTestPageSample].[RequestUri] AS [RequestUri], 
-      [LoadTestPageSample].[IntervalStartTime] AS [IntervalStartTime], 
-      [LoadTestPageSample].[IntervalEndTime] AS [IntervalEndTime], 
-      [LoadTestPageSample].[ComputedValue] AS [ComputedValue]
-      FROM [dbo].[LoadTestPageSample] AS [LoadTestPageSample]</DefiningQuery>
-    </EntitySet>
-    <EntitySet Name="LoadTestPageSummary" EntityType="LoadTest2010Model.Store.LoadTestPageSummary" store:Type="Views" store:Schema="dbo" store:Name="LoadTestPageSummary">
-      <DefiningQuery>SELECT 
-      [LoadTestPageSummary].[LoadTestName] AS [LoadTestName], 
-      [LoadTestPageSummary].[LoadTestRunId] AS [LoadTestRunId], 
-      [LoadTestPageSummary].[CounterName] AS [CounterName], 
-      [LoadTestPageSummary].[ScenarioName] AS [ScenarioName], 
-      [LoadTestPageSummary].[TestCaseName] AS [TestCaseName], 
-      [LoadTestPageSummary].[RequestUri] AS [RequestUri], 
-      [LoadTestPageSummary].[CumulativeValue] AS [CumulativeValue], 
-      [LoadTestPageSummary].[ResponseTimeGoal] AS [ResponseTimeGoal]
-      FROM [dbo].[LoadTestPageSummary] AS [LoadTestPageSummary]</DefiningQuery>
-    </EntitySet>
-    <EntitySet Name="LoadTestRequestSummary" EntityType="LoadTest2010Model.Store.LoadTestRequestSummary" store:Type="Views" store:Schema="dbo" store:Name="LoadTestRequestSummary">
-      <DefiningQuery>SELECT 
-      [LoadTestRequestSummary].[LoadTestName] AS [LoadTestName], 
-      [LoadTestRequestSummary].[LoadTestRunId] AS [LoadTestRunId], 
-      [LoadTestRequestSummary].[CounterName] AS [CounterName], 
-      [LoadTestRequestSummary].[ScenarioName] AS [ScenarioName], 
-      [LoadTestRequestSummary].[TestCaseName] AS [TestCaseName], 
-      [LoadTestRequestSummary].[RequestUri] AS [RequestUri], 
-      [LoadTestRequestSummary].[CumulativeValue] AS [CumulativeValue]
-      FROM [dbo].[LoadTestRequestSummary] AS [LoadTestRequestSummary]</DefiningQuery>
-    </EntitySet>
-    <EntitySet Name="LoadTestScenarioSummary" EntityType="LoadTest2010Model.Store.LoadTestScenarioSummary" store:Type="Views" store:Schema="dbo" store:Name="LoadTestScenarioSummary">
-      <DefiningQuery>SELECT 
-      [LoadTestScenarioSummary].[LoadTestName] AS [LoadTestName], 
-      [LoadTestScenarioSummary].[LoadTestRunId] AS [LoadTestRunId], 
-      [LoadTestScenarioSummary].[CounterName] AS [CounterName], 
-      [LoadTestScenarioSummary].[ScenarioName] AS [ScenarioName], 
-      [LoadTestScenarioSummary].[CumulativeValue] AS [CumulativeValue]
-      FROM [dbo].[LoadTestScenarioSummary] AS [LoadTestScenarioSummary]</DefiningQuery>
-    </EntitySet>
-    <EntitySet Name="LoadTestTestCaseSample" EntityType="LoadTest2010Model.Store.LoadTestTestCaseSample" store:Type="Views" store:Schema="dbo" store:Name="LoadTestTestCaseSample">
-      <DefiningQuery>SELECT 
-      [LoadTestTestCaseSample].[LoadTestRunId] AS [LoadTestRunId], 
-      [LoadTestTestCaseSample].[CounterName] AS [CounterName], 
-      [LoadTestTestCaseSample].[ScenarioName] AS [ScenarioName], 
-      [LoadTestTestCaseSample].[TestCaseName] AS [TestCaseName], 
-      [LoadTestTestCaseSample].[IntervalStartTime] AS [IntervalStartTime], 
-      [LoadTestTestCaseSample].[IntervalEndTime] AS [IntervalEndTime], 
-      [LoadTestTestCaseSample].[ComputedValue] AS [ComputedValue]
-      FROM [dbo].[LoadTestTestCaseSample] AS [LoadTestTestCaseSample]</DefiningQuery>
-    </EntitySet>
-    <EntitySet Name="LoadTestTestCaseSummary" EntityType="LoadTest2010Model.Store.LoadTestTestCaseSummary" store:Type="Views" store:Schema="dbo" store:Name="LoadTestTestCaseSummary">
-      <DefiningQuery>SELECT 
-      [LoadTestTestCaseSummary].[LoadTestName] AS [LoadTestName], 
-      [LoadTestTestCaseSummary].[LoadTestRunId] AS [LoadTestRunId], 
-      [LoadTestTestCaseSummary].[CounterName] AS [CounterName], 
-      [LoadTestTestCaseSummary].[ScenarioName] AS [ScenarioName], 
-      [LoadTestTestCaseSummary].[TestCaseName] AS [TestCaseName], 
-      [LoadTestTestCaseSummary].[CumulativeValue] AS [CumulativeValue]
-      FROM [dbo].[LoadTestTestCaseSummary] AS [LoadTestTestCaseSummary]</DefiningQuery>
-    </EntitySet>
-    <EntitySet Name="LoadTestTestResults" EntityType="LoadTest2010Model.Store.LoadTestTestResults" store:Type="Views" store:Schema="dbo" store:Name="LoadTestTestResults">
-      <DefiningQuery>SELECT 
-      [LoadTestTestResults].[LoadTestRunId] AS [LoadTestRunId], 
-      [LoadTestTestResults].[ScenarioName] AS [ScenarioName], 
-      [LoadTestTestResults].[TestCaseName] AS [TestCaseName], 
-      [LoadTestTestResults].[TestsRun] AS [TestsRun], 
-      [LoadTestTestResults].[Minimum] AS [Minimum], 
-      [LoadTestTestResults].[Average] AS [Average], 
-      [LoadTestTestResults].[Percentile90] AS [Percentile90], 
-      [LoadTestTestResults].[Percentile95] AS [Percentile95], 
-      [LoadTestTestResults].[Maximum] AS [Maximum]
-      FROM [dbo].[LoadTestTestResults] AS [LoadTestTestResults]</DefiningQuery>
-    </EntitySet>
-    <EntitySet Name="LoadTestTransactionResults" EntityType="LoadTest2010Model.Store.LoadTestTransactionResults" store:Type="Views" store:Schema="dbo" store:Name="LoadTestTransactionResults">
-      <DefiningQuery>SELECT 
-      [LoadTestTransactionResults].[LoadTestRunId] AS [LoadTestRunId], 
-      [LoadTestTransactionResults].[ScenarioName] AS [ScenarioName], 
-      [LoadTestTransactionResults].[TestCaseName] AS [TestCaseName], 
-      [LoadTestTransactionResults].[TransactionName] AS [TransactionName], 
-      [LoadTestTransactionResults].[TransactionCount] AS [TransactionCount], 
-      [LoadTestTransactionResults].[Minimum] AS [Minimum], 
-      [LoadTestTransactionResults].[Average] AS [Average], 
-      [LoadTestTransactionResults].[Percentile90] AS [Percentile90], 
-      [LoadTestTransactionResults].[Percentile95] AS [Percentile95], 
-      [LoadTestTransactionResults].[Maximum] AS [Maximum]
-      FROM [dbo].[LoadTestTransactionResults] AS [LoadTestTransactionResults]</DefiningQuery>
-    </EntitySet>
-    <EntitySet Name="LoadTestTransactionResults2" EntityType="LoadTest2010Model.Store.LoadTestTransactionResults2" store:Type="Views" store:Schema="dbo" store:Name="LoadTestTransactionResults2">
-      <DefiningQuery>SELECT 
-      [LoadTestTransactionResults2].[LoadTestRunId] AS [LoadTestRunId], 
-      [LoadTestTransactionResults2].[ScenarioName] AS [ScenarioName], 
-      [LoadTestTransactionResults2].[TestCaseName] AS [TestCaseName], 
-      [LoadTestTransactionResults2].[TransactionName] AS [TransactionName], 
-      [LoadTestTransactionResults2].[TransactionCount] AS [TransactionCount], 
-      [LoadTestTransactionResults2].[Minimum] AS [Minimum], 
-      [LoadTestTransactionResults2].[Average] AS [Average], 
-      [LoadTestTransactionResults2].[Percentile90] AS [Percentile90], 
-      [LoadTestTransactionResults2].[Percentile95] AS [Percentile95], 
-      [LoadTestTransactionResults2].[Maximum] AS [Maximum], 
-      [LoadTestTransactionResults2].[Median] AS [Median], 
-      [LoadTestTransactionResults2].[Percentile99] AS [Percentile99], 
-      [LoadTestTransactionResults2].[StandardDeviation] AS [StandardDeviation], 
-      [LoadTestTransactionResults2].[AvgTransactionTime] AS [AvgTransactionTime]
-      FROM [dbo].[LoadTestTransactionResults2] AS [LoadTestTransactionResults2]</DefiningQuery>
-    </EntitySet>
-    <EntitySet Name="LoadTestTransactionSample" EntityType="LoadTest2010Model.Store.LoadTestTransactionSample" store:Type="Views" store:Schema="dbo" store:Name="LoadTestTransactionSample">
-      <DefiningQuery>SELECT 
-      [LoadTestTransactionSample].[LoadTestRunId] AS [LoadTestRunId], 
-      [LoadTestTransactionSample].[CounterName] AS [CounterName], 
-      [LoadTestTransactionSample].[ScenarioName] AS [ScenarioName], 
-      [LoadTestTransactionSample].[TestCaseName] AS [TestCaseName], 
-      [LoadTestTransactionSample].[TransactionName] AS [TransactionName], 
-      [LoadTestTransactionSample].[IntervalStartTime] AS [IntervalStartTime], 
-      [LoadTestTransactionSample].[IntervalEndTime] AS [IntervalEndTime], 
-      [LoadTestTransactionSample].[ComputedValue] AS [ComputedValue]
-      FROM [dbo].[LoadTestTransactionSample] AS [LoadTestTransactionSample]</DefiningQuery>
-    </EntitySet>
-    <EntitySet Name="LoadTestTransactionSummary" EntityType="LoadTest2010Model.Store.LoadTestTransactionSummary" store:Type="Views" store:Schema="dbo" store:Name="LoadTestTransactionSummary">
-      <DefiningQuery>SELECT 
-      [LoadTestTransactionSummary].[LoadTestName] AS [LoadTestName], 
-      [LoadTestTransactionSummary].[LoadTestRunId] AS [LoadTestRunId], 
-      [LoadTestTransactionSummary].[CounterName] AS [CounterName], 
-      [LoadTestTransactionSummary].[ScenarioName] AS [ScenarioName], 
-      [LoadTestTransactionSummary].[TestCaseName] AS [TestCaseName], 
-      [LoadTestTransactionSummary].[TransactionName] AS [TransactionName], 
-      [LoadTestTransactionSummary].[CumulativeValue] AS [CumulativeValue]
-      FROM [dbo].[LoadTestTransactionSummary] AS [LoadTestTransactionSummary]</DefiningQuery>
-    </EntitySet>
-    <EntitySet Name="LoadTestWebPageAndUserLoadCounterSample" EntityType="LoadTest2010Model.Store.LoadTestWebPageAndUserLoadCounterSample" store:Type="Views" store:Schema="dbo" store:Name="LoadTestWebPageAndUserLoadCounterSample">
-      <DefiningQuery>SELECT 
-      [LoadTestWebPageAndUserLoadCounterSample].[loadtestrunid] AS [loadtestrunid], 
-      [LoadTestWebPageAndUserLoadCounterSample].[instanceName] AS [instanceName], 
-      [LoadTestWebPageAndUserLoadCounterSample].[RequestUri] AS [RequestUri], 
-      [LoadTestWebPageAndUserLoadCounterSample].[IntervalStartTime] AS [IntervalStartTime], 
-      [LoadTestWebPageAndUserLoadCounterSample].[UserLoad] AS [UserLoad], 
-      [LoadTestWebPageAndUserLoadCounterSample].[ResponseTime] AS [ResponseTime], 
-      [LoadTestWebPageAndUserLoadCounterSample].[RPS] AS [RPS]
-      FROM [dbo].[LoadTestWebPageAndUserLoadCounterSample] AS [LoadTestWebPageAndUserLoadCounterSample]</DefiningQuery>
-    </EntitySet>
-    <EntitySet Name="LoadTestWebRequestCounterSample" EntityType="LoadTest2010Model.Store.LoadTestWebRequestCounterSample" store:Type="Views" store:Schema="dbo" store:Name="LoadTestWebRequestCounterSample">
-      <DefiningQuery>SELECT 
-      [LoadTestWebRequestCounterSample].[LoadTestRunId] AS [LoadTestRunId], 
-      [LoadTestWebRequestCounterSample].[CounterName] AS [CounterName], 
-      [LoadTestWebRequestCounterSample].[ScenarioName] AS [ScenarioName], 
-      [LoadTestWebRequestCounterSample].[TestCaseName] AS [TestCaseName], 
-      [LoadTestWebRequestCounterSample].[RequestUri] AS [RequestUri], 
-      [LoadTestWebRequestCounterSample].[IntervalStartTime] AS [IntervalStartTime], 
-      [LoadTestWebRequestCounterSample].[IntervalEndTime] AS [IntervalEndTime], 
-      [LoadTestWebRequestCounterSample].[CounterType] AS [CounterType], 
-      [LoadTestWebRequestCounterSample].[ComputedValue] AS [ComputedValue]
-      FROM [dbo].[LoadTestWebRequestCounterSample] AS [LoadTestWebRequestCounterSample]</DefiningQuery>
-    </EntitySet>
-    <EntitySet Name="LoadTestWebRequestCounterSummary" EntityType="LoadTest2010Model.Store.LoadTestWebRequestCounterSummary" store:Type="Views" store:Schema="dbo" store:Name="LoadTestWebRequestCounterSummary">
-      <DefiningQuery>SELECT 
-      [LoadTestWebRequestCounterSummary].[LoadTestRunId] AS [LoadTestRunId], 
-      [LoadTestWebRequestCounterSummary].[CounterName] AS [CounterName], 
-      [LoadTestWebRequestCounterSummary].[ScenarioName] AS [ScenarioName], 
-      [LoadTestWebRequestCounterSummary].[TestCaseName] AS [TestCaseName], 
-      [LoadTestWebRequestCounterSummary].[RequestUri] AS [RequestUri], 
-      [LoadTestWebRequestCounterSummary].[CumulativeValue] AS [CumulativeValue]
-      FROM [dbo].[LoadTestWebRequestCounterSummary] AS [LoadTestWebRequestCounterSummary]</DefiningQuery>
-    </EntitySet>
-    <AssociationSet Name="FK__LoadTestC__LoadT__72C60C4A" Association="LoadTest2010Model.Store.FK__LoadTestC__LoadT__72C60C4A">
-      <End Role="LoadTestRun" EntitySet="LoadTestRun" />
-      <End Role="LoadTestCase" EntitySet="LoadTestCase" />
-    </AssociationSet>
-    <AssociationSet Name="FK__LoadTestD__LoadT__02FC7413" Association="LoadTest2010Model.Store.FK__LoadTestD__LoadT__02FC7413">
-      <End Role="LoadTestRun" EntitySet="LoadTestRun" />
-      <End Role="LoadTestDataCollectorLog" EntitySet="LoadTestDataCollectorLog" />
-    </AssociationSet>
-    <AssociationSet Name="FK__LoadTestF__LoadT__03F0984C" Association="LoadTest2010Model.Store.FK__LoadTestF__LoadT__03F0984C">
-      <End Role="LoadTestRun" EntitySet="LoadTestRun" />
-      <End Role="LoadTestFileAttachment" EntitySet="LoadTestFileAttachment" />
-    </AssociationSet>
-    <AssociationSet Name="FK__LoadTestF__LoadT__04E4BC85" Association="LoadTest2010Model.Store.FK__LoadTestF__LoadT__04E4BC85">
-      <End Role="LoadTestRun" EntitySet="LoadTestRun" />
-      <End Role="LoadTestFileAttachmentChunk" EntitySet="LoadTestFileAttachmentChunk" />
-    </AssociationSet>
-    <AssociationSet Name="FK__LoadTestM__LoadT__73BA3083" Association="LoadTest2010Model.Store.FK__LoadTestM__LoadT__73BA3083">
-      <End Role="LoadTestRun" EntitySet="LoadTestRun" />
-      <End Role="LoadTestMessage" EntitySet="LoadTestMessage" />
-    </AssociationSet>
-    <AssociationSet Name="FK__LoadTestP__LoadT__75A278F5" Association="LoadTest2010Model.Store.FK__LoadTestP__LoadT__75A278F5">
-      <End Role="LoadTestRun" EntitySet="LoadTestRun" />
-      <End Role="LoadTestPerformanceCounter" EntitySet="LoadTestPerformanceCounter" />
-    </AssociationSet>
-    <AssociationSet Name="FK__LoadTestP__LoadT__76969D2E" Association="LoadTest2010Model.Store.FK__LoadTestP__LoadT__76969D2E">
-      <End Role="LoadTestRun" EntitySet="LoadTestRun" />
-      <End Role="LoadTestPerformanceCounterCategory" EntitySet="LoadTestPerformanceCounterCategory" />
-    </AssociationSet>
-    <AssociationSet Name="FK__LoadTestP__LoadT__778AC167" Association="LoadTest2010Model.Store.FK__LoadTestP__LoadT__778AC167">
-      <End Role="LoadTestRun" EntitySet="LoadTestRun" />
-      <End Role="LoadTestPerformanceCounterInstance" EntitySet="LoadTestPerformanceCounterInstance" />
-    </AssociationSet>
-    <AssociationSet Name="FK__LoadTestP__LoadT__787EE5A0" Association="LoadTest2010Model.Store.FK__LoadTestP__LoadT__787EE5A0">
-      <End Role="LoadTestRun" EntitySet="LoadTestRun" />
-      <End Role="LoadTestPerformanceCounterSample" EntitySet="LoadTestPerformanceCounterSample" />
-    </AssociationSet>
-    <AssociationSet Name="FK__LoadTestR__LoadT__797309D9" Association="LoadTest2010Model.Store.FK__LoadTestR__LoadT__797309D9">
-      <End Role="LoadTestRun" EntitySet="LoadTestRun" />
-      <End Role="LoadTestRunAgent" EntitySet="LoadTestRunAgent" />
-    </AssociationSet>
-    <AssociationSet Name="FK__LoadTestR__LoadT__7A672E12" Association="LoadTest2010Model.Store.FK__LoadTestR__LoadT__7A672E12">
-      <End Role="LoadTestRun" EntitySet="LoadTestRun" />
-      <End Role="LoadTestRunInterval" EntitySet="LoadTestRunInterval" />
-    </AssociationSet>
-    <AssociationSet Name="FK__LoadTestS__LoadT__00200768" Association="LoadTest2010Model.Store.FK__LoadTestS__LoadT__00200768">
-      <End Role="LoadTestRun" EntitySet="LoadTestRun" />
-      <End Role="LoadTestSystemUnderTest" EntitySet="LoadTestSystemUnderTest" />
-    </AssociationSet>
-    <AssociationSet Name="FK__LoadTestS__LoadT__01142BA1" Association="LoadTest2010Model.Store.FK__LoadTestS__LoadT__01142BA1">
-      <End Role="LoadTestRun" EntitySet="LoadTestRun" />
-      <End Role="LoadTestSystemUnderTestTag" EntitySet="LoadTestSystemUnderTestTag" />
-    </AssociationSet>
-    <AssociationSet Name="FK__LoadTestS__LoadT__7B5B524B" Association="LoadTest2010Model.Store.FK__LoadTestS__LoadT__7B5B524B">
-      <End Role="LoadTestRun" EntitySet="LoadTestRun" />
-      <End Role="LoadTestScenario" EntitySet="LoadTestScenario" />
-    </AssociationSet>
-    <AssociationSet Name="FK__LoadTestS__LoadT__7F2BE32F" Association="LoadTest2010Model.Store.FK__LoadTestS__LoadT__7F2BE32F">
-      <End Role="LoadTestRun" EntitySet="LoadTestRun" />
-      <End Role="LoadTestSqlTrace" EntitySet="LoadTestSqlTrace" />
-    </AssociationSet>
-    <AssociationSet Name="FK__LoadTestT__LoadT__02084FDA" Association="LoadTest2010Model.Store.FK__LoadTestT__LoadT__02084FDA">
-      <End Role="LoadTestRun" EntitySet="LoadTestRun" />
-      <End Role="LoadTestTestLog" EntitySet="LoadTestTestLog" />
-    </AssociationSet>
-    <AssociationSet Name="FK__LoadTestT__LoadT__74AE54BC" Association="LoadTest2010Model.Store.FK__LoadTestT__LoadT__74AE54BC">
-      <End Role="LoadTestRun" EntitySet="LoadTestRun" />
-      <End Role="LoadTestThresholdMessage" EntitySet="LoadTestThresholdMessage" />
-    </AssociationSet>
-    <AssociationSet Name="FK__WebLoadTe__LoadT__7C4F7684" Association="LoadTest2010Model.Store.FK__WebLoadTe__LoadT__7C4F7684">
-      <End Role="LoadTestRun" EntitySet="LoadTestRun" />
-      <End Role="WebLoadTestErrorDetail" EntitySet="WebLoadTestErrorDetail" />
-    </AssociationSet>
-    <AssociationSet Name="FK__WebLoadTe__LoadT__7D439ABD" Association="LoadTest2010Model.Store.FK__WebLoadTe__LoadT__7D439ABD">
-      <End Role="LoadTestRun" EntitySet="LoadTestRun" />
-      <End Role="WebLoadTestRequestMap" EntitySet="WebLoadTestRequestMap" />
-    </AssociationSet>
-    <AssociationSet Name="FK__WebLoadTe__LoadT__7E37BEF6" Association="LoadTest2010Model.Store.FK__WebLoadTe__LoadT__7E37BEF6">
-      <End Role="LoadTestRun" EntitySet="LoadTestRun" />
-      <End Role="WebLoadTestTransaction" EntitySet="WebLoadTestTransaction" />
-    </AssociationSet>
-  </EntityContainer>
+<Schema Namespace="LoadTest2010Model.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
   <EntityType Name="LoadTestBrowsers">
     <Key>
       <PropertyRef Name="LoadTestRunId" />
@@ -463,7 +17,7 @@
     <Property Name="LoadTestRunId" Type="int" Nullable="false" />
     <Property Name="ScenarioId" Type="int" Nullable="false" />
     <Property Name="TestCaseId" Type="int" Nullable="false" />
-    <Property Name="TestCaseName" Type="nvarchar" Nullable="false" MaxLength="64" />
+    <Property Name="TestCaseName" Type="nvarchar" MaxLength="64" Nullable="false" />
     <Property Name="TestElement" Type="image" />
     <Property Name="TestType" Type="nvarchar" MaxLength="64" />
   </EntityType>
@@ -474,8 +28,8 @@
     </Key>
     <Property Name="LoadTestRunId" Type="int" Nullable="false" />
     <Property Name="DataCollectorLogId" Type="int" Nullable="false" />
-    <Property Name="DataCollectorDisplayName" Type="nvarchar" Nullable="false" MaxLength="255" />
-    <Property Name="MachineName" Type="nvarchar" Nullable="false" MaxLength="255" />
+    <Property Name="DataCollectorDisplayName" Type="nvarchar" MaxLength="255" Nullable="false" />
+    <Property Name="MachineName" Type="nvarchar" MaxLength="255" Nullable="false" />
     <Property Name="TimestampColumnName" Type="nvarchar" MaxLength="128" />
     <Property Name="DurationColumnName" Type="nvarchar" MaxLength="128" />
     <Property Name="CreateTableFormatString" Type="nvarchar(max)" Nullable="false" />
@@ -498,8 +52,8 @@
     </Key>
     <Property Name="LoadTestRunId" Type="int" Nullable="false" />
     <Property Name="FileAttachmentId" Type="int" Nullable="false" />
-    <Property Name="MachineName" Type="nvarchar" Nullable="false" MaxLength="255" />
-    <Property Name="Filename" Type="nvarchar" Nullable="false" MaxLength="260" />
+    <Property Name="MachineName" Type="nvarchar" MaxLength="255" Nullable="false" />
+    <Property Name="Filename" Type="nvarchar" MaxLength="260" Nullable="false" />
     <Property Name="FileSize" Type="bigint" Nullable="false" />
   </EntityType>
   <EntityType Name="LoadTestFileAttachmentChunk">
@@ -550,7 +104,7 @@
     </Key>
     <Property Name="LoadTestRunId" Type="int" Nullable="false" />
     <Property Name="NetworkId" Type="int" Nullable="false" />
-    <Property Name="NetworkName" Type="nvarchar" Nullable="false" MaxLength="255" />
+    <Property Name="NetworkName" Type="nvarchar" MaxLength="255" Nullable="false" />
   </EntityType>
   <EntityType Name="LoadTestPageDetail">
     <Key>
@@ -615,7 +169,7 @@
     <Property Name="LoadTestRunId" Type="int" Nullable="false" />
     <Property Name="CounterCategoryId" Type="int" Nullable="false" />
     <Property Name="CounterId" Type="int" Nullable="false" />
-    <Property Name="CounterName" Type="nvarchar" Nullable="false" MaxLength="255" />
+    <Property Name="CounterName" Type="nvarchar" MaxLength="255" Nullable="false" />
     <Property Name="HigherIsBetter" Type="bit" />
   </EntityType>
   <EntityType Name="LoadTestPerformanceCounterCategory">
@@ -625,8 +179,8 @@
     </Key>
     <Property Name="LoadTestRunId" Type="int" Nullable="false" />
     <Property Name="CounterCategoryId" Type="int" Nullable="false" />
-    <Property Name="CategoryName" Type="nvarchar" Nullable="false" MaxLength="255" />
-    <Property Name="MachineName" Type="nvarchar" Nullable="false" MaxLength="255" />
+    <Property Name="CategoryName" Type="nvarchar" MaxLength="255" Nullable="false" />
+    <Property Name="MachineName" Type="nvarchar" MaxLength="255" Nullable="false" />
     <Property Name="StartTimeStamp100nSec" Type="bigint" Nullable="false" />
   </EntityType>
   <EntityType Name="LoadTestPerformanceCounterInstance">
@@ -638,7 +192,7 @@
     <Property Name="CounterId" Type="int" Nullable="false" />
     <Property Name="InstanceId" Type="int" Nullable="false" />
     <Property Name="LoadTestItemId" Type="int" />
-    <Property Name="InstanceName" Type="nvarchar" Nullable="false" MaxLength="255" />
+    <Property Name="InstanceName" Type="nvarchar" MaxLength="255" Nullable="false" />
     <Property Name="CumulativeValue" Type="real" />
     <Property Name="OverallThresholdRuleResult" Type="tinyint" />
   </EntityType>
@@ -666,24 +220,24 @@
     <Key>
       <PropertyRef Name="ReportId" />
     </Key>
-    <Property Name="ReportId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
-    <Property Name="Name" Type="nvarchar" Nullable="false" MaxLength="255" />
+    <Property Name="ReportId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="255" Nullable="false" />
     <Property Name="Description" Type="nvarchar(max)" />
-    <Property Name="LoadTestName" Type="nvarchar" Nullable="false" MaxLength="255" />
+    <Property Name="LoadTestName" Type="nvarchar" MaxLength="255" Nullable="false" />
     <Property Name="LastRunId" Type="int" Nullable="false" />
     <Property Name="SelectNewRuns" Type="bit" Nullable="false" />
     <Property Name="LastModified" Type="datetime" Nullable="false" />
-    <Property Name="LastModifiedBy" Type="nvarchar" Nullable="false" MaxLength="255" />
+    <Property Name="LastModifiedBy" Type="nvarchar" MaxLength="255" Nullable="false" />
     <Property Name="ReportType" Type="tinyint" Nullable="false" />
   </EntityType>
   <EntityType Name="LoadTestReportPage">
     <Key>
       <PropertyRef Name="PageId" />
     </Key>
-    <Property Name="PageId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="PageId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="ReportId" Type="int" Nullable="false" />
-    <Property Name="CategoryName" Type="nvarchar" Nullable="false" MaxLength="255" />
-    <Property Name="CounterName" Type="nvarchar" Nullable="false" MaxLength="255" />
+    <Property Name="CategoryName" Type="nvarchar" MaxLength="255" Nullable="false" />
+    <Property Name="CounterName" Type="nvarchar" MaxLength="255" Nullable="false" />
   </EntityType>
   <EntityType Name="LoadTestReportRuns">
     <Key>
@@ -697,18 +251,18 @@
     <Key>
       <PropertyRef Name="LoadTestRunId" />
     </Key>
-    <Property Name="LoadTestRunId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="LoadTestRunId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="LoadTestName" Type="nvarchar" MaxLength="255" />
-    <Property Name="RunId" Type="char" Nullable="false" MaxLength="36" />
+    <Property Name="RunId" Type="char" MaxLength="36" Nullable="false" />
     <Property Name="Description" Type="nvarchar" MaxLength="255" />
     <Property Name="StartTime" Type="datetime" />
     <Property Name="EndTime" Type="datetime" />
     <Property Name="RunDuration" Type="int" Nullable="false" />
     <Property Name="WarmupTime" Type="int" Nullable="false" />
-    <Property Name="RunSettingUsed" Type="nvarchar" Nullable="false" MaxLength="32" />
+    <Property Name="RunSettingUsed" Type="nvarchar" MaxLength="32" Nullable="false" />
     <Property Name="IsLocalRun" Type="bit" Nullable="false" />
     <Property Name="ControllerName" Type="nvarchar" MaxLength="255" />
-    <Property Name="Outcome" Type="nvarchar" Nullable="false" MaxLength="32" />
+    <Property Name="Outcome" Type="nvarchar" MaxLength="32" Nullable="false" />
     <Property Name="LoadTest" Type="image" />
     <Property Name="Comment" Type="ntext" />
     <Property Name="LoadTestSchemaRev" Type="int" />
@@ -721,7 +275,7 @@
     </Key>
     <Property Name="LoadTestRunId" Type="int" Nullable="false" />
     <Property Name="AgentId" Type="int" Nullable="false" />
-    <Property Name="AgentName" Type="nvarchar" Nullable="false" MaxLength="255" />
+    <Property Name="AgentName" Type="nvarchar" MaxLength="255" Nullable="false" />
   </EntityType>
   <EntityType Name="LoadTestRunInterval">
     <Key>
@@ -740,11 +294,10 @@
     </Key>
     <Property Name="LoadTestRunId" Type="int" Nullable="false" />
     <Property Name="ScenarioId" Type="int" Nullable="false" />
-    <Property Name="ScenarioName" Type="nvarchar" Nullable="false" MaxLength="64" />
+    <Property Name="ScenarioName" Type="nvarchar" MaxLength="64" Nullable="false" />
   </EntityType>
   <!--Errors Found During Generation:
-      warning 6002: The table/view 'LoadTest2010.dbo.LoadTestSchemaRevision' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
-      -->
+warning 6002: The table/view 'LoadTest2010.dbo.LoadTestSchemaRevision' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
   <EntityType Name="LoadTestSchemaRevision">
     <Key>
       <PropertyRef Name="LoadTestSchemaRev" />
@@ -752,8 +305,7 @@
     <Property Name="LoadTestSchemaRev" Type="int" Nullable="false" />
   </EntityType>
   <!--Errors Found During Generation:
-      warning 6002: The table/view 'LoadTest2010.dbo.LoadTestSqlTrace' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
-      -->
+warning 6002: The table/view 'LoadTest2010.dbo.LoadTestSqlTrace' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
   <EntityType Name="LoadTestSqlTrace">
     <Key>
       <PropertyRef Name="LoadTestRunId" />
@@ -776,11 +328,10 @@
     </Key>
     <Property Name="LoadTestRunId" Type="int" Nullable="false" />
     <Property Name="SystemUnderTestId" Type="int" Nullable="false" />
-    <Property Name="MachineName" Type="nvarchar" Nullable="false" MaxLength="255" />
+    <Property Name="MachineName" Type="nvarchar" MaxLength="255" Nullable="false" />
   </EntityType>
   <!--Errors Found During Generation:
-      warning 6002: The table/view 'LoadTest2010.dbo.LoadTestSystemUnderTestTag' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
-      -->
+warning 6002: The table/view 'LoadTest2010.dbo.LoadTestSystemUnderTestTag' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
   <EntityType Name="LoadTestSystemUnderTestTag">
     <Key>
       <PropertyRef Name="LoadTestRunId" />
@@ -789,7 +340,7 @@
     </Key>
     <Property Name="LoadTestRunId" Type="int" Nullable="false" />
     <Property Name="SystemUnderTestId" Type="int" Nullable="false" />
-    <Property Name="MachineTag" Type="nvarchar" Nullable="false" MaxLength="255" />
+    <Property Name="MachineTag" Type="nvarchar" MaxLength="255" Nullable="false" />
   </EntityType>
   <EntityType Name="LoadTestTestDetail">
     <Key>
@@ -883,29 +434,6 @@
     <Property Name="StandardDeviation" Type="float" />
     <Property Name="AvgTransactionTime" Type="float" />
   </EntityType>
-  <!--Errors Found During Generation:
-      warning 6002: The table/view 'LoadTest2010.dbo.PassportUserIDStatus' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
-      -->
-  <EntityType Name="PassportUserIDStatus">
-    <Key>
-      <PropertyRef Name="UserID" />
-      <PropertyRef Name="Password" />
-      <PropertyRef Name="Status" />
-    </Key>
-    <Property Name="UserID" Type="varchar" Nullable="false" MaxLength="50" />
-    <Property Name="Password" Type="varchar" Nullable="false" MaxLength="50" />
-    <Property Name="Status" Type="varchar" Nullable="false" MaxLength="50" />
-  </EntityType>
-  <EntityType Name="sysdiagrams">
-    <Key>
-      <PropertyRef Name="diagram_id" />
-    </Key>
-    <Property Name="name" Type="nvarchar" Nullable="false" MaxLength="128" />
-    <Property Name="principal_id" Type="int" Nullable="false" />
-    <Property Name="diagram_id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
-    <Property Name="version" Type="int" />
-    <Property Name="definition" Type="varbinary(max)" />
-  </EntityType>
   <EntityType Name="WebLoadTestErrorDetail">
     <Key>
       <PropertyRef Name="LoadTestRunId" />
@@ -925,7 +453,7 @@
     <Property Name="LoadTestRunId" Type="int" Nullable="false" />
     <Property Name="RequestId" Type="int" Nullable="false" />
     <Property Name="TestCaseId" Type="int" Nullable="false" />
-    <Property Name="RequestUri" Type="nvarchar" Nullable="false" MaxLength="2048" />
+    <Property Name="RequestUri" Type="nvarchar" MaxLength="2048" Nullable="false" />
     <Property Name="ResponseTimeGoal" Type="float" />
   </EntityType>
   <EntityType Name="WebLoadTestTransaction">
@@ -936,12 +464,11 @@
     <Property Name="LoadTestRunId" Type="int" Nullable="false" />
     <Property Name="TransactionId" Type="int" Nullable="false" />
     <Property Name="TestCaseId" Type="int" Nullable="false" />
-    <Property Name="TransactionName" Type="nvarchar" Nullable="false" MaxLength="64" />
+    <Property Name="TransactionName" Type="nvarchar" MaxLength="64" Nullable="false" />
     <Property Name="Goal" Type="float" />
   </EntityType>
   <!--Errors Found During Generation:
-      warning 6002: The table/view 'LoadTest2010.dbo.LoadTestComputedCounterSample' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
-      -->
+warning 6002: The table/view 'LoadTest2010.dbo.LoadTestComputedCounterSample' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
   <EntityType Name="LoadTestComputedCounterSample">
     <Key>
       <PropertyRef Name="LoadTestRunId" />
@@ -956,10 +483,10 @@
       <PropertyRef Name="ThresholdRuleResult" />
     </Key>
     <Property Name="LoadTestRunId" Type="int" Nullable="false" />
-    <Property Name="MachineName" Type="nvarchar" Nullable="false" MaxLength="255" />
-    <Property Name="CategoryName" Type="nvarchar" Nullable="false" MaxLength="255" />
-    <Property Name="CounterName" Type="nvarchar" Nullable="false" MaxLength="255" />
-    <Property Name="InstanceName" Type="nvarchar" Nullable="false" MaxLength="255" />
+    <Property Name="MachineName" Type="nvarchar" MaxLength="255" Nullable="false" />
+    <Property Name="CategoryName" Type="nvarchar" MaxLength="255" Nullable="false" />
+    <Property Name="CounterName" Type="nvarchar" MaxLength="255" Nullable="false" />
+    <Property Name="InstanceName" Type="nvarchar" MaxLength="255" Nullable="false" />
     <Property Name="IntervalStartTime" Type="datetime" Nullable="false" />
     <Property Name="IntervalEndTime" Type="datetime" Nullable="false" />
     <Property Name="CounterType" Type="int" Nullable="false" />
@@ -968,8 +495,7 @@
     <Property Name="ThresholdRuleResult" Type="tinyint" Nullable="false" />
   </EntityType>
   <!--Errors Found During Generation:
-      warning 6002: The table/view 'LoadTest2010.dbo.LoadTestComputedCounterSummary' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
-      -->
+warning 6002: The table/view 'LoadTest2010.dbo.LoadTestComputedCounterSummary' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
   <EntityType Name="LoadTestComputedCounterSummary">
     <Key>
       <PropertyRef Name="LoadTestRunId" />
@@ -980,17 +506,16 @@
     </Key>
     <Property Name="LoadTestName" Type="nvarchar" MaxLength="255" />
     <Property Name="LoadTestRunId" Type="int" Nullable="false" />
-    <Property Name="MachineName" Type="nvarchar" Nullable="false" MaxLength="255" />
-    <Property Name="CategoryName" Type="nvarchar" Nullable="false" MaxLength="255" />
-    <Property Name="CounterName" Type="nvarchar" Nullable="false" MaxLength="255" />
+    <Property Name="MachineName" Type="nvarchar" MaxLength="255" Nullable="false" />
+    <Property Name="CategoryName" Type="nvarchar" MaxLength="255" Nullable="false" />
+    <Property Name="CounterName" Type="nvarchar" MaxLength="255" Nullable="false" />
     <Property Name="HigherIsBetter" Type="bit" />
-    <Property Name="InstanceName" Type="nvarchar" Nullable="false" MaxLength="255" />
+    <Property Name="InstanceName" Type="nvarchar" MaxLength="255" Nullable="false" />
     <Property Name="CumulativeValue" Type="real" />
     <Property Name="OverallThresholdRuleResult" Type="tinyint" />
   </EntityType>
   <!--Errors Found During Generation:
-      warning 6002: The table/view 'LoadTest2010.dbo.LoadTestMessageSummary' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
-      -->
+warning 6002: The table/view 'LoadTest2010.dbo.LoadTestMessageSummary' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
   <EntityType Name="LoadTestMessageSummary">
     <Key>
       <PropertyRef Name="LoadTestRunId" />
@@ -1006,16 +531,15 @@
     <Property Name="RequestUri" Type="nvarchar" MaxLength="2048" />
     <Property Name="MessageId" Type="int" Nullable="false" />
     <Property Name="MessageTimeStamp" Type="datetime" Nullable="false" />
-    <Property Name="MessageType" Type="varchar" Nullable="false" MaxLength="19" />
+    <Property Name="MessageType" Type="varchar" MaxLength="19" Nullable="false" />
     <Property Name="SubType" Type="nvarchar" MaxLength="64" />
     <Property Name="MessageText" Type="nvarchar" MaxLength="2048" />
     <Property Name="StackTrace" Type="ntext" />
     <Property Name="RequestId" Type="int" />
-    <Property Name="HasWebTestErrorDetail" Type="varchar" Nullable="false" MaxLength="5" />
+    <Property Name="HasWebTestErrorDetail" Type="varchar" MaxLength="5" Nullable="false" />
   </EntityType>
   <!--Errors Found During Generation:
-      warning 6002: The table/view 'LoadTest2010.dbo.LoadTestMessageView' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
-      -->
+warning 6002: The table/view 'LoadTest2010.dbo.LoadTestMessageView' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
   <EntityType Name="LoadTestMessageView">
     <Key>
       <PropertyRef Name="LoadTestRunId" />
@@ -1036,11 +560,10 @@
     <Property Name="MessageText" Type="nvarchar" MaxLength="2048" />
     <Property Name="StackTrace" Type="ntext" />
     <Property Name="RequestId" Type="int" />
-    <Property Name="HasWebTestErrorDetail" Type="varchar" Nullable="false" MaxLength="5" />
+    <Property Name="HasWebTestErrorDetail" Type="varchar" MaxLength="5" Nullable="false" />
   </EntityType>
   <!--Errors Found During Generation:
-      warning 6002: The table/view 'LoadTest2010.dbo.LoadTestMessageView2' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
-      -->
+warning 6002: The table/view 'LoadTest2010.dbo.LoadTestMessageView2' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
   <EntityType Name="LoadTestMessageView2">
     <Key>
       <PropertyRef Name="LoadTestRunId" />
@@ -1061,12 +584,11 @@
     <Property Name="MessageText" Type="nvarchar" MaxLength="2048" />
     <Property Name="StackTrace" Type="ntext" />
     <Property Name="RequestId" Type="int" />
-    <Property Name="HasWebTestErrorDetail" Type="varchar" Nullable="false" MaxLength="5" />
+    <Property Name="HasWebTestErrorDetail" Type="varchar" MaxLength="5" Nullable="false" />
     <Property Name="TestLogId" Type="int" />
   </EntityType>
   <!--Errors Found During Generation:
-      warning 6002: The table/view 'LoadTest2010.dbo.LoadTestPageResults' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
-      -->
+warning 6002: The table/view 'LoadTest2010.dbo.LoadTestPageResults' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
   <EntityType Name="LoadTestPageResults">
     <Key>
       <PropertyRef Name="LoadTestRunId" />
@@ -1079,9 +601,9 @@
       <PropertyRef Name="Maximum" />
     </Key>
     <Property Name="LoadTestRunId" Type="int" Nullable="false" />
-    <Property Name="ScenarioName" Type="nvarchar" Nullable="false" MaxLength="64" />
-    <Property Name="TestCaseName" Type="nvarchar" Nullable="false" MaxLength="64" />
-    <Property Name="RequestUri" Type="nvarchar" Nullable="false" MaxLength="2048" />
+    <Property Name="ScenarioName" Type="nvarchar" MaxLength="64" Nullable="false" />
+    <Property Name="TestCaseName" Type="nvarchar" MaxLength="64" Nullable="false" />
+    <Property Name="RequestUri" Type="nvarchar" MaxLength="2048" Nullable="false" />
     <Property Name="PageCount" Type="int" Nullable="false" />
     <Property Name="Minimum" Type="float" Nullable="false" />
     <Property Name="Average" Type="float" Nullable="false" />
@@ -1090,8 +612,7 @@
     <Property Name="Maximum" Type="float" Nullable="false" />
   </EntityType>
   <!--Errors Found During Generation:
-      warning 6002: The table/view 'LoadTest2010.dbo.LoadTestPageResultsByNetwork' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
-      -->
+warning 6002: The table/view 'LoadTest2010.dbo.LoadTestPageResultsByNetwork' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
   <EntityType Name="LoadTestPageResultsByNetwork">
     <Key>
       <PropertyRef Name="LoadTestRunId" />
@@ -1105,10 +626,10 @@
       <PropertyRef Name="Maximum" />
     </Key>
     <Property Name="LoadTestRunId" Type="int" Nullable="false" />
-    <Property Name="ScenarioName" Type="nvarchar" Nullable="false" MaxLength="64" />
-    <Property Name="TestCaseName" Type="nvarchar" Nullable="false" MaxLength="64" />
-    <Property Name="RequestUri" Type="nvarchar" Nullable="false" MaxLength="2048" />
-    <Property Name="NetworkName" Type="nvarchar" Nullable="false" MaxLength="255" />
+    <Property Name="ScenarioName" Type="nvarchar" MaxLength="64" Nullable="false" />
+    <Property Name="TestCaseName" Type="nvarchar" MaxLength="64" Nullable="false" />
+    <Property Name="RequestUri" Type="nvarchar" MaxLength="2048" Nullable="false" />
+    <Property Name="NetworkName" Type="nvarchar" MaxLength="255" Nullable="false" />
     <Property Name="PageCount" Type="int" Nullable="false" />
     <Property Name="Minimum" Type="float" Nullable="false" />
     <Property Name="Average" Type="float" Nullable="false" />
@@ -1119,8 +640,7 @@
     <Property Name="PagesMeetingGoal" Type="int" />
   </EntityType>
   <!--Errors Found During Generation:
-      warning 6002: The table/view 'LoadTest2010.dbo.LoadTestPageResultsByNetwork2' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
-      -->
+warning 6002: The table/view 'LoadTest2010.dbo.LoadTestPageResultsByNetwork2' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
   <EntityType Name="LoadTestPageResultsByNetwork2">
     <Key>
       <PropertyRef Name="LoadTestRunId" />
@@ -1134,10 +654,10 @@
       <PropertyRef Name="Maximum" />
     </Key>
     <Property Name="LoadTestRunId" Type="int" Nullable="false" />
-    <Property Name="ScenarioName" Type="nvarchar" Nullable="false" MaxLength="64" />
-    <Property Name="TestCaseName" Type="nvarchar" Nullable="false" MaxLength="64" />
-    <Property Name="RequestUri" Type="nvarchar" Nullable="false" MaxLength="2048" />
-    <Property Name="NetworkName" Type="nvarchar" Nullable="false" MaxLength="255" />
+    <Property Name="ScenarioName" Type="nvarchar" MaxLength="64" Nullable="false" />
+    <Property Name="TestCaseName" Type="nvarchar" MaxLength="64" Nullable="false" />
+    <Property Name="RequestUri" Type="nvarchar" MaxLength="2048" Nullable="false" />
+    <Property Name="NetworkName" Type="nvarchar" MaxLength="255" Nullable="false" />
     <Property Name="PageCount" Type="int" Nullable="false" />
     <Property Name="Minimum" Type="float" Nullable="false" />
     <Property Name="Average" Type="float" Nullable="false" />
@@ -1151,8 +671,7 @@
     <Property Name="PagesMeetingGoal" Type="int" />
   </EntityType>
   <!--Errors Found During Generation:
-      warning 6002: The table/view 'LoadTest2010.dbo.LoadTestPageSample' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
-      -->
+warning 6002: The table/view 'LoadTest2010.dbo.LoadTestPageSample' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
   <EntityType Name="LoadTestPageSample">
     <Key>
       <PropertyRef Name="LoadTestRunId" />
@@ -1164,17 +683,16 @@
       <PropertyRef Name="IntervalEndTime" />
     </Key>
     <Property Name="LoadTestRunId" Type="int" Nullable="false" />
-    <Property Name="CounterName" Type="nvarchar" Nullable="false" MaxLength="255" />
-    <Property Name="ScenarioName" Type="nvarchar" Nullable="false" MaxLength="64" />
-    <Property Name="TestCaseName" Type="nvarchar" Nullable="false" MaxLength="64" />
-    <Property Name="RequestUri" Type="nvarchar" Nullable="false" MaxLength="2048" />
+    <Property Name="CounterName" Type="nvarchar" MaxLength="255" Nullable="false" />
+    <Property Name="ScenarioName" Type="nvarchar" MaxLength="64" Nullable="false" />
+    <Property Name="TestCaseName" Type="nvarchar" MaxLength="64" Nullable="false" />
+    <Property Name="RequestUri" Type="nvarchar" MaxLength="2048" Nullable="false" />
     <Property Name="IntervalStartTime" Type="datetime" Nullable="false" />
     <Property Name="IntervalEndTime" Type="datetime" Nullable="false" />
     <Property Name="ComputedValue" Type="real" />
   </EntityType>
   <!--Errors Found During Generation:
-      warning 6002: The table/view 'LoadTest2010.dbo.LoadTestPageSummary' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
-      -->
+warning 6002: The table/view 'LoadTest2010.dbo.LoadTestPageSummary' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
   <EntityType Name="LoadTestPageSummary">
     <Key>
       <PropertyRef Name="LoadTestRunId" />
@@ -1186,16 +704,15 @@
     </Key>
     <Property Name="LoadTestName" Type="nvarchar" MaxLength="255" />
     <Property Name="LoadTestRunId" Type="int" Nullable="false" />
-    <Property Name="CounterName" Type="nvarchar" Nullable="false" MaxLength="255" />
-    <Property Name="ScenarioName" Type="nvarchar" Nullable="false" MaxLength="64" />
-    <Property Name="TestCaseName" Type="nvarchar" Nullable="false" MaxLength="64" />
-    <Property Name="RequestUri" Type="nvarchar" Nullable="false" MaxLength="2048" />
+    <Property Name="CounterName" Type="nvarchar" MaxLength="255" Nullable="false" />
+    <Property Name="ScenarioName" Type="nvarchar" MaxLength="64" Nullable="false" />
+    <Property Name="TestCaseName" Type="nvarchar" MaxLength="64" Nullable="false" />
+    <Property Name="RequestUri" Type="nvarchar" MaxLength="2048" Nullable="false" />
     <Property Name="CumulativeValue" Type="real" />
     <Property Name="ResponseTimeGoal" Type="float" Nullable="false" />
   </EntityType>
   <!--Errors Found During Generation:
-      warning 6002: The table/view 'LoadTest2010.dbo.LoadTestRequestSummary' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
-      -->
+warning 6002: The table/view 'LoadTest2010.dbo.LoadTestRequestSummary' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
   <EntityType Name="LoadTestRequestSummary">
     <Key>
       <PropertyRef Name="LoadTestRunId" />
@@ -1206,15 +723,14 @@
     </Key>
     <Property Name="LoadTestName" Type="nvarchar" MaxLength="255" />
     <Property Name="LoadTestRunId" Type="int" Nullable="false" />
-    <Property Name="CounterName" Type="nvarchar" Nullable="false" MaxLength="255" />
-    <Property Name="ScenarioName" Type="nvarchar" Nullable="false" MaxLength="64" />
-    <Property Name="TestCaseName" Type="nvarchar" Nullable="false" MaxLength="64" />
-    <Property Name="RequestUri" Type="nvarchar" Nullable="false" MaxLength="2048" />
+    <Property Name="CounterName" Type="nvarchar" MaxLength="255" Nullable="false" />
+    <Property Name="ScenarioName" Type="nvarchar" MaxLength="64" Nullable="false" />
+    <Property Name="TestCaseName" Type="nvarchar" MaxLength="64" Nullable="false" />
+    <Property Name="RequestUri" Type="nvarchar" MaxLength="2048" Nullable="false" />
     <Property Name="CumulativeValue" Type="real" />
   </EntityType>
   <!--Errors Found During Generation:
-      warning 6002: The table/view 'LoadTest2010.dbo.LoadTestScenarioSummary' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
-      -->
+warning 6002: The table/view 'LoadTest2010.dbo.LoadTestScenarioSummary' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
   <EntityType Name="LoadTestScenarioSummary">
     <Key>
       <PropertyRef Name="LoadTestRunId" />
@@ -1223,13 +739,12 @@
     </Key>
     <Property Name="LoadTestName" Type="nvarchar" MaxLength="255" />
     <Property Name="LoadTestRunId" Type="int" Nullable="false" />
-    <Property Name="CounterName" Type="nvarchar" Nullable="false" MaxLength="255" />
-    <Property Name="ScenarioName" Type="nvarchar" Nullable="false" MaxLength="64" />
+    <Property Name="CounterName" Type="nvarchar" MaxLength="255" Nullable="false" />
+    <Property Name="ScenarioName" Type="nvarchar" MaxLength="64" Nullable="false" />
     <Property Name="CumulativeValue" Type="real" />
   </EntityType>
   <!--Errors Found During Generation:
-      warning 6002: The table/view 'LoadTest2010.dbo.LoadTestTestCaseSample' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
-      -->
+warning 6002: The table/view 'LoadTest2010.dbo.LoadTestTestCaseSample' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
   <EntityType Name="LoadTestTestCaseSample">
     <Key>
       <PropertyRef Name="LoadTestRunId" />
@@ -1240,16 +755,15 @@
       <PropertyRef Name="IntervalEndTime" />
     </Key>
     <Property Name="LoadTestRunId" Type="int" Nullable="false" />
-    <Property Name="CounterName" Type="nvarchar" Nullable="false" MaxLength="255" />
-    <Property Name="ScenarioName" Type="nvarchar" Nullable="false" MaxLength="64" />
-    <Property Name="TestCaseName" Type="nvarchar" Nullable="false" MaxLength="64" />
+    <Property Name="CounterName" Type="nvarchar" MaxLength="255" Nullable="false" />
+    <Property Name="ScenarioName" Type="nvarchar" MaxLength="64" Nullable="false" />
+    <Property Name="TestCaseName" Type="nvarchar" MaxLength="64" Nullable="false" />
     <Property Name="IntervalStartTime" Type="datetime" Nullable="false" />
     <Property Name="IntervalEndTime" Type="datetime" Nullable="false" />
     <Property Name="ComputedValue" Type="real" />
   </EntityType>
   <!--Errors Found During Generation:
-      warning 6002: The table/view 'LoadTest2010.dbo.LoadTestTestCaseSummary' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
-      -->
+warning 6002: The table/view 'LoadTest2010.dbo.LoadTestTestCaseSummary' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
   <EntityType Name="LoadTestTestCaseSummary">
     <Key>
       <PropertyRef Name="LoadTestRunId" />
@@ -1259,14 +773,13 @@
     </Key>
     <Property Name="LoadTestName" Type="nvarchar" MaxLength="255" />
     <Property Name="LoadTestRunId" Type="int" Nullable="false" />
-    <Property Name="CounterName" Type="nvarchar" Nullable="false" MaxLength="255" />
-    <Property Name="ScenarioName" Type="nvarchar" Nullable="false" MaxLength="64" />
-    <Property Name="TestCaseName" Type="nvarchar" Nullable="false" MaxLength="64" />
+    <Property Name="CounterName" Type="nvarchar" MaxLength="255" Nullable="false" />
+    <Property Name="ScenarioName" Type="nvarchar" MaxLength="64" Nullable="false" />
+    <Property Name="TestCaseName" Type="nvarchar" MaxLength="64" Nullable="false" />
     <Property Name="CumulativeValue" Type="real" />
   </EntityType>
   <!--Errors Found During Generation:
-      warning 6002: The table/view 'LoadTest2010.dbo.LoadTestTestResults' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
-      -->
+warning 6002: The table/view 'LoadTest2010.dbo.LoadTestTestResults' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
   <EntityType Name="LoadTestTestResults">
     <Key>
       <PropertyRef Name="LoadTestRunId" />
@@ -1278,8 +791,8 @@
       <PropertyRef Name="Maximum" />
     </Key>
     <Property Name="LoadTestRunId" Type="int" Nullable="false" />
-    <Property Name="ScenarioName" Type="nvarchar" Nullable="false" MaxLength="64" />
-    <Property Name="TestCaseName" Type="nvarchar" Nullable="false" MaxLength="64" />
+    <Property Name="ScenarioName" Type="nvarchar" MaxLength="64" Nullable="false" />
+    <Property Name="TestCaseName" Type="nvarchar" MaxLength="64" Nullable="false" />
     <Property Name="TestsRun" Type="int" Nullable="false" />
     <Property Name="Minimum" Type="float" Nullable="false" />
     <Property Name="Average" Type="float" Nullable="false" />
@@ -1288,8 +801,7 @@
     <Property Name="Maximum" Type="float" Nullable="false" />
   </EntityType>
   <!--Errors Found During Generation:
-      warning 6002: The table/view 'LoadTest2010.dbo.LoadTestTransactionResults' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
-      -->
+warning 6002: The table/view 'LoadTest2010.dbo.LoadTestTransactionResults' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
   <EntityType Name="LoadTestTransactionResults">
     <Key>
       <PropertyRef Name="LoadTestRunId" />
@@ -1302,9 +814,9 @@
       <PropertyRef Name="Maximum" />
     </Key>
     <Property Name="LoadTestRunId" Type="int" Nullable="false" />
-    <Property Name="ScenarioName" Type="nvarchar" Nullable="false" MaxLength="64" />
-    <Property Name="TestCaseName" Type="nvarchar" Nullable="false" MaxLength="64" />
-    <Property Name="TransactionName" Type="nvarchar" Nullable="false" MaxLength="64" />
+    <Property Name="ScenarioName" Type="nvarchar" MaxLength="64" Nullable="false" />
+    <Property Name="TestCaseName" Type="nvarchar" MaxLength="64" Nullable="false" />
+    <Property Name="TransactionName" Type="nvarchar" MaxLength="64" Nullable="false" />
     <Property Name="TransactionCount" Type="int" Nullable="false" />
     <Property Name="Minimum" Type="float" Nullable="false" />
     <Property Name="Average" Type="float" Nullable="false" />
@@ -1313,8 +825,7 @@
     <Property Name="Maximum" Type="float" Nullable="false" />
   </EntityType>
   <!--Errors Found During Generation:
-      warning 6002: The table/view 'LoadTest2010.dbo.LoadTestTransactionResults2' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
-      -->
+warning 6002: The table/view 'LoadTest2010.dbo.LoadTestTransactionResults2' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
   <EntityType Name="LoadTestTransactionResults2">
     <Key>
       <PropertyRef Name="LoadTestRunId" />
@@ -1327,9 +838,9 @@
       <PropertyRef Name="Maximum" />
     </Key>
     <Property Name="LoadTestRunId" Type="int" Nullable="false" />
-    <Property Name="ScenarioName" Type="nvarchar" Nullable="false" MaxLength="64" />
-    <Property Name="TestCaseName" Type="nvarchar" Nullable="false" MaxLength="64" />
-    <Property Name="TransactionName" Type="nvarchar" Nullable="false" MaxLength="64" />
+    <Property Name="ScenarioName" Type="nvarchar" MaxLength="64" Nullable="false" />
+    <Property Name="TestCaseName" Type="nvarchar" MaxLength="64" Nullable="false" />
+    <Property Name="TransactionName" Type="nvarchar" MaxLength="64" Nullable="false" />
     <Property Name="TransactionCount" Type="int" Nullable="false" />
     <Property Name="Minimum" Type="float" Nullable="false" />
     <Property Name="Average" Type="float" Nullable="false" />
@@ -1342,8 +853,7 @@
     <Property Name="AvgTransactionTime" Type="float" />
   </EntityType>
   <!--Errors Found During Generation:
-      warning 6002: The table/view 'LoadTest2010.dbo.LoadTestTransactionSample' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
-      -->
+warning 6002: The table/view 'LoadTest2010.dbo.LoadTestTransactionSample' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
   <EntityType Name="LoadTestTransactionSample">
     <Key>
       <PropertyRef Name="LoadTestRunId" />
@@ -1355,17 +865,16 @@
       <PropertyRef Name="IntervalEndTime" />
     </Key>
     <Property Name="LoadTestRunId" Type="int" Nullable="false" />
-    <Property Name="CounterName" Type="nvarchar" Nullable="false" MaxLength="255" />
-    <Property Name="ScenarioName" Type="nvarchar" Nullable="false" MaxLength="64" />
-    <Property Name="TestCaseName" Type="nvarchar" Nullable="false" MaxLength="64" />
-    <Property Name="TransactionName" Type="nvarchar" Nullable="false" MaxLength="64" />
+    <Property Name="CounterName" Type="nvarchar" MaxLength="255" Nullable="false" />
+    <Property Name="ScenarioName" Type="nvarchar" MaxLength="64" Nullable="false" />
+    <Property Name="TestCaseName" Type="nvarchar" MaxLength="64" Nullable="false" />
+    <Property Name="TransactionName" Type="nvarchar" MaxLength="64" Nullable="false" />
     <Property Name="IntervalStartTime" Type="datetime" Nullable="false" />
     <Property Name="IntervalEndTime" Type="datetime" Nullable="false" />
     <Property Name="ComputedValue" Type="real" />
   </EntityType>
   <!--Errors Found During Generation:
-      warning 6002: The table/view 'LoadTest2010.dbo.LoadTestTransactionSummary' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
-      -->
+warning 6002: The table/view 'LoadTest2010.dbo.LoadTestTransactionSummary' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
   <EntityType Name="LoadTestTransactionSummary">
     <Key>
       <PropertyRef Name="LoadTestRunId" />
@@ -1376,15 +885,14 @@
     </Key>
     <Property Name="LoadTestName" Type="nvarchar" MaxLength="255" />
     <Property Name="LoadTestRunId" Type="int" Nullable="false" />
-    <Property Name="CounterName" Type="nvarchar" Nullable="false" MaxLength="255" />
-    <Property Name="ScenarioName" Type="nvarchar" Nullable="false" MaxLength="64" />
-    <Property Name="TestCaseName" Type="nvarchar" Nullable="false" MaxLength="64" />
-    <Property Name="TransactionName" Type="nvarchar" Nullable="false" MaxLength="64" />
+    <Property Name="CounterName" Type="nvarchar" MaxLength="255" Nullable="false" />
+    <Property Name="ScenarioName" Type="nvarchar" MaxLength="64" Nullable="false" />
+    <Property Name="TestCaseName" Type="nvarchar" MaxLength="64" Nullable="false" />
+    <Property Name="TransactionName" Type="nvarchar" MaxLength="64" Nullable="false" />
     <Property Name="CumulativeValue" Type="real" />
   </EntityType>
   <!--Errors Found During Generation:
-      warning 6002: The table/view 'LoadTest2010.dbo.LoadTestWebPageAndUserLoadCounterSample' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
-      -->
+warning 6002: The table/view 'LoadTest2010.dbo.LoadTestWebPageAndUserLoadCounterSample' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
   <EntityType Name="LoadTestWebPageAndUserLoadCounterSample">
     <Key>
       <PropertyRef Name="loadtestrunid" />
@@ -1393,16 +901,15 @@
       <PropertyRef Name="IntervalStartTime" />
     </Key>
     <Property Name="loadtestrunid" Type="int" Nullable="false" />
-    <Property Name="instanceName" Type="nvarchar" Nullable="false" MaxLength="255" />
-    <Property Name="RequestUri" Type="nvarchar" Nullable="false" MaxLength="2048" />
+    <Property Name="instanceName" Type="nvarchar" MaxLength="255" Nullable="false" />
+    <Property Name="RequestUri" Type="nvarchar" MaxLength="2048" Nullable="false" />
     <Property Name="IntervalStartTime" Type="datetime" Nullable="false" />
     <Property Name="UserLoad" Type="real" />
     <Property Name="ResponseTime" Type="real" />
     <Property Name="RPS" Type="real" />
   </EntityType>
   <!--Errors Found During Generation:
-      warning 6002: The table/view 'LoadTest2010.dbo.LoadTestWebRequestCounterSample' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
-      -->
+warning 6002: The table/view 'LoadTest2010.dbo.LoadTestWebRequestCounterSample' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
   <EntityType Name="LoadTestWebRequestCounterSample">
     <Key>
       <PropertyRef Name="LoadTestRunId" />
@@ -1415,18 +922,17 @@
       <PropertyRef Name="CounterType" />
     </Key>
     <Property Name="LoadTestRunId" Type="int" Nullable="false" />
-    <Property Name="CounterName" Type="nvarchar" Nullable="false" MaxLength="255" />
-    <Property Name="ScenarioName" Type="nvarchar" Nullable="false" MaxLength="64" />
-    <Property Name="TestCaseName" Type="nvarchar" Nullable="false" MaxLength="64" />
-    <Property Name="RequestUri" Type="nvarchar" Nullable="false" MaxLength="2048" />
+    <Property Name="CounterName" Type="nvarchar" MaxLength="255" Nullable="false" />
+    <Property Name="ScenarioName" Type="nvarchar" MaxLength="64" Nullable="false" />
+    <Property Name="TestCaseName" Type="nvarchar" MaxLength="64" Nullable="false" />
+    <Property Name="RequestUri" Type="nvarchar" MaxLength="2048" Nullable="false" />
     <Property Name="IntervalStartTime" Type="datetime" Nullable="false" />
     <Property Name="IntervalEndTime" Type="datetime" Nullable="false" />
     <Property Name="CounterType" Type="int" Nullable="false" />
     <Property Name="ComputedValue" Type="real" />
   </EntityType>
   <!--Errors Found During Generation:
-      warning 6002: The table/view 'LoadTest2010.dbo.LoadTestWebRequestCounterSummary' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
-      -->
+warning 6002: The table/view 'LoadTest2010.dbo.LoadTestWebRequestCounterSummary' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
   <EntityType Name="LoadTestWebRequestCounterSummary">
     <Key>
       <PropertyRef Name="LoadTestRunId" />
@@ -1436,15 +942,15 @@
       <PropertyRef Name="RequestUri" />
     </Key>
     <Property Name="LoadTestRunId" Type="int" Nullable="false" />
-    <Property Name="CounterName" Type="nvarchar" Nullable="false" MaxLength="255" />
-    <Property Name="ScenarioName" Type="nvarchar" Nullable="false" MaxLength="64" />
-    <Property Name="TestCaseName" Type="nvarchar" Nullable="false" MaxLength="64" />
-    <Property Name="RequestUri" Type="nvarchar" Nullable="false" MaxLength="2048" />
+    <Property Name="CounterName" Type="nvarchar" MaxLength="255" Nullable="false" />
+    <Property Name="ScenarioName" Type="nvarchar" MaxLength="64" Nullable="false" />
+    <Property Name="TestCaseName" Type="nvarchar" MaxLength="64" Nullable="false" />
+    <Property Name="RequestUri" Type="nvarchar" MaxLength="2048" Nullable="false" />
     <Property Name="CumulativeValue" Type="real" />
   </EntityType>
   <Association Name="FK__LoadTestC__LoadT__72C60C4A">
-    <End Role="LoadTestRun" Type="LoadTest2010Model.Store.LoadTestRun" Multiplicity="1" />
-    <End Role="LoadTestCase" Type="LoadTest2010Model.Store.LoadTestCase" Multiplicity="*" />
+    <End Role="LoadTestRun" Type="Self.LoadTestRun" Multiplicity="1" />
+    <End Role="LoadTestCase" Type="Self.LoadTestCase" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="LoadTestRun">
         <PropertyRef Name="LoadTestRunId" />
@@ -1455,8 +961,8 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="FK__LoadTestD__LoadT__02FC7413">
-    <End Role="LoadTestRun" Type="LoadTest2010Model.Store.LoadTestRun" Multiplicity="1" />
-    <End Role="LoadTestDataCollectorLog" Type="LoadTest2010Model.Store.LoadTestDataCollectorLog" Multiplicity="*" />
+    <End Role="LoadTestRun" Type="Self.LoadTestRun" Multiplicity="1" />
+    <End Role="LoadTestDataCollectorLog" Type="Self.LoadTestDataCollectorLog" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="LoadTestRun">
         <PropertyRef Name="LoadTestRunId" />
@@ -1467,8 +973,8 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="FK__LoadTestF__LoadT__03F0984C">
-    <End Role="LoadTestRun" Type="LoadTest2010Model.Store.LoadTestRun" Multiplicity="1" />
-    <End Role="LoadTestFileAttachment" Type="LoadTest2010Model.Store.LoadTestFileAttachment" Multiplicity="*" />
+    <End Role="LoadTestRun" Type="Self.LoadTestRun" Multiplicity="1" />
+    <End Role="LoadTestFileAttachment" Type="Self.LoadTestFileAttachment" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="LoadTestRun">
         <PropertyRef Name="LoadTestRunId" />
@@ -1479,8 +985,8 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="FK__LoadTestF__LoadT__04E4BC85">
-    <End Role="LoadTestRun" Type="LoadTest2010Model.Store.LoadTestRun" Multiplicity="1" />
-    <End Role="LoadTestFileAttachmentChunk" Type="LoadTest2010Model.Store.LoadTestFileAttachmentChunk" Multiplicity="*" />
+    <End Role="LoadTestRun" Type="Self.LoadTestRun" Multiplicity="1" />
+    <End Role="LoadTestFileAttachmentChunk" Type="Self.LoadTestFileAttachmentChunk" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="LoadTestRun">
         <PropertyRef Name="LoadTestRunId" />
@@ -1491,8 +997,8 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="FK__LoadTestM__LoadT__73BA3083">
-    <End Role="LoadTestRun" Type="LoadTest2010Model.Store.LoadTestRun" Multiplicity="1" />
-    <End Role="LoadTestMessage" Type="LoadTest2010Model.Store.LoadTestMessage" Multiplicity="*" />
+    <End Role="LoadTestRun" Type="Self.LoadTestRun" Multiplicity="1" />
+    <End Role="LoadTestMessage" Type="Self.LoadTestMessage" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="LoadTestRun">
         <PropertyRef Name="LoadTestRunId" />
@@ -1503,8 +1009,8 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="FK__LoadTestP__LoadT__75A278F5">
-    <End Role="LoadTestRun" Type="LoadTest2010Model.Store.LoadTestRun" Multiplicity="1" />
-    <End Role="LoadTestPerformanceCounter" Type="LoadTest2010Model.Store.LoadTestPerformanceCounter" Multiplicity="*" />
+    <End Role="LoadTestRun" Type="Self.LoadTestRun" Multiplicity="1" />
+    <End Role="LoadTestPerformanceCounter" Type="Self.LoadTestPerformanceCounter" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="LoadTestRun">
         <PropertyRef Name="LoadTestRunId" />
@@ -1515,8 +1021,8 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="FK__LoadTestP__LoadT__76969D2E">
-    <End Role="LoadTestRun" Type="LoadTest2010Model.Store.LoadTestRun" Multiplicity="1" />
-    <End Role="LoadTestPerformanceCounterCategory" Type="LoadTest2010Model.Store.LoadTestPerformanceCounterCategory" Multiplicity="*" />
+    <End Role="LoadTestRun" Type="Self.LoadTestRun" Multiplicity="1" />
+    <End Role="LoadTestPerformanceCounterCategory" Type="Self.LoadTestPerformanceCounterCategory" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="LoadTestRun">
         <PropertyRef Name="LoadTestRunId" />
@@ -1527,8 +1033,8 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="FK__LoadTestP__LoadT__778AC167">
-    <End Role="LoadTestRun" Type="LoadTest2010Model.Store.LoadTestRun" Multiplicity="1" />
-    <End Role="LoadTestPerformanceCounterInstance" Type="LoadTest2010Model.Store.LoadTestPerformanceCounterInstance" Multiplicity="*" />
+    <End Role="LoadTestRun" Type="Self.LoadTestRun" Multiplicity="1" />
+    <End Role="LoadTestPerformanceCounterInstance" Type="Self.LoadTestPerformanceCounterInstance" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="LoadTestRun">
         <PropertyRef Name="LoadTestRunId" />
@@ -1539,8 +1045,8 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="FK__LoadTestP__LoadT__787EE5A0">
-    <End Role="LoadTestRun" Type="LoadTest2010Model.Store.LoadTestRun" Multiplicity="1" />
-    <End Role="LoadTestPerformanceCounterSample" Type="LoadTest2010Model.Store.LoadTestPerformanceCounterSample" Multiplicity="*" />
+    <End Role="LoadTestRun" Type="Self.LoadTestRun" Multiplicity="1" />
+    <End Role="LoadTestPerformanceCounterSample" Type="Self.LoadTestPerformanceCounterSample" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="LoadTestRun">
         <PropertyRef Name="LoadTestRunId" />
@@ -1551,8 +1057,8 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="FK__LoadTestR__LoadT__797309D9">
-    <End Role="LoadTestRun" Type="LoadTest2010Model.Store.LoadTestRun" Multiplicity="1" />
-    <End Role="LoadTestRunAgent" Type="LoadTest2010Model.Store.LoadTestRunAgent" Multiplicity="*" />
+    <End Role="LoadTestRun" Type="Self.LoadTestRun" Multiplicity="1" />
+    <End Role="LoadTestRunAgent" Type="Self.LoadTestRunAgent" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="LoadTestRun">
         <PropertyRef Name="LoadTestRunId" />
@@ -1563,8 +1069,8 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="FK__LoadTestR__LoadT__7A672E12">
-    <End Role="LoadTestRun" Type="LoadTest2010Model.Store.LoadTestRun" Multiplicity="1" />
-    <End Role="LoadTestRunInterval" Type="LoadTest2010Model.Store.LoadTestRunInterval" Multiplicity="*" />
+    <End Role="LoadTestRun" Type="Self.LoadTestRun" Multiplicity="1" />
+    <End Role="LoadTestRunInterval" Type="Self.LoadTestRunInterval" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="LoadTestRun">
         <PropertyRef Name="LoadTestRunId" />
@@ -1575,8 +1081,8 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="FK__LoadTestS__LoadT__00200768">
-    <End Role="LoadTestRun" Type="LoadTest2010Model.Store.LoadTestRun" Multiplicity="1" />
-    <End Role="LoadTestSystemUnderTest" Type="LoadTest2010Model.Store.LoadTestSystemUnderTest" Multiplicity="*" />
+    <End Role="LoadTestRun" Type="Self.LoadTestRun" Multiplicity="1" />
+    <End Role="LoadTestSystemUnderTest" Type="Self.LoadTestSystemUnderTest" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="LoadTestRun">
         <PropertyRef Name="LoadTestRunId" />
@@ -1587,8 +1093,8 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="FK__LoadTestS__LoadT__01142BA1">
-    <End Role="LoadTestRun" Type="LoadTest2010Model.Store.LoadTestRun" Multiplicity="1" />
-    <End Role="LoadTestSystemUnderTestTag" Type="LoadTest2010Model.Store.LoadTestSystemUnderTestTag" Multiplicity="*" />
+    <End Role="LoadTestRun" Type="Self.LoadTestRun" Multiplicity="1" />
+    <End Role="LoadTestSystemUnderTestTag" Type="Self.LoadTestSystemUnderTestTag" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="LoadTestRun">
         <PropertyRef Name="LoadTestRunId" />
@@ -1599,8 +1105,8 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="FK__LoadTestS__LoadT__7B5B524B">
-    <End Role="LoadTestRun" Type="LoadTest2010Model.Store.LoadTestRun" Multiplicity="1" />
-    <End Role="LoadTestScenario" Type="LoadTest2010Model.Store.LoadTestScenario" Multiplicity="*" />
+    <End Role="LoadTestRun" Type="Self.LoadTestRun" Multiplicity="1" />
+    <End Role="LoadTestScenario" Type="Self.LoadTestScenario" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="LoadTestRun">
         <PropertyRef Name="LoadTestRunId" />
@@ -1611,8 +1117,8 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="FK__LoadTestS__LoadT__7F2BE32F">
-    <End Role="LoadTestRun" Type="LoadTest2010Model.Store.LoadTestRun" Multiplicity="1" />
-    <End Role="LoadTestSqlTrace" Type="LoadTest2010Model.Store.LoadTestSqlTrace" Multiplicity="*" />
+    <End Role="LoadTestRun" Type="Self.LoadTestRun" Multiplicity="1" />
+    <End Role="LoadTestSqlTrace" Type="Self.LoadTestSqlTrace" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="LoadTestRun">
         <PropertyRef Name="LoadTestRunId" />
@@ -1623,8 +1129,8 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="FK__LoadTestT__LoadT__02084FDA">
-    <End Role="LoadTestRun" Type="LoadTest2010Model.Store.LoadTestRun" Multiplicity="1" />
-    <End Role="LoadTestTestLog" Type="LoadTest2010Model.Store.LoadTestTestLog" Multiplicity="*" />
+    <End Role="LoadTestRun" Type="Self.LoadTestRun" Multiplicity="1" />
+    <End Role="LoadTestTestLog" Type="Self.LoadTestTestLog" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="LoadTestRun">
         <PropertyRef Name="LoadTestRunId" />
@@ -1635,8 +1141,8 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="FK__LoadTestT__LoadT__74AE54BC">
-    <End Role="LoadTestRun" Type="LoadTest2010Model.Store.LoadTestRun" Multiplicity="1" />
-    <End Role="LoadTestThresholdMessage" Type="LoadTest2010Model.Store.LoadTestThresholdMessage" Multiplicity="*" />
+    <End Role="LoadTestRun" Type="Self.LoadTestRun" Multiplicity="1" />
+    <End Role="LoadTestThresholdMessage" Type="Self.LoadTestThresholdMessage" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="LoadTestRun">
         <PropertyRef Name="LoadTestRunId" />
@@ -1647,8 +1153,8 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="FK__WebLoadTe__LoadT__7C4F7684">
-    <End Role="LoadTestRun" Type="LoadTest2010Model.Store.LoadTestRun" Multiplicity="1" />
-    <End Role="WebLoadTestErrorDetail" Type="LoadTest2010Model.Store.WebLoadTestErrorDetail" Multiplicity="*" />
+    <End Role="LoadTestRun" Type="Self.LoadTestRun" Multiplicity="1" />
+    <End Role="WebLoadTestErrorDetail" Type="Self.WebLoadTestErrorDetail" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="LoadTestRun">
         <PropertyRef Name="LoadTestRunId" />
@@ -1659,8 +1165,8 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="FK__WebLoadTe__LoadT__7D439ABD">
-    <End Role="LoadTestRun" Type="LoadTest2010Model.Store.LoadTestRun" Multiplicity="1" />
-    <End Role="WebLoadTestRequestMap" Type="LoadTest2010Model.Store.WebLoadTestRequestMap" Multiplicity="*" />
+    <End Role="LoadTestRun" Type="Self.LoadTestRun" Multiplicity="1" />
+    <End Role="WebLoadTestRequestMap" Type="Self.WebLoadTestRequestMap" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="LoadTestRun">
         <PropertyRef Name="LoadTestRunId" />
@@ -1671,8 +1177,8 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="FK__WebLoadTe__LoadT__7E37BEF6">
-    <End Role="LoadTestRun" Type="LoadTest2010Model.Store.LoadTestRun" Multiplicity="1" />
-    <End Role="WebLoadTestTransaction" Type="LoadTest2010Model.Store.WebLoadTestTransaction" Multiplicity="*" />
+    <End Role="LoadTestRun" Type="Self.LoadTestRun" Multiplicity="1" />
+    <End Role="WebLoadTestTransaction" Type="Self.WebLoadTestTransaction" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="LoadTestRun">
         <PropertyRef Name="LoadTestRunId" />
@@ -1682,12 +1188,6 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Function Name="dba_SpaceUsed" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
-    <Parameter Name="SourceDB" Type="varchar" Mode="In" />
-    <Parameter Name="SortBy" Type="char" Mode="In" />
-  </Function>
-  <Function Name="fn_diagramobjects" ReturnType="int" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
-  <Function Name="GetAllTableSizes" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
   <Function Name="Pbx_DeleteLoadTestsLessThan15MinutesDuration" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
   <Function Name="Pbx_FindLoadTestsLessThan15MinutesDuration" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
   <Function Name="Pbx_GetAgents" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
@@ -1703,6 +1203,7 @@
     <Parameter Name="FilterAgents" Type="bit" Mode="In" />
   </Function>
   <Function Name="Pbx_RebuildIndexes" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="Pbx_ReorganizeAllIndexes" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
   <Function Name="Pbx_ShrinkDatabase" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
   <Function Name="prc_CreateLoadTestReport" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
     <Parameter Name="name" Type="nvarchar" Mode="In" />
@@ -1810,16 +1311,6 @@
   <Function Name="Prc_GetSamplesForInstance" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
     <Parameter Name="LoadTestRunId" Type="int" Mode="In" />
     <Parameter Name="InstanceId" Type="int" Mode="In" />
-  </Function>
-  <Function Name="Prc_GetSamplesForTest" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
-    <Parameter Name="LoadTestId" Type="int" Mode="In" />
-    <Parameter Name="CounterCategory" Type="nvarchar" Mode="In" />
-    <Parameter Name="CounterName" Type="nvarchar" Mode="In" />
-  </Function>
-  <Function Name="Prc_GetSamplesForTest2" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
-    <Parameter Name="LoadTestId" Type="nvarchar" Mode="In" />
-    <Parameter Name="CounterCategory" Type="nvarchar" Mode="In" />
-    <Parameter Name="CounterName" Type="nvarchar" Mode="In" />
   </Function>
   <Function Name="Prc_GetTestCases" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
     <Parameter Name="LoadTestRunId" Type="int" Mode="In" />
@@ -2079,16 +1570,26 @@
     <Parameter Name="LoadTestRunId" Type="int" Mode="In" />
     <Parameter Name="PageId" Type="int" Mode="In" />
   </Function>
+  <Function Name="Prc_UpdatePageSummary3" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="LoadTestRunId" Type="int" Mode="In" />
+  </Function>
   <Function Name="Prc_UpdatePageSummaryByNetwork" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
     <Parameter Name="LoadTestRunId" Type="int" Mode="In" />
     <Parameter Name="PageId" Type="int" Mode="In" />
     <Parameter Name="NetworkId" Type="int" Mode="In" />
+  </Function>
+  <Function Name="Prc_UpdatePageSummaryByNetwork3" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="LoadTestRunId" Type="int" Mode="In" />
   </Function>
   <Function Name="Prc_UpdateSummaryData" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
     <Parameter Name="LoadTestRunId" Type="int" Mode="In" />
     <Parameter Name="DeleteDetailTables" Type="bit" Mode="In" />
   </Function>
   <Function Name="Prc_UpdateSummaryData2" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="LoadTestRunId" Type="int" Mode="In" />
+    <Parameter Name="DeleteDetailTables" Type="bit" Mode="In" />
+  </Function>
+  <Function Name="Prc_UpdateSummaryData3" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
     <Parameter Name="LoadTestRunId" Type="int" Mode="In" />
     <Parameter Name="DeleteDetailTables" Type="bit" Mode="In" />
   </Function>
@@ -2100,6 +1601,9 @@
     <Parameter Name="LoadTestRunId" Type="int" Mode="In" />
     <Parameter Name="TestCaseId" Type="int" Mode="In" />
   </Function>
+  <Function Name="Prc_UpdateTestSummary3" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="LoadTestRunId" Type="int" Mode="In" />
+  </Function>
   <Function Name="Prc_UpdateTransactionPercentiles" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
     <Parameter Name="LoadTestRunId" Type="int" Mode="In" />
     <Parameter Name="TransactionId" Type="int" Mode="In" />
@@ -2108,34 +1612,445 @@
     <Parameter Name="LoadTestRunId" Type="int" Mode="In" />
     <Parameter Name="TransactionId" Type="int" Mode="In" />
   </Function>
-  <Function Name="sp_alterdiagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
-    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
-    <Parameter Name="owner_id" Type="int" Mode="In" />
-    <Parameter Name="version" Type="int" Mode="In" />
-    <Parameter Name="definition" Type="varbinary(max)" Mode="In" />
+  <Function Name="Prc_UpdateTransactionSummary3" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="LoadTestRunId" Type="int" Mode="In" />
   </Function>
-  <Function Name="sp_creatediagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
-    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
-    <Parameter Name="owner_id" Type="int" Mode="In" />
-    <Parameter Name="version" Type="int" Mode="In" />
-    <Parameter Name="definition" Type="varbinary(max)" Mode="In" />
-  </Function>
-  <Function Name="sp_dropdiagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
-    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
-    <Parameter Name="owner_id" Type="int" Mode="In" />
-  </Function>
-  <Function Name="sp_helpdiagramdefinition" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
-    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
-    <Parameter Name="owner_id" Type="int" Mode="In" />
-  </Function>
-  <Function Name="sp_helpdiagrams" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
-    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
-    <Parameter Name="owner_id" Type="int" Mode="In" />
-  </Function>
-  <Function Name="sp_renamediagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
-    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
-    <Parameter Name="owner_id" Type="int" Mode="In" />
-    <Parameter Name="new_diagramname" Type="nvarchar" Mode="In" />
-  </Function>
-  <Function Name="sp_upgraddiagrams" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <EntityContainer Name="LoadTest2010ModelStoreContainer">
+    <EntitySet Name="LoadTestBrowsers" EntityType="Self.LoadTestBrowsers" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="LoadTestCase" EntityType="Self.LoadTestCase" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="LoadTestDataCollectorLog" EntityType="Self.LoadTestDataCollectorLog" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="LoadTestDetailMessage" EntityType="Self.LoadTestDetailMessage" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="LoadTestFileAttachment" EntityType="Self.LoadTestFileAttachment" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="LoadTestFileAttachmentChunk" EntityType="Self.LoadTestFileAttachmentChunk" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="LoadTestMessage" EntityType="Self.LoadTestMessage" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="LoadTestMessageType" EntityType="Self.LoadTestMessageType" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="LoadTestNetworks" EntityType="Self.LoadTestNetworks" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="LoadTestPageDetail" EntityType="Self.LoadTestPageDetail" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="LoadTestPageSummaryByNetwork" EntityType="Self.LoadTestPageSummaryByNetwork" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="LoadTestPageSummaryData" EntityType="Self.LoadTestPageSummaryData" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="LoadTestPerformanceCounter" EntityType="Self.LoadTestPerformanceCounter" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="LoadTestPerformanceCounterCategory" EntityType="Self.LoadTestPerformanceCounterCategory" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="LoadTestPerformanceCounterInstance" EntityType="Self.LoadTestPerformanceCounterInstance" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="LoadTestPerformanceCounterSample" EntityType="Self.LoadTestPerformanceCounterSample" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="LoadTestReport" EntityType="Self.LoadTestReport" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="LoadTestReportPage" EntityType="Self.LoadTestReportPage" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="LoadTestReportRuns" EntityType="Self.LoadTestReportRuns" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="LoadTestRun" EntityType="Self.LoadTestRun" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="LoadTestRunAgent" EntityType="Self.LoadTestRunAgent" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="LoadTestRunInterval" EntityType="Self.LoadTestRunInterval" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="LoadTestScenario" EntityType="Self.LoadTestScenario" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="LoadTestSystemUnderTest" EntityType="Self.LoadTestSystemUnderTest" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="LoadTestTestDetail" EntityType="Self.LoadTestTestDetail" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="LoadTestTestLog" EntityType="Self.LoadTestTestLog" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="LoadTestTestSummaryData" EntityType="Self.LoadTestTestSummaryData" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="LoadTestThresholdMessage" EntityType="Self.LoadTestThresholdMessage" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="LoadTestTransactionDetail" EntityType="Self.LoadTestTransactionDetail" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="LoadTestTransactionSummaryData" EntityType="Self.LoadTestTransactionSummaryData" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="WebLoadTestErrorDetail" EntityType="Self.WebLoadTestErrorDetail" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="WebLoadTestRequestMap" EntityType="Self.WebLoadTestRequestMap" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="WebLoadTestTransaction" EntityType="Self.WebLoadTestTransaction" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="LoadTestSchemaRevision" EntityType="Self.LoadTestSchemaRevision" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+[LoadTestSchemaRevision].[LoadTestSchemaRev] AS [LoadTestSchemaRev]
+FROM [dbo].[LoadTestSchemaRevision] AS [LoadTestSchemaRevision]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="LoadTestSqlTrace" EntityType="Self.LoadTestSqlTrace" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+[LoadTestSqlTrace].[LoadTestRunId] AS [LoadTestRunId], 
+[LoadTestSqlTrace].[TextData] AS [TextData], 
+[LoadTestSqlTrace].[Duration] AS [Duration], 
+[LoadTestSqlTrace].[StartTime] AS [StartTime], 
+[LoadTestSqlTrace].[EndTime] AS [EndTime], 
+[LoadTestSqlTrace].[Reads] AS [Reads], 
+[LoadTestSqlTrace].[Writes] AS [Writes], 
+[LoadTestSqlTrace].[CPU] AS [CPU], 
+[LoadTestSqlTrace].[EventClass] AS [EventClass]
+FROM [dbo].[LoadTestSqlTrace] AS [LoadTestSqlTrace]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="LoadTestSystemUnderTestTag" EntityType="Self.LoadTestSystemUnderTestTag" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+[LoadTestSystemUnderTestTag].[LoadTestRunId] AS [LoadTestRunId], 
+[LoadTestSystemUnderTestTag].[SystemUnderTestId] AS [SystemUnderTestId], 
+[LoadTestSystemUnderTestTag].[MachineTag] AS [MachineTag]
+FROM [dbo].[LoadTestSystemUnderTestTag] AS [LoadTestSystemUnderTestTag]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="LoadTestComputedCounterSample" EntityType="Self.LoadTestComputedCounterSample" store:Type="Views" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+[LoadTestComputedCounterSample].[LoadTestRunId] AS [LoadTestRunId], 
+[LoadTestComputedCounterSample].[MachineName] AS [MachineName], 
+[LoadTestComputedCounterSample].[CategoryName] AS [CategoryName], 
+[LoadTestComputedCounterSample].[CounterName] AS [CounterName], 
+[LoadTestComputedCounterSample].[InstanceName] AS [InstanceName], 
+[LoadTestComputedCounterSample].[IntervalStartTime] AS [IntervalStartTime], 
+[LoadTestComputedCounterSample].[IntervalEndTime] AS [IntervalEndTime], 
+[LoadTestComputedCounterSample].[CounterType] AS [CounterType], 
+[LoadTestComputedCounterSample].[ComputedValue] AS [ComputedValue], 
+[LoadTestComputedCounterSample].[RawValue] AS [RawValue], 
+[LoadTestComputedCounterSample].[ThresholdRuleResult] AS [ThresholdRuleResult]
+FROM [dbo].[LoadTestComputedCounterSample] AS [LoadTestComputedCounterSample]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="LoadTestComputedCounterSummary" EntityType="Self.LoadTestComputedCounterSummary" store:Type="Views" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+[LoadTestComputedCounterSummary].[LoadTestName] AS [LoadTestName], 
+[LoadTestComputedCounterSummary].[LoadTestRunId] AS [LoadTestRunId], 
+[LoadTestComputedCounterSummary].[MachineName] AS [MachineName], 
+[LoadTestComputedCounterSummary].[CategoryName] AS [CategoryName], 
+[LoadTestComputedCounterSummary].[CounterName] AS [CounterName], 
+[LoadTestComputedCounterSummary].[HigherIsBetter] AS [HigherIsBetter], 
+[LoadTestComputedCounterSummary].[InstanceName] AS [InstanceName], 
+[LoadTestComputedCounterSummary].[CumulativeValue] AS [CumulativeValue], 
+[LoadTestComputedCounterSummary].[OverallThresholdRuleResult] AS [OverallThresholdRuleResult]
+FROM [dbo].[LoadTestComputedCounterSummary] AS [LoadTestComputedCounterSummary]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="LoadTestMessageSummary" EntityType="Self.LoadTestMessageSummary" store:Type="Views" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+[LoadTestMessageSummary].[LoadTestRunId] AS [LoadTestRunId], 
+[LoadTestMessageSummary].[AgentName] AS [AgentName], 
+[LoadTestMessageSummary].[ScenarioName] AS [ScenarioName], 
+[LoadTestMessageSummary].[TestCaseName] AS [TestCaseName], 
+[LoadTestMessageSummary].[RequestUri] AS [RequestUri], 
+[LoadTestMessageSummary].[MessageId] AS [MessageId], 
+[LoadTestMessageSummary].[MessageTimeStamp] AS [MessageTimeStamp], 
+[LoadTestMessageSummary].[MessageType] AS [MessageType], 
+[LoadTestMessageSummary].[SubType] AS [SubType], 
+[LoadTestMessageSummary].[MessageText] AS [MessageText], 
+[LoadTestMessageSummary].[StackTrace] AS [StackTrace], 
+[LoadTestMessageSummary].[RequestId] AS [RequestId], 
+[LoadTestMessageSummary].[HasWebTestErrorDetail] AS [HasWebTestErrorDetail]
+FROM [dbo].[LoadTestMessageSummary] AS [LoadTestMessageSummary]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="LoadTestMessageView" EntityType="Self.LoadTestMessageView" store:Type="Views" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+[LoadTestMessageView].[LoadTestRunId] AS [LoadTestRunId], 
+[LoadTestMessageView].[AgentName] AS [AgentName], 
+[LoadTestMessageView].[ScenarioName] AS [ScenarioName], 
+[LoadTestMessageView].[TestCaseName] AS [TestCaseName], 
+[LoadTestMessageView].[RequestUri] AS [RequestUri], 
+[LoadTestMessageView].[MessageId] AS [MessageId], 
+[LoadTestMessageView].[MessageTimeStamp] AS [MessageTimeStamp], 
+[LoadTestMessageView].[MessageType] AS [MessageType], 
+[LoadTestMessageView].[SubType] AS [SubType], 
+[LoadTestMessageView].[MessageText] AS [MessageText], 
+[LoadTestMessageView].[StackTrace] AS [StackTrace], 
+[LoadTestMessageView].[RequestId] AS [RequestId], 
+[LoadTestMessageView].[HasWebTestErrorDetail] AS [HasWebTestErrorDetail]
+FROM [dbo].[LoadTestMessageView] AS [LoadTestMessageView]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="LoadTestMessageView2" EntityType="Self.LoadTestMessageView2" store:Type="Views" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+[LoadTestMessageView2].[LoadTestRunId] AS [LoadTestRunId], 
+[LoadTestMessageView2].[AgentName] AS [AgentName], 
+[LoadTestMessageView2].[ScenarioName] AS [ScenarioName], 
+[LoadTestMessageView2].[TestCaseName] AS [TestCaseName], 
+[LoadTestMessageView2].[RequestUri] AS [RequestUri], 
+[LoadTestMessageView2].[MessageId] AS [MessageId], 
+[LoadTestMessageView2].[MessageTimeStamp] AS [MessageTimeStamp], 
+[LoadTestMessageView2].[MessageType] AS [MessageType], 
+[LoadTestMessageView2].[SubType] AS [SubType], 
+[LoadTestMessageView2].[MessageText] AS [MessageText], 
+[LoadTestMessageView2].[StackTrace] AS [StackTrace], 
+[LoadTestMessageView2].[RequestId] AS [RequestId], 
+[LoadTestMessageView2].[HasWebTestErrorDetail] AS [HasWebTestErrorDetail], 
+[LoadTestMessageView2].[TestLogId] AS [TestLogId]
+FROM [dbo].[LoadTestMessageView2] AS [LoadTestMessageView2]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="LoadTestPageResults" EntityType="Self.LoadTestPageResults" store:Type="Views" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+[LoadTestPageResults].[LoadTestRunId] AS [LoadTestRunId], 
+[LoadTestPageResults].[ScenarioName] AS [ScenarioName], 
+[LoadTestPageResults].[TestCaseName] AS [TestCaseName], 
+[LoadTestPageResults].[RequestUri] AS [RequestUri], 
+[LoadTestPageResults].[PageCount] AS [PageCount], 
+[LoadTestPageResults].[Minimum] AS [Minimum], 
+[LoadTestPageResults].[Average] AS [Average], 
+[LoadTestPageResults].[Percentile90] AS [Percentile90], 
+[LoadTestPageResults].[Percentile95] AS [Percentile95], 
+[LoadTestPageResults].[Maximum] AS [Maximum]
+FROM [dbo].[LoadTestPageResults] AS [LoadTestPageResults]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="LoadTestPageResultsByNetwork" EntityType="Self.LoadTestPageResultsByNetwork" store:Type="Views" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+[LoadTestPageResultsByNetwork].[LoadTestRunId] AS [LoadTestRunId], 
+[LoadTestPageResultsByNetwork].[ScenarioName] AS [ScenarioName], 
+[LoadTestPageResultsByNetwork].[TestCaseName] AS [TestCaseName], 
+[LoadTestPageResultsByNetwork].[RequestUri] AS [RequestUri], 
+[LoadTestPageResultsByNetwork].[NetworkName] AS [NetworkName], 
+[LoadTestPageResultsByNetwork].[PageCount] AS [PageCount], 
+[LoadTestPageResultsByNetwork].[Minimum] AS [Minimum], 
+[LoadTestPageResultsByNetwork].[Average] AS [Average], 
+[LoadTestPageResultsByNetwork].[Percentile90] AS [Percentile90], 
+[LoadTestPageResultsByNetwork].[Percentile95] AS [Percentile95], 
+[LoadTestPageResultsByNetwork].[Maximum] AS [Maximum], 
+[LoadTestPageResultsByNetwork].[Goal] AS [Goal], 
+[LoadTestPageResultsByNetwork].[PagesMeetingGoal] AS [PagesMeetingGoal]
+FROM [dbo].[LoadTestPageResultsByNetwork] AS [LoadTestPageResultsByNetwork]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="LoadTestPageResultsByNetwork2" EntityType="Self.LoadTestPageResultsByNetwork2" store:Type="Views" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+[LoadTestPageResultsByNetwork2].[LoadTestRunId] AS [LoadTestRunId], 
+[LoadTestPageResultsByNetwork2].[ScenarioName] AS [ScenarioName], 
+[LoadTestPageResultsByNetwork2].[TestCaseName] AS [TestCaseName], 
+[LoadTestPageResultsByNetwork2].[RequestUri] AS [RequestUri], 
+[LoadTestPageResultsByNetwork2].[NetworkName] AS [NetworkName], 
+[LoadTestPageResultsByNetwork2].[PageCount] AS [PageCount], 
+[LoadTestPageResultsByNetwork2].[Minimum] AS [Minimum], 
+[LoadTestPageResultsByNetwork2].[Average] AS [Average], 
+[LoadTestPageResultsByNetwork2].[Median] AS [Median], 
+[LoadTestPageResultsByNetwork2].[Percentile90] AS [Percentile90], 
+[LoadTestPageResultsByNetwork2].[Percentile95] AS [Percentile95], 
+[LoadTestPageResultsByNetwork2].[Percentile99] AS [Percentile99], 
+[LoadTestPageResultsByNetwork2].[Maximum] AS [Maximum], 
+[LoadTestPageResultsByNetwork2].[StandardDeviation] AS [StandardDeviation], 
+[LoadTestPageResultsByNetwork2].[Goal] AS [Goal], 
+[LoadTestPageResultsByNetwork2].[PagesMeetingGoal] AS [PagesMeetingGoal]
+FROM [dbo].[LoadTestPageResultsByNetwork2] AS [LoadTestPageResultsByNetwork2]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="LoadTestPageSample" EntityType="Self.LoadTestPageSample" store:Type="Views" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+[LoadTestPageSample].[LoadTestRunId] AS [LoadTestRunId], 
+[LoadTestPageSample].[CounterName] AS [CounterName], 
+[LoadTestPageSample].[ScenarioName] AS [ScenarioName], 
+[LoadTestPageSample].[TestCaseName] AS [TestCaseName], 
+[LoadTestPageSample].[RequestUri] AS [RequestUri], 
+[LoadTestPageSample].[IntervalStartTime] AS [IntervalStartTime], 
+[LoadTestPageSample].[IntervalEndTime] AS [IntervalEndTime], 
+[LoadTestPageSample].[ComputedValue] AS [ComputedValue]
+FROM [dbo].[LoadTestPageSample] AS [LoadTestPageSample]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="LoadTestPageSummary" EntityType="Self.LoadTestPageSummary" store:Type="Views" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+[LoadTestPageSummary].[LoadTestName] AS [LoadTestName], 
+[LoadTestPageSummary].[LoadTestRunId] AS [LoadTestRunId], 
+[LoadTestPageSummary].[CounterName] AS [CounterName], 
+[LoadTestPageSummary].[ScenarioName] AS [ScenarioName], 
+[LoadTestPageSummary].[TestCaseName] AS [TestCaseName], 
+[LoadTestPageSummary].[RequestUri] AS [RequestUri], 
+[LoadTestPageSummary].[CumulativeValue] AS [CumulativeValue], 
+[LoadTestPageSummary].[ResponseTimeGoal] AS [ResponseTimeGoal]
+FROM [dbo].[LoadTestPageSummary] AS [LoadTestPageSummary]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="LoadTestRequestSummary" EntityType="Self.LoadTestRequestSummary" store:Type="Views" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+[LoadTestRequestSummary].[LoadTestName] AS [LoadTestName], 
+[LoadTestRequestSummary].[LoadTestRunId] AS [LoadTestRunId], 
+[LoadTestRequestSummary].[CounterName] AS [CounterName], 
+[LoadTestRequestSummary].[ScenarioName] AS [ScenarioName], 
+[LoadTestRequestSummary].[TestCaseName] AS [TestCaseName], 
+[LoadTestRequestSummary].[RequestUri] AS [RequestUri], 
+[LoadTestRequestSummary].[CumulativeValue] AS [CumulativeValue]
+FROM [dbo].[LoadTestRequestSummary] AS [LoadTestRequestSummary]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="LoadTestScenarioSummary" EntityType="Self.LoadTestScenarioSummary" store:Type="Views" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+[LoadTestScenarioSummary].[LoadTestName] AS [LoadTestName], 
+[LoadTestScenarioSummary].[LoadTestRunId] AS [LoadTestRunId], 
+[LoadTestScenarioSummary].[CounterName] AS [CounterName], 
+[LoadTestScenarioSummary].[ScenarioName] AS [ScenarioName], 
+[LoadTestScenarioSummary].[CumulativeValue] AS [CumulativeValue]
+FROM [dbo].[LoadTestScenarioSummary] AS [LoadTestScenarioSummary]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="LoadTestTestCaseSample" EntityType="Self.LoadTestTestCaseSample" store:Type="Views" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+[LoadTestTestCaseSample].[LoadTestRunId] AS [LoadTestRunId], 
+[LoadTestTestCaseSample].[CounterName] AS [CounterName], 
+[LoadTestTestCaseSample].[ScenarioName] AS [ScenarioName], 
+[LoadTestTestCaseSample].[TestCaseName] AS [TestCaseName], 
+[LoadTestTestCaseSample].[IntervalStartTime] AS [IntervalStartTime], 
+[LoadTestTestCaseSample].[IntervalEndTime] AS [IntervalEndTime], 
+[LoadTestTestCaseSample].[ComputedValue] AS [ComputedValue]
+FROM [dbo].[LoadTestTestCaseSample] AS [LoadTestTestCaseSample]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="LoadTestTestCaseSummary" EntityType="Self.LoadTestTestCaseSummary" store:Type="Views" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+[LoadTestTestCaseSummary].[LoadTestName] AS [LoadTestName], 
+[LoadTestTestCaseSummary].[LoadTestRunId] AS [LoadTestRunId], 
+[LoadTestTestCaseSummary].[CounterName] AS [CounterName], 
+[LoadTestTestCaseSummary].[ScenarioName] AS [ScenarioName], 
+[LoadTestTestCaseSummary].[TestCaseName] AS [TestCaseName], 
+[LoadTestTestCaseSummary].[CumulativeValue] AS [CumulativeValue]
+FROM [dbo].[LoadTestTestCaseSummary] AS [LoadTestTestCaseSummary]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="LoadTestTestResults" EntityType="Self.LoadTestTestResults" store:Type="Views" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+[LoadTestTestResults].[LoadTestRunId] AS [LoadTestRunId], 
+[LoadTestTestResults].[ScenarioName] AS [ScenarioName], 
+[LoadTestTestResults].[TestCaseName] AS [TestCaseName], 
+[LoadTestTestResults].[TestsRun] AS [TestsRun], 
+[LoadTestTestResults].[Minimum] AS [Minimum], 
+[LoadTestTestResults].[Average] AS [Average], 
+[LoadTestTestResults].[Percentile90] AS [Percentile90], 
+[LoadTestTestResults].[Percentile95] AS [Percentile95], 
+[LoadTestTestResults].[Maximum] AS [Maximum]
+FROM [dbo].[LoadTestTestResults] AS [LoadTestTestResults]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="LoadTestTransactionResults" EntityType="Self.LoadTestTransactionResults" store:Type="Views" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+[LoadTestTransactionResults].[LoadTestRunId] AS [LoadTestRunId], 
+[LoadTestTransactionResults].[ScenarioName] AS [ScenarioName], 
+[LoadTestTransactionResults].[TestCaseName] AS [TestCaseName], 
+[LoadTestTransactionResults].[TransactionName] AS [TransactionName], 
+[LoadTestTransactionResults].[TransactionCount] AS [TransactionCount], 
+[LoadTestTransactionResults].[Minimum] AS [Minimum], 
+[LoadTestTransactionResults].[Average] AS [Average], 
+[LoadTestTransactionResults].[Percentile90] AS [Percentile90], 
+[LoadTestTransactionResults].[Percentile95] AS [Percentile95], 
+[LoadTestTransactionResults].[Maximum] AS [Maximum]
+FROM [dbo].[LoadTestTransactionResults] AS [LoadTestTransactionResults]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="LoadTestTransactionResults2" EntityType="Self.LoadTestTransactionResults2" store:Type="Views" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+[LoadTestTransactionResults2].[LoadTestRunId] AS [LoadTestRunId], 
+[LoadTestTransactionResults2].[ScenarioName] AS [ScenarioName], 
+[LoadTestTransactionResults2].[TestCaseName] AS [TestCaseName], 
+[LoadTestTransactionResults2].[TransactionName] AS [TransactionName], 
+[LoadTestTransactionResults2].[TransactionCount] AS [TransactionCount], 
+[LoadTestTransactionResults2].[Minimum] AS [Minimum], 
+[LoadTestTransactionResults2].[Average] AS [Average], 
+[LoadTestTransactionResults2].[Percentile90] AS [Percentile90], 
+[LoadTestTransactionResults2].[Percentile95] AS [Percentile95], 
+[LoadTestTransactionResults2].[Maximum] AS [Maximum], 
+[LoadTestTransactionResults2].[Median] AS [Median], 
+[LoadTestTransactionResults2].[Percentile99] AS [Percentile99], 
+[LoadTestTransactionResults2].[StandardDeviation] AS [StandardDeviation], 
+[LoadTestTransactionResults2].[AvgTransactionTime] AS [AvgTransactionTime]
+FROM [dbo].[LoadTestTransactionResults2] AS [LoadTestTransactionResults2]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="LoadTestTransactionSample" EntityType="Self.LoadTestTransactionSample" store:Type="Views" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+[LoadTestTransactionSample].[LoadTestRunId] AS [LoadTestRunId], 
+[LoadTestTransactionSample].[CounterName] AS [CounterName], 
+[LoadTestTransactionSample].[ScenarioName] AS [ScenarioName], 
+[LoadTestTransactionSample].[TestCaseName] AS [TestCaseName], 
+[LoadTestTransactionSample].[TransactionName] AS [TransactionName], 
+[LoadTestTransactionSample].[IntervalStartTime] AS [IntervalStartTime], 
+[LoadTestTransactionSample].[IntervalEndTime] AS [IntervalEndTime], 
+[LoadTestTransactionSample].[ComputedValue] AS [ComputedValue]
+FROM [dbo].[LoadTestTransactionSample] AS [LoadTestTransactionSample]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="LoadTestTransactionSummary" EntityType="Self.LoadTestTransactionSummary" store:Type="Views" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+[LoadTestTransactionSummary].[LoadTestName] AS [LoadTestName], 
+[LoadTestTransactionSummary].[LoadTestRunId] AS [LoadTestRunId], 
+[LoadTestTransactionSummary].[CounterName] AS [CounterName], 
+[LoadTestTransactionSummary].[ScenarioName] AS [ScenarioName], 
+[LoadTestTransactionSummary].[TestCaseName] AS [TestCaseName], 
+[LoadTestTransactionSummary].[TransactionName] AS [TransactionName], 
+[LoadTestTransactionSummary].[CumulativeValue] AS [CumulativeValue]
+FROM [dbo].[LoadTestTransactionSummary] AS [LoadTestTransactionSummary]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="LoadTestWebPageAndUserLoadCounterSample" EntityType="Self.LoadTestWebPageAndUserLoadCounterSample" store:Type="Views" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+[LoadTestWebPageAndUserLoadCounterSample].[loadtestrunid] AS [loadtestrunid], 
+[LoadTestWebPageAndUserLoadCounterSample].[instanceName] AS [instanceName], 
+[LoadTestWebPageAndUserLoadCounterSample].[RequestUri] AS [RequestUri], 
+[LoadTestWebPageAndUserLoadCounterSample].[IntervalStartTime] AS [IntervalStartTime], 
+[LoadTestWebPageAndUserLoadCounterSample].[UserLoad] AS [UserLoad], 
+[LoadTestWebPageAndUserLoadCounterSample].[ResponseTime] AS [ResponseTime], 
+[LoadTestWebPageAndUserLoadCounterSample].[RPS] AS [RPS]
+FROM [dbo].[LoadTestWebPageAndUserLoadCounterSample] AS [LoadTestWebPageAndUserLoadCounterSample]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="LoadTestWebRequestCounterSample" EntityType="Self.LoadTestWebRequestCounterSample" store:Type="Views" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+[LoadTestWebRequestCounterSample].[LoadTestRunId] AS [LoadTestRunId], 
+[LoadTestWebRequestCounterSample].[CounterName] AS [CounterName], 
+[LoadTestWebRequestCounterSample].[ScenarioName] AS [ScenarioName], 
+[LoadTestWebRequestCounterSample].[TestCaseName] AS [TestCaseName], 
+[LoadTestWebRequestCounterSample].[RequestUri] AS [RequestUri], 
+[LoadTestWebRequestCounterSample].[IntervalStartTime] AS [IntervalStartTime], 
+[LoadTestWebRequestCounterSample].[IntervalEndTime] AS [IntervalEndTime], 
+[LoadTestWebRequestCounterSample].[CounterType] AS [CounterType], 
+[LoadTestWebRequestCounterSample].[ComputedValue] AS [ComputedValue]
+FROM [dbo].[LoadTestWebRequestCounterSample] AS [LoadTestWebRequestCounterSample]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="LoadTestWebRequestCounterSummary" EntityType="Self.LoadTestWebRequestCounterSummary" store:Type="Views" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+[LoadTestWebRequestCounterSummary].[LoadTestRunId] AS [LoadTestRunId], 
+[LoadTestWebRequestCounterSummary].[CounterName] AS [CounterName], 
+[LoadTestWebRequestCounterSummary].[ScenarioName] AS [ScenarioName], 
+[LoadTestWebRequestCounterSummary].[TestCaseName] AS [TestCaseName], 
+[LoadTestWebRequestCounterSummary].[RequestUri] AS [RequestUri], 
+[LoadTestWebRequestCounterSummary].[CumulativeValue] AS [CumulativeValue]
+FROM [dbo].[LoadTestWebRequestCounterSummary] AS [LoadTestWebRequestCounterSummary]</DefiningQuery>
+    </EntitySet>
+    <AssociationSet Name="FK__LoadTestC__LoadT__72C60C4A" Association="Self.FK__LoadTestC__LoadT__72C60C4A">
+      <End Role="LoadTestRun" EntitySet="LoadTestRun" />
+      <End Role="LoadTestCase" EntitySet="LoadTestCase" />
+    </AssociationSet>
+    <AssociationSet Name="FK__LoadTestD__LoadT__02FC7413" Association="Self.FK__LoadTestD__LoadT__02FC7413">
+      <End Role="LoadTestRun" EntitySet="LoadTestRun" />
+      <End Role="LoadTestDataCollectorLog" EntitySet="LoadTestDataCollectorLog" />
+    </AssociationSet>
+    <AssociationSet Name="FK__LoadTestF__LoadT__03F0984C" Association="Self.FK__LoadTestF__LoadT__03F0984C">
+      <End Role="LoadTestRun" EntitySet="LoadTestRun" />
+      <End Role="LoadTestFileAttachment" EntitySet="LoadTestFileAttachment" />
+    </AssociationSet>
+    <AssociationSet Name="FK__LoadTestF__LoadT__04E4BC85" Association="Self.FK__LoadTestF__LoadT__04E4BC85">
+      <End Role="LoadTestRun" EntitySet="LoadTestRun" />
+      <End Role="LoadTestFileAttachmentChunk" EntitySet="LoadTestFileAttachmentChunk" />
+    </AssociationSet>
+    <AssociationSet Name="FK__LoadTestM__LoadT__73BA3083" Association="Self.FK__LoadTestM__LoadT__73BA3083">
+      <End Role="LoadTestRun" EntitySet="LoadTestRun" />
+      <End Role="LoadTestMessage" EntitySet="LoadTestMessage" />
+    </AssociationSet>
+    <AssociationSet Name="FK__LoadTestP__LoadT__75A278F5" Association="Self.FK__LoadTestP__LoadT__75A278F5">
+      <End Role="LoadTestRun" EntitySet="LoadTestRun" />
+      <End Role="LoadTestPerformanceCounter" EntitySet="LoadTestPerformanceCounter" />
+    </AssociationSet>
+    <AssociationSet Name="FK__LoadTestP__LoadT__76969D2E" Association="Self.FK__LoadTestP__LoadT__76969D2E">
+      <End Role="LoadTestRun" EntitySet="LoadTestRun" />
+      <End Role="LoadTestPerformanceCounterCategory" EntitySet="LoadTestPerformanceCounterCategory" />
+    </AssociationSet>
+    <AssociationSet Name="FK__LoadTestP__LoadT__778AC167" Association="Self.FK__LoadTestP__LoadT__778AC167">
+      <End Role="LoadTestRun" EntitySet="LoadTestRun" />
+      <End Role="LoadTestPerformanceCounterInstance" EntitySet="LoadTestPerformanceCounterInstance" />
+    </AssociationSet>
+    <AssociationSet Name="FK__LoadTestP__LoadT__787EE5A0" Association="Self.FK__LoadTestP__LoadT__787EE5A0">
+      <End Role="LoadTestRun" EntitySet="LoadTestRun" />
+      <End Role="LoadTestPerformanceCounterSample" EntitySet="LoadTestPerformanceCounterSample" />
+    </AssociationSet>
+    <AssociationSet Name="FK__LoadTestR__LoadT__797309D9" Association="Self.FK__LoadTestR__LoadT__797309D9">
+      <End Role="LoadTestRun" EntitySet="LoadTestRun" />
+      <End Role="LoadTestRunAgent" EntitySet="LoadTestRunAgent" />
+    </AssociationSet>
+    <AssociationSet Name="FK__LoadTestR__LoadT__7A672E12" Association="Self.FK__LoadTestR__LoadT__7A672E12">
+      <End Role="LoadTestRun" EntitySet="LoadTestRun" />
+      <End Role="LoadTestRunInterval" EntitySet="LoadTestRunInterval" />
+    </AssociationSet>
+    <AssociationSet Name="FK__LoadTestS__LoadT__00200768" Association="Self.FK__LoadTestS__LoadT__00200768">
+      <End Role="LoadTestRun" EntitySet="LoadTestRun" />
+      <End Role="LoadTestSystemUnderTest" EntitySet="LoadTestSystemUnderTest" />
+    </AssociationSet>
+    <AssociationSet Name="FK__LoadTestS__LoadT__01142BA1" Association="Self.FK__LoadTestS__LoadT__01142BA1">
+      <End Role="LoadTestRun" EntitySet="LoadTestRun" />
+      <End Role="LoadTestSystemUnderTestTag" EntitySet="LoadTestSystemUnderTestTag" />
+    </AssociationSet>
+    <AssociationSet Name="FK__LoadTestS__LoadT__7B5B524B" Association="Self.FK__LoadTestS__LoadT__7B5B524B">
+      <End Role="LoadTestRun" EntitySet="LoadTestRun" />
+      <End Role="LoadTestScenario" EntitySet="LoadTestScenario" />
+    </AssociationSet>
+    <AssociationSet Name="FK__LoadTestS__LoadT__7F2BE32F" Association="Self.FK__LoadTestS__LoadT__7F2BE32F">
+      <End Role="LoadTestRun" EntitySet="LoadTestRun" />
+      <End Role="LoadTestSqlTrace" EntitySet="LoadTestSqlTrace" />
+    </AssociationSet>
+    <AssociationSet Name="FK__LoadTestT__LoadT__02084FDA" Association="Self.FK__LoadTestT__LoadT__02084FDA">
+      <End Role="LoadTestRun" EntitySet="LoadTestRun" />
+      <End Role="LoadTestTestLog" EntitySet="LoadTestTestLog" />
+    </AssociationSet>
+    <AssociationSet Name="FK__LoadTestT__LoadT__74AE54BC" Association="Self.FK__LoadTestT__LoadT__74AE54BC">
+      <End Role="LoadTestRun" EntitySet="LoadTestRun" />
+      <End Role="LoadTestThresholdMessage" EntitySet="LoadTestThresholdMessage" />
+    </AssociationSet>
+    <AssociationSet Name="FK__WebLoadTe__LoadT__7C4F7684" Association="Self.FK__WebLoadTe__LoadT__7C4F7684">
+      <End Role="LoadTestRun" EntitySet="LoadTestRun" />
+      <End Role="WebLoadTestErrorDetail" EntitySet="WebLoadTestErrorDetail" />
+    </AssociationSet>
+    <AssociationSet Name="FK__WebLoadTe__LoadT__7D439ABD" Association="Self.FK__WebLoadTe__LoadT__7D439ABD">
+      <End Role="LoadTestRun" EntitySet="LoadTestRun" />
+      <End Role="WebLoadTestRequestMap" EntitySet="WebLoadTestRequestMap" />
+    </AssociationSet>
+    <AssociationSet Name="FK__WebLoadTe__LoadT__7E37BEF6" Association="Self.FK__WebLoadTe__LoadT__7E37BEF6">
+      <End Role="LoadTestRun" EntitySet="LoadTestRun" />
+      <End Role="WebLoadTestTransaction" EntitySet="WebLoadTestTransaction" />
+    </AssociationSet>
+  </EntityContainer>
 </Schema>

@@ -1,3 +1,5 @@
+USE LoadTest2010;
+GO
 CREATE procedure [dbo].[Pbx_FindLoadTestsLessThan15MinutesDuration]  
 as  
 begin  

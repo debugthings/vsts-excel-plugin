@@ -1,3 +1,5 @@
+USE LoadTest2010;
+GO
 CREATE procedure [dbo].[Pbx_ReorganizeAllIndexes]  
 as  
 begin  
